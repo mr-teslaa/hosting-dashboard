@@ -151,15 +151,61 @@
                                 />
                             </a>
 
-                            <div class="nav__toggle" id="nav-toggle">
-                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABNElEQVRIS5VU2xHDMAiTN+smbSdrMml6cLZPJjyc/NkmSAhBg/kagMte9rO8yWffy3+yAElYvQd89L9BasZEySqWadU7DHdibLVLBV6C7O4JoMpTABy9t99I75HDmqDsQQOOC3j3xALkgliC43wDYIY9SJIqAJ0VJLKtzRE6iFgoCDlFK/FYj2QjtnEpcsmsOIGRSuJEuilXZu9b3xJmbiUjQWSUcsiMy47myJVN82JR7jpPJ/dDXEVszwZ8tiZ5Y9imozrjE8DHk2ixqfWsty1B89DjlXm1Xacixeir7pRsYb4z3bdVQYCLLA04r858Zx9pBYX2IsOPNbcT7E2024Nk/AXkxQ2tZJmTnAXuJqniwvdsMiPfW8vOXfSkkp3mMtCyKjxfW/DHAJ4rPAns5o0cyIT+JolyG6/cz/IAAAAASUVORK5CYII="/>
-                            </div>
+                            <!--div class="nav__toggle" id="nav-toggle">
+                                <img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABNElEQVRIS5VU2xHDMAiTN+smbSdrMml6cLZPJjyc/NkmSAhBg/kagMte9rO8yWffy3+yAElYvQd89L9BasZEySqWadU7DHdibLVLBV6C7O4JoMpTABy9t99I75HDmqDsQQOOC3j3xALkgliC43wDYIY9SJIqAJ0VJLKtzRE6iFgoCDlFK/FYj2QjtnEpcsmsOIGRSuJEuilXZu9b3xJmbiUjQWSUcsiMy47myJVN82JR7jpPJ/dDXEVszwZ8tiZ5Y9imozrjE8DHk2ixqfWsty1B89DjlXm1Xacixeir7pRsYb4z3bdVQYCLLA04r858Zx9pBYX2IsOPNbcT7E2024Nk/AXkxQ2tZJmTnAXuJqniwvdsMiPfW8vOXfSkkp3mMtCyKjxfW/DHAJ4rPAns5o0cyIT+JolyG6/cz/IAAAAASUVORK5CYII="
+                                />
+                            </div-->
 
                             <ul class="nav__list">
                                 <a href="#" class="nav__link active">
-                                    <i class="bx bx-home"></i>
-                                    <span class="nav__text"></span>
+                                    <i class="bx bx-home nav__icon"></i>
+                                    <span class="nav__text"> Home </span>
                                 </a>
+
+
+                                <a href="#" class="nav__link">
+                                    <i class="bx bx-server nav__icon"></i>
+                                    <span class="nav__text"> Service </span>
+                                </a>
+
+
+                                <a href="#" class="nav__link">
+                                    <i class="bx bx-cart-alt nav__icon"></i>
+                                    <span class="nav__text"> Orders </span>
+                                </a>
+
+
+                                <a href="#" class="nav__link">
+                                    <i class="bx bx-conversation nav__icon"></i>
+                                    <span class="nav__text"> Tickets </span>
+                                </a>
+
+
+                                <a href="#" class="nav__link">
+                                    <i class="bx bxs-user-detail nav__icon"></i>
+                                    <span class="nav__text"> My Profile </span>
+                                </a>
+
+
+                                <a href="#" class="nav__link">
+                                    <i class="bx bx-file nav__icon"></i>
+                                    <span class="nav__text"> Invoices </span>
+                                </a>
+
+
+                                <a href="#" class="nav__link">
+                                    <i class="bx bx-shopping-bag bx-burst nav__icon"></i>
+                                    <span class="nav__text"> Order Now </span>
+                                </a>
+
+
+                                <a href="#" class="nav__link nav__danger">
+                                    <i class="bx bx-log-out nav__icon"></i>
+                                    <span class="nav__text"> Logout </span>
+                                </a>
+
+
                             </ul>
                         </div>
                     </nav>
@@ -213,7 +259,7 @@
 
             </header>
 
-            <!--main class="main-content bg-minimal">
+            <main class="main-content bg-minimal ml__sidebar">
                 <div class="page-holder home-page">
                     <div class="container-fluid container-custom">
                         <div class="row page-header">
@@ -224,48 +270,48 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-6 col-xs-6" id="services">
                                     <a href="https://www.my.ssdcloud.io/service/listing/">
-                                        <div class="item blue clearfix">
-                                            <div class="icon"><i class="bx bx-rocket"></i></div>
-                                            <div class="value">1</div>
+                                        <div class="item clearfix">
+                                            <div class="icon minimal-green-color"><i class="bx bx-rocket"></i></div>
                                             <div class="title">Active Services</div>
-                                            <div class="mblokbtn">
-                                                <div class="padding10">My Products &amp; Services<span>»</span></div>
+                                            <div class="value">1</div>
+                                            <div class="mblokbtn minimal-green">
+                                                <div class="padding10 minimal-green">My Products &amp; Services<span>»</span></div>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="col-md-3 col-sm-6 col-xs-6">
                                     <a href="https://www.my.ssdcloud.io/order/listing/">
-                                        <div class="item orange clearfix">
-                                            <div class="icon"><i class="bx bx-cart-alt"></i></div>
-                                            <div class="value">0</div>
+                                        <div class="item clearfix">
+                                            <div class="icon minimal-orange-color"><i class="bx bx-cart-alt"></i></div>
                                             <div class="title">Unpaid Orders</div>
-                                            <div class="mblokbtn">
-                                                <div class="padding10">Unpaid Orders<span>»</span></div>
+                                            <div class="value">0</div>
+                                            <div class="mblokbtn minimal-orange">
+                                                <div class="padding10 minimal-orange">Unpaid Orders<span>»</span></div>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="col-md-3 col-sm-6 col-xs-6">
                                     <a href="https://www.my.ssdcloud.io/ticket/listing/">
-                                        <div class="item pink clearfix">
-                                            <div class="icon"><i class="bx bx-conversation"></i></div>
-                                            <div class="value">1</div>
+                                        <div class="item clearfix">
+                                            <div class="icon minimal-blue-color"><i class="bx bx-conversation"></i></div>
                                             <div class="title">Tickets</div>
-                                            <div class="mblokbtn">
-                                                <div class="padding10">Open Support Ticket<span>»</span></div>
+                                            <div class="value">1</div>
+                                            <div class="mblokbtn minimal-blue">
+                                                <div class="padding10 minimal-blue">Open Support Ticket<span>»</span></div>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="col-md-3 col-sm-6 col-xs-6" id="invoices">
                                     <a href="https://www.my.ssdcloud.io/invoice/listing/">
-                                        <div class="item green clearfix">
-                                            <div class="icon"><i class="bx bxs-file-pdf"></i></div>
-                                            <div class="value">0</div>
+                                        <div class="item clearfix">
+                                            <div class="icon minimal-gray-color"><i class="bx bxs-file-pdf"></i></div>
                                             <div class="title">Invoices</div>
-                                            <div class="mblokbtn">
-                                                <div class="padding10">My Invoices<span>»</span></div>
+                                            <div class="value">0</div>
+                                            <div class="mblokbtn minimal-gray">
+                                                <div class="padding10 minimal-gray">My Invoices<span>»</span></div>
                                             </div>
                                         </div>
                                     </a>
@@ -299,8 +345,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>-->
-                        <!--div class="row">
+                        </div-->
+                        <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="row page-header">
                                     <div class="sub-title col-xs-6 v_center">Recent Orders</div>
@@ -439,7 +485,7 @@
             </div>
         </section-->
 
-        <section class="footer">
+        <section class="footer ml__sidebar">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-4">

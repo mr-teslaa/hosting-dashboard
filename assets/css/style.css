@@ -17388,6 +17388,42 @@ input.validation-success:focus {
   background-color: #edf2f9;
 }
 
+.minimal-green {
+  color: #00864e;
+  background-color: #ccf6e4;
+}
+
+.minimal-gray {
+  color: #7d899b;
+  background-color: #e3e6ea;
+}
+
+.minimal-orange {
+  color: #c46632;
+  background-color: #fde6d8;
+}
+
+.minimal-blue {
+  color: #1c4f93;
+  background-color: #d5e5fa;
+}
+
+minimal-green-color {
+  color: #00864e;
+}
+
+minimal-gray-color {
+  color: #7d899b;
+}
+
+minimal-orange-color {
+  color: #c46632;
+}
+
+minimal-blue-color {
+  color: #1c4f93;
+}
+
 .bg-lg-blue {
   background-image: linear-gradient(to right top, #3498db, #00b1ec, #00caf8, #00e2fe, #08f9ff);
 }
@@ -17444,3 +17480,149 @@ input.validation-success:focus {
 .pb-7 {
     padding-bottom: 7rem !important;
 }
+
+/*$nav-width: 112 + 56px
+$font-bold: 700
+z-back: -10
+z-normal: 1
+z-tooltip: 10
+z-fixed: 100
+z-modal: 1000
+
+gray color: #5e6e82
+
+/*------ redesing the dashboard ------*/
+.l-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 112+56px;
+  height: 100vh;
+  background-color: #edf2f9;
+  padding: 1.25rem 0.5rem 2rem;
+  transition: 0.5s;
+  z-index: 100;
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.nav .nav__list {
+  padding-left: 10px;
+}
+
+.nav .nav__logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+}
+
+.nav .nav__logo .nav__logo-icon {
+  margin-right: 1.2rem;
+  height: 120px;
+  width: 120px;
+}
+
+.nav .nav__toggle {
+  position: absolute;
+  top: 1.10rem;
+  right: -1rem;
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.nav .nav__link {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  color: #5e6e82;
+  transition: 0.3s;
+}
+
+.nav .nav__link:hover {
+  background-color: #b4d3ff;
+  font-weight: 600;
+}
+
+.nav .nav__icon {
+  font-weight: 500;
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.nav .nav__text {
+  font-weight: 500;
+}
+
+.nav .nav__list .active {
+  color: #3498db;
+  font-weight: 600;
+}
+
+.nav .nav__list .active:hover {
+  background-color: transparent;
+}
+
+.nav .nav__danger {
+  color: #d63031;
+  background-color: rgba(214, 48, 49, 0.15);
+}
+
+.nav .nav__danger:hover {
+  color: #fff;
+  background-color: #d63031;
+}
+
+/* main content modification */
+.ml__sidebar {
+  margin-left: 150px !important;
+}
+
+.main-content .page-holder.home-page .user-stats-holder>div .item .icon {
+  color: #000;
+  font-size: 5rem;
+  margin: 0;
+  padding-right: 10px;
+  position: absolute;
+  text-align: right !important;
+  top: 40px;
+  width: 100%;
+  z-index: 5;
+}
+
+.user-stats-holder>div .item>div {
+  color: #5e6e82 !important;
+  text-align: left !important;
+  padding-left: 1.25rem;
+}
+
+.main-content .page-holder.home-page .user-stats-holder>div .item {
+  box-shadow: 0 7px 14px 0 rgb(59 65 94 / 10%), 0 3px 6px 0 rgb(0 0 0 / 7%) !important;
+}
+
+.user-stats-holder>div .item .title {
+  font-size: 1.4rem;
+  margin-bottom: 5px !important;
+}
+
+.user-stats-holder>div .item .value {
+  margin-bottom: 20px !important;
+}
+
