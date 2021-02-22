@@ -27,8 +27,13 @@
 }
 
 .header {
+  width: 100%;
   border-bottom: 1px solid rgba(75,75,90,.075);
   padding-bottom: 0!important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
 }
 
 @media (min-width: 1199.98px) {
@@ -1790,6 +1795,7 @@ table td[class*=col-],table th[class*=col-] {
 }
 
 @media screen and (max-width:767px) {
+
   /* pushing new design for "recent order" section */
   .sub-title {
     width: 100%;
@@ -3754,6 +3760,10 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 }
 
 @media (max-width:767px) {
+  .navbar__toggle {
+    display: block;
+  }
+
   .navbar-form .form-group {
     margin-bottom: 5px;
   }
@@ -8136,8 +8146,15 @@ input:-webkit-autofill,input:-webkit-autofill:focus textarea:-webkit-autofill,in
   -webkit-box-shadow: 0 4px 20px 1px rgba(0,0,0,.06),0 1px 4px rgba(0,0,0,.08);
 }
 
-.main-content .page-holder.home-page .user-stats-holder>div .item:hover {
-  background-color: rgba(245,245,245,.3);
+.main-content .page-holder.home-page .user-stats-holder>div .item:hover .icon,
+.main-content .page-holder.home-page .user-stats-holder>div .item:hover .title,
+.main-content .page-holder.home-page .user-stats-holder>div .item:hover .value {
+  color: #fff;
+}
+
+.main-content .page-holder.home-page .user-stats-holder>div .item:hover .minimal-green {
+  color: #ccf6e4;
+  background-color: #00864e;
 }
 
 .main-content .page-holder.home-page .user-stats-holder>div .item>div {
@@ -8201,6 +8218,7 @@ input:-webkit-autofill,input:-webkit-autofill:focus textarea:-webkit-autofill,in
   transition: all .3s ease-out;
   -webkit-transition: all .3s ease-out;
   width: 100%;
+  padding-right: 0.9rem;
   z-index: 6;
 }
 
@@ -8221,12 +8239,17 @@ input:-webkit-autofill,input:-webkit-autofill:focus textarea:-webkit-autofill,in
 }
 
 .mblokbtn:hover {
-  background: rgba(0,0,0,0.43);
+/*  background: rgba(0,0,0,0.43);
+  color: rgba(255,255,255,1.5);
+  padding-left: 0 !important; */
+  margin-left: 0 !important;
+  background: none!important;
   color: rgba(255,255,255,1.5);
 }
 
 .mblokbtn .padding10 {
   padding: 6px;
+  padding-left: 10px;
 }
 
 .main-content .page-holder.home-page .balance-menu,.main-content .page-holder.home-page .news-menu {
@@ -17394,6 +17417,14 @@ input.validation-success:focus {
   background-color: #edf2f9;
 }
 
+.bg-minimal-green-hover {
+  transition: 0.6s;
+}
+
+.bg-minimal-green-hover:hover {
+  background-color: #ccf6e4 !important;
+}
+
 .minimal-green {
   color: #00864e;
   background-color: #ccf6e4;
@@ -17511,13 +17542,13 @@ gray color: #5e6e82
   position: fixed;
   top: 0;
   left: 0;
-  width: 112+56px;
+  width: 250px;
   height: 100vh;
-  margin-top: 80px;
   background-color: #edf2f9;
-  padding: 1.25rem 0.5rem 2rem;
+  padding: 10rem 0.5rem 2rem;
   transition: 0.5s;
-  z-index: 100;
+  z-index: 10;
+  box-shadow: 0 4px 20px 1px rgb(0 0 0 / 6%), 0 1px 4px rgb(0 0 0 / 8%);
 }
 
 .nav {
@@ -17547,20 +17578,21 @@ gray color: #5e6e82
 
 .nav .nav__toggle {
   position: absolute;
-  top: 1.10rem;
-  right: -1rem;
+  top: 8rem;
+  right: -1.5rem;
   width: 25px;
   height: 25px;
   color: #1c4f93;
   background-color: #d5e5fa;
+  border: 1px solid #1c4f93;
   border-radius: 50%;
   font-size: 1.25rem;
-  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: 0.5s;
+  display: none;
 }
 
 .nav .nav__link {
@@ -17570,6 +17602,7 @@ gray color: #5e6e82
   margin-bottom: 1rem;
   border-radius: 0.5rem;
   color: #5e6e82;
+  word-break: keep-all;
   transition: 0.3s;
 }
 
@@ -17581,7 +17614,7 @@ gray color: #5e6e82
 .nav .nav__icon {
   font-weight: 500;
   font-size: 2rem;
-  margin-right: 1rem;
+  margin-right: 1.5rem;
 }
 
 .nav .nav__text {
@@ -17609,7 +17642,7 @@ gray color: #5e6e82
 
 /* main content modification */
 .ml__sidebar {
-  margin-left: 150px !important;
+  margin-left: -98px !important;
 }
 
 .sub-title {
@@ -17627,7 +17660,9 @@ gray color: #5e6e82
   z-index: 5;
 }
 
-.user-stats-holder>div .item>div {
+.user-stats-holder>div .item .icon,
+.user-stats-holder>div .item .title,
+.user-stats-holder>div .item .value {
   color: #5e6e82 !important;
   text-align: left !important;
   padding-left: 1.25rem;
@@ -17656,7 +17691,26 @@ gray color: #5e6e82
   border-radius: .2rem;
   border: 1px solid transparent;
   background-color: #fff;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;;
   box-shadow: 0 0 0 1px rgba(43,45,80,.1),0 2px 5px 0 rgba(43,45,80,.08),0 1px 1.5px 0 rgba(0,0,0,.07),0 1px 2px 0 rgba(0,0,0,.08);
+}
+
+.btn-white:hover {
+  color: #34495e;
+  box-shadow: 0 0 0 1px rgba(43,45,80,.1),0 4px 5px 0 rgba(43,45,80,.08),0 2px 1.5px 0 rgba(0,0,0,.07),0 2px 2px 0 rgba(0,0,0,.08);
+}
+
+.btn-primary {
+  font-size: 1.4rem !important;
+  color:#fff !important;
+  background-color:#2c7be5 !important;
+  border-color:#2c7be5 !important;
+  border-radius: .2rem !important;
+}
+.btn-primary:hover {
+  color:#fff !important;
+  background-color:#1a68d1 !important;
+  border-color:#1862c6 !important;
 }
 
 /* status */
@@ -17705,4 +17759,79 @@ gray color: #5e6e82
 .powered_by {
   padding-bottom: 10px;
   margin-bottom: 0;
+}
+
+.payment_methods {
+  height: 10vh !important;
+}
+
+
+/* toggle class by javascript */
+.show {
+  width: 250px !important;
+}
+
+
+/* rotate navigation toggle button */
+.rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+/* adding more padding in body */
+#body {
+  background-color: #EFF4F8;
+  padding: 6rem 0 0 12rem;
+}
+
+/*Add padding in main componant when navigation menu is toggling */
+.expander {
+  padding: 0 0 0 12rem;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+
+@media screen and (max-width:767px) {
+ .nav .nav__toggle {
+    display: flex;
+  }
+
+  .l-navbar {
+    width: 60px;
+  }
+}
+
+
+@media only screen and (min-device-width: 761px) and (max-device-width: 1199px) {
+
+  .outer-wrap main>div.page-holder>div {
+    padding-top: 5rem;
+    transition: .6s;
+  }
+
+  .l-navbar {
+    padding-top: 15rem;
+  }
+}
+
+@media screen and (max-width:420px) {
+   #body {
+    margin-right: 0 !important;
+    margin-left: 3rem !important;
+   }
+}
+
+@media screen and (max-width:767px) {
+  #body {
+    margin-right: 1rem !important;
+    margin-left: 4rem !important;
+  }
+
+  .nav .nav__toggle {
+    top: 12rem !important;
+  }
+
 }
