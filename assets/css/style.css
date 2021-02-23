@@ -17907,6 +17907,10 @@ gray color: #5e6e82
   }
 }
 
+@media screen and (max-width:767px) {
+
+}
+
 
 @media only screen and (min-device-width: 761px) and (max-device-width: 1199px) {
 
@@ -17926,11 +17930,11 @@ gray color: #5e6e82
 }
 
 
-@media screen and (max-width:1730px){
-  #body{
-    margin-left: 23rem !important;
-  }
+@media screen and (max-width:1199px) {
+  #body {
+    padding-left: 3rem !important;
 }
+
 
 @media screen and (min-width:992px) and (max-width:1280px){
   .bx-menu{

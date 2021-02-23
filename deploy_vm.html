@@ -1,0 +1,1515 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="theme-color" content="#4285F4">
+        <title>KVM VPS Service Configuration | SSDCloud Hosting Solutions</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+
+        <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.9/css/bootstrap-select.min.css" rel="stylesheet">
+        <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" rel="stylesheet">
+        <link href="//cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+        <link href="https://www.ssdcloud.io/assets/css/app.min.css" rel="stylesheet">
+        <link href="/assets/css/style.css" rel="stylesheet">
+        <link href="https://www.ssdcloud.io/assets/images/favicon.png" type="image/png" rel="icon">
+        <link href="https://www.my.ssdcloud.io/deploy/vps/21/" rel="canonical">
+        <script src="//copypoison.com/cp.js" async></script>
+        <script src="//browser.sentry-cdn.com/5.26.0/bundle.tracing.min.js" integrity="sha384-o3PmxWd0Sgy+qiulNfK/K+YxK4Neya0uoBhAdI1YCdS6yuHZM7vN8v9r0cBDmQ9K"crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://www.my.ssdcloud.io/assets/js/intro.min.js"></script>
+    </head>
+
+    <body itemscope itemtype="http://schema.org/WebPage" id="body">
+        <noscript><meta http-equiv="refresh" content="0;url=https://www.my.ssdcloud.io/js-disabled/"></noscript>
+        <div id="ssd-header">
+            <div id="showHere"></div>
+            <section class="header py-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="ssdcloud-4 ssdcloud-lg-2">
+                            <a href="https://www.ssdcloud.io/" rel="home" title="SSDCloud Hosting" class="logo">
+                                <h1><img src="https://www.ssdcloud.io/assets/images/logo.svg" alt="SSDCloud Hosting"></h1>
+                            </a>
+                        </div>
+                        <div class="ssdcloud-8 order-lg-3 ssdcloud-lg-3 text-right">
+                            <div class="burger_menu">
+                                <div class="up-line"></div>
+                                <div class="middle-line"></div>
+                                <div class="down-line"></div>
+                            </div>
+                            <div class="clientlogin">
+                                <a href="https://www.my.ssdcloud.io/" rel="nofollow"><span>My Account</span></a>
+                            </div>
+                            <div class="deploy_button">
+                                <a href="https://www.my.ssdcloud.io/deploy/"><span>Order</span></a>
+                            </div>
+                        </div>
+
+                        <div class="ssdcloud-12 order-lg-2 ssdcloud-lg-7 no-relative">
+                            <nav class="mainmenu">
+                                <ul class="menu_list">
+                                    <li><a href="https://www.ssdcloud.io/kvm-vps/">SSD VPS</a></li>
+                                    <li><a href="https://www.ssdcloud.io/web-hosting/">Web Hosting</a></li>
+                                    <li class="dropdown unity-menu">
+                                        <a href="#" onclick="return false;">Technology <i class="bx bx-chevron-down"></i></a>
+                                        <ul class="dropdown-menu dropdown-unity">
+                                            <li>
+                                                <a class="unity-link" href="https://www.ssdcloud.io/technology/">
+                                                    <div class="unity-box">
+                                                        <div class="unity-icon"><i class="bx bx-rocket"></i></div>
+                                                        <div class="unity-title">Lightning Speed</div>
+                                                        <div class="unity-details">Always Latest Technologies</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="unity-link" href="https://www.ssdcloud.io/website-migration/">
+                                                    <div class="unity-box">
+                                                        <div class="unity-icon"><i class="bx bx-merge"></i></div>
+                                                        <div class="unity-title">Website Migration</div>
+                                                        <div class="unity-details">Switch to a Better Hosting Now</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="unity-link" href="https://www.ssdcloud.io/datacenters/">
+                                                    <div class="unity-box">
+                                                        <div class="unity-icon"><i class="bx bx-building"></i></div>
+                                                        <div class="unity-title">Data Centers</div>
+                                                        <div class="unity-details">Top of the Line Data Centers</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="unity-link" href="https://www.ssdcloud.io/ddos-protection/">
+                                                    <div class="unity-box">
+                                                        <div class="unity-icon"><i class="bx bx-check-shield"></i></div>
+                                                        <div class="unity-title">DDoS Protection</div>
+                                                        <div class="unity-details">Protect Against DDoS Attack</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://www.ssdcloud.io/about-us/">About Us</a></li>
+                                    <li class="dropdown unity-menu">
+                                        <a href="#" onclick="return false;">Company <i class="bx bx-chevron-down"></i></a>
+                                        <ul class="dropdown-menu dropdown-unity">
+                                            <li>
+                                                <a class="unity-link" href="https://www.ssdcloud.io/contact-us/">
+                                                    <div class="unity-box">
+                                                        <div class="unity-icon"><i class="bx bx-envelope"></i></div>
+                                                        <div class="unity-title">Contact</div>
+                                                        <div class="unity-details">Got a Question? Contact us Today.</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="unity-link" href="https://www.ssdcloud.io/blog/">
+                                                    <div class="unity-box">
+                                                        <div class="unity-icon"><i class="bx bx-message-square-dots"></i></div>
+                                                        <div class="unity-title">Blog</div>
+                                                        <div class="unity-details">Stay Up-To-Date with Latest News</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="unity-link" href="https://www.ssdcloud.io/kb/">
+                                                    <div class="unity-box">
+                                                        <div class="unity-icon"><i class="bx bxs-business bx-flip-horizontal"></i></div>
+                                                        <div class="unity-title">Knowledge Base</div>
+                                                        <div class="unity-details">You're Learning Center</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="outer-wrap" style="visibility: visible; opacity: 1;">
+
+            <header class="main-header">
+
+                <!-- custom sidebar -->
+                <div class="l-navbar" id="navbar">
+                    <nav class="nav">
+                        <div>
+                            <!--a href="#" class="nav__logo">
+                                <img
+                                    src="https://www.ssdcloud.io/assets/images/logo.svg"
+                                    alt="SSDCloud Hosting"
+                                    class="nav__logo-icon"
+                                />
+                            </a-->
+
+                            <div class="nav__toggle" id="nav-toggle">
+                                <i class='bx bxs-chevron-right' ></i>
+                            </div>
+
+                            <ul class="nav__list">
+                                <a href="#" class="nav__link active">
+                                    <i class="bx bx-home nav__icon"></i>
+                                    <span class="nav__text"> Home </span>
+                                </a>
+
+
+                                <a href="#" class="nav__link">
+                                    <i class="bx bx-server nav__icon"></i>
+                                    <span class="nav__text"> Service </span>
+                                </a>
+
+
+                                <a href="#" class="nav__link">
+                                    <i class="bx bx-cart-alt nav__icon"></i>
+                                    <span class="nav__text"> Orders </span>
+                                </a>
+
+
+                                <a href="#" class="nav__link">
+                                    <i class="bx bx-conversation nav__icon"></i>
+                                    <span class="nav__text"> Tickets </span>
+                                </a>
+
+
+                                <a href="#" class="nav__link">
+                                    <i class="bx bxs-user-detail nav__icon"></i>
+                                    <span class="nav__text"> My Profile </span>
+                                </a>
+
+
+                                <a href="#" class="nav__link">
+                                    <i class="bx bx-file nav__icon"></i>
+                                    <span class="nav__text"> Invoices </span>
+                                </a>
+
+
+                                <a href="#" class="nav__link">
+                                    <i class="bx bx-shopping-bag bx-burst nav__icon"></i>
+                                    <span class="nav__text"> Order Now </span>
+                                </a>
+
+
+                                <a href="#" class="nav__link nav__danger">
+                                    <i class="bx bx-log-out nav__icon"></i>
+                                    <span class="nav__text"> Logout </span>
+                                </a>
+
+
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+                <!--div class="vertical-ghost-menu">
+                    <div class="vertical-menu-holder">
+                        <div class="menu-bg">
+                            <div class="vertical-menu">
+                                <ul>
+                                    <li class="active" id="home"><a href="https://www.my.ssdcloud.io/"><i class="bx bx-home"></i> Home</a></li>
+                                    <li id="services"><a href="https://www.my.ssdcloud.io/service/listing/"><i class="bx bx-server"></i> Services</a></li>                                    <li id="orders">
+                                        <a href="https://www.my.ssdcloud.io/order/listing/">
+                                            <i class="bx bx-cart-alt"></i> Orders                                         </a>
+                                    </li>
+                                    <li id="tickets">
+                                        <a href="https://www.my.ssdcloud.io/ticket/listing/">
+                                            <i class="bx bx-conversation"></i> Tickets <span class="total-orders">1</span>                                        </a>
+                                    </li>
+                                    <li id="profile"><a href="https://www.my.ssdcloud.io/profile/edit/"><i class="bx bxs-user-detail"></i> My Profile</a></li>
+                                                                        <li id="invoices">
+                                        <a href="https://www.my.ssdcloud.io/invoice/listing/">
+                                            <i class="bx bx-file"></i> Invoices                                         </a>
+                                    </li>
+                                                                        <li style="background: #02a2fe;" id="order"><a href="https://www.my.ssdcloud.io/deploy/" style="color: #fff;"><i class="bx bx-shopping-bag bx-burst"></i> Order Now</a></li>
+
+                                    <li class="exit">
+                                        <a onclick="location.href='https://www.my.ssdcloud.io/logout/';"><i class="bx bx-log-out"></i> Logout</a>
+                                    </li>
+                                    <li class="exit" id="tour">
+                                        <a id="start-tour" onclick="startIntro()"><i class="bx bxs-dashboard"></i> Start Tour</a>
+                                    </li>
+                                    <span class="under-bar under-bar-defaults" style="left: 0px; width: 94px;"></span>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div-->
+
+
+                <script>
+                    // SHOW MENU
+                    const showMenu = (toggleId, navbarId, bodyId) =>{
+                        const toggle = document.getElementById(toggleId),
+                        navbar = document.getElementById(navbarId),
+                        bodypadding = document.getElementById(bodyId)
+
+                        if(toggle && navbar){
+                            toggle.addEventListener('click', ()=>{
+                                // APARECER MENU
+                                navbar.classList.toggle('show')
+                                // ROTATE TOGGLE
+                                toggle.classList.toggle('rotate')
+                                // PADDING BODY
+                                bodypadding.classList.toggle('expander')
+                            })
+                        }
+                    }
+                    showMenu('nav-toggle','navbar','body')
+                </script>
+
+
+            </header>
+
+            <main class="main-content">
+                <div class="page-holder configurator-step-two">
+                    <div class="container-fluid container-custom vps">
+                        <div class="form-holder">
+                            <div class="page-header">
+                                <div class="title">KVM VPS Service Configuration</div>
+                            </div>
+                            <div class="configurator-steps">
+
+                                <div class="title">1. Server Size</div>
+                                <span style="display: block; width: 32px; height: 2px; margin: 10px 0; background: #007bfc;"></span>
+                                <div class="plans-holder row">
+
+
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-2">
+
+
+
+                                        <div class="item radio-content radio-plans" data-id="20" data-stock="10" data-amount="11.95" data-label="2GB">
+
+                                            <div class="radio-1">
+                                                <label class="control control-radio">
+
+                                                    <input type="radio" name="plan_id" value="20">
+
+                                                    <div class="control_indicator"></div>
+                                                </label>
+                                            </div>
+                                            <div class="title">KVM VPS 2GB</div>
+                                            <div class="old-price" style="display: none;">&euro;<span> </span></div>
+                                            <div class="price" data-default="14.46">&euro;<span>14.46</span></div>
+                                            <div class="price-period">per month</div>
+                                            <div class="line"></div>
+                                            <div class="parameters">
+                                                <div><span class="value">1vCPU</span> Core</div>
+                                                <div><span class="value">2GB</span> RAM</div>
+                                                <div><span class="value">20GB</span> NVMe SSD Space</div>
+                                                <div><span class="value">1TB</span> Data Transfer</div>
+                                                <div><span class="value">1</span> IP Address</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-2">
+
+
+
+                                        <div class="item radio-content radio-plans active" data-id="21" data-stock="10" data-amount="29.95" data-label="4GB">
+
+                                            <div class="radio-1">
+                                                <label class="control control-radio">
+
+                                                    <input type="radio" name="plan_id" value="21" checked>
+
+                                                    <div class="control_indicator"></div>
+                                                </label>
+                                            </div>
+                                            <div class="title">KVM VPS 4GB</div>
+                                            <div class="old-price" style="display: none;">&euro;<span> </span></div>
+                                            <div class="price" data-default="36.24">&euro;<span>36.24</span></div>
+                                            <div class="price-period">per month</div>
+                                            <div class="line"></div>
+                                            <div class="parameters">
+                                                <div><span class="value">2vCPU</span> Core</div>
+                                                <div><span class="value">4GB</span> RAM</div>
+                                                <div><span class="value">40GB</span> NVMe SSD Space</div>
+                                                <div><span class="value">2TB</span> Data Transfer</div>
+                                                <div><span class="value">1</span> IP Address</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-2">
+
+
+
+                                        <div class="item radio-content radio-plans" data-id="22" data-stock="10" data-amount="49.95" data-label="8GB">
+
+                                            <div class="radio-1">
+                                                <label class="control control-radio">
+
+                                                    <input type="radio" name="plan_id" value="22">
+
+                                                    <div class="control_indicator"></div>
+                                                </label>
+                                            </div>
+                                            <div class="title">KVM VPS 8GB</div>
+                                            <div class="old-price" style="display: none;">&euro;<span> </span></div>
+                                            <div class="price" data-default="60.44">&euro;<span>60.44</span></div>
+                                            <div class="price-period">per month</div>
+                                            <div class="line"></div>
+                                            <div class="parameters">
+                                                <div><span class="value">2vCPU</span> Core</div>
+                                                <div><span class="value">8GB</span> RAM</div>
+                                                <div><span class="value">80GB</span> NVMe SSD Space</div>
+                                                <div><span class="value">4TB</span> Data Transfer</div>
+                                                <div><span class="value">1</span> IP Address</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-2">
+
+
+
+                                        <div class="item radio-content radio-plans" data-id="23" data-stock="10" data-amount="129.95" data-label="16GB">
+
+                                            <div class="radio-1">
+                                                <label class="control control-radio">
+
+                                                    <input type="radio" name="plan_id" value="23">
+
+                                                    <div class="control_indicator"></div>
+                                                </label>
+                                            </div>
+                                            <div class="title">KVM VPS 16GB</div>
+                                            <div class="old-price" style="display: none;">&euro;<span> </span></div>
+                                            <div class="price" data-default="157.24">&euro;<span>157.24</span></div>
+                                            <div class="price-period">per month</div>
+                                            <div class="line"></div>
+                                            <div class="parameters">
+                                                <div><span class="value">4vCPU</span> Core</div>
+                                                <div><span class="value">16GB</span> RAM</div>
+                                                <div><span class="value">160GB</span> NVMe SSD Space</div>
+                                                <div><span class="value">6TB</span> Data Transfer</div>
+                                                <div><span class="value">1</span> IP Address</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-2">
+
+
+
+                                        <div class="item radio-content radio-plans" data-id="24" data-stock="10" data-amount="259.95" data-label="32GB">
+
+                                            <div class="radio-1">
+                                                <label class="control control-radio">
+
+                                                    <input type="radio" name="plan_id" value="24">
+
+                                                    <div class="control_indicator"></div>
+                                                </label>
+                                            </div>
+                                            <div class="title">KVM VPS 32GB</div>
+                                            <div class="old-price" style="display: none;">&euro;<span> </span></div>
+                                            <div class="price" data-default="314.54">&euro;<span>314.54</span></div>
+                                            <div class="price-period">per month</div>
+                                            <div class="line"></div>
+                                            <div class="parameters">
+                                                <div><span class="value">8vCPU</span> Core</div>
+                                                <div><span class="value">32GB</span> RAM</div>
+                                                <div><span class="value">240GB</span> NVMe SSD Space</div>
+                                                <div><span class="value">8TB</span> Data Transfer</div>
+                                                <div><span class="value">1</span> IP Address</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="title">2. Choose a Distribution & Version</div>
+                                <span style="display: block; width: 32px; height: 2px; margin: 10px 0; background: #007bfc;"></span>
+                                <div class="os-menu clearfix row odd">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="item selected" data-name="ubuntu">
+                                            <select class="os-select selectpicker" name="os">
+                                                <option value="1" data-content="<img src='/assets/images/icons/os/ubuntu.png' class='select-img'> Ubuntu 20.04"></option>
+                                                <option value="2" data-content="<img src='/assets/images/icons/os/ubuntu.png' class='select-img'> Ubuntu 18.04"></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="item" data-name="debian">
+                                            <select class="os-select selectpicker" name="os">
+                                                <option value="3" data-content="<img src='/assets/images/icons/os/debian.png' class='select-img'> Debian 10"></option>
+                                                <option value="4" data-content="<img src='/assets/images/icons/os/debian.png' class='select-img'> Debian 9"></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="item" data-name="centos">
+                                            <select class="os-select selectpicker" name="os">
+                                                <option value="5" data-content="<img src='/assets/images/icons/os/centos.png' class='select-img'> CentOS 8"></option>
+                                                <option value="6" data-content="<img src='/assets/images/icons/os/centos.png' class='select-img'> CentOS 7"></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="item" data-name="fedora">
+                                            <select class="os-select selectpicker" name="os">
+                                                <option value="7" data-content="<img src='/assets/images/icons/os/fedora.png' class='select-img'> Fedora 32"></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="title">3. Payment Method</div>
+                                <span style="display: block; width: 32px; height: 2px; margin: 10px 0; background: #007bfc;"></span>
+                                <div class="payment-methods row">
+
+                                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+
+                                                <div class="radio-content radio-payment-methods active" data-id="1">
+
+                                                <div class="radio-1">
+                                                    <label class="control control-radio clearfix">
+                                                        <img src="/assets/images/icons/payments/card.png"> <span>Credit/Debit Card</span>
+
+                                                            <input type="radio" name="payment_method_id" value="1" checked>
+
+                                                        <div class="control_indicator"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+
+                                                <div class="radio-content radio-payment-methods" data-id="2">
+
+                                                <div class="radio-1">
+                                                    <label class="control control-radio clearfix">
+                                                        <img src="/assets/images/icons/payments/paypal.png"> <span>PayPal</span>
+
+                                                            <input type="radio" name="payment_method_id" value="2">
+
+                                                        <div class="control_indicator"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="title">4. Payment Period</div>
+                                    <span style="display: block; width: 32px; height: 2px; margin: 10px 0; background: #007bfc;"></span>
+                                    <div class="billing-cycle row">
+
+                                        <div class="col-lg-3 col-sm-6 col-xs-12">
+
+
+                                            <div class="radio-content radio-period active" data-promo-code="" data-period="1">
+
+                                                <div class="radio-1">
+                                                    <label class="control control-radio clearfix">
+                                                        1 Month
+
+                                                        <input type="radio" name="billing_cycle" checked>
+
+                                                        <div class="control_indicator"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-sm-6 col-xs-12">
+
+
+                                            <div class="radio-content radio-period" data-period="3">
+
+                                                <div class="radio-1">
+                                                    <label class="control control-radio clearfix">
+                                                        3 Months
+
+                                                        <input type="radio" name="billing_cycle">
+
+                                                        <div class="control_indicator"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-sm-6 col-xs-12">
+
+
+                                            <div class="radio-content radio-period" data-period="6">
+
+                                                <div class="radio-1">
+                                                    <label class="control control-radio clearfix">
+                                                        6 Months
+
+                                                        <input type="radio" name="billing_cycle">
+
+                                                        <div class="control_indicator"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+
+                                <div class="title">5. Optional Add-ons</div>
+                                <span style="display: block; width: 32px; height: 2px; margin: 10px 0; background: #007bfc;"></span>
+                                <div class="addons-holder">
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-md-8 checkbox-1">
+                                                <label class="control control-checkbox">
+                                                    Auto Backups
+                                                    <input type="checkbox" name="addons[1]" data-price="5.00" class="backup" value="1">
+                                                    <div class="option-checkbox-indicator"></div>
+                                                </label>
+                                            </div>
+                                            <div class="col-md-4 clearfix backup-addon text-right">
+                                                <span class="option-price">&euro;<span class="addonPriceHolder"></span><span class="forPeriod"></span><span class="addonPricePerMonth"></span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+<div class="item">
+                                        <div class="row">
+                                            <div class="col-md-8 checkbox-1">
+                                                <label class="control control-checkbox">
+                                                    DDoS Protection
+                                                    <input type="checkbox" name="addons[0]" data-price="10.00" class="ddos" value="1">
+                                                    <div class="option-checkbox-indicator"></div>
+                                                </label>
+                                            </div>
+                                            <div class="col-md-4 clearfix ddos-addon text-right">
+                                                <span class="option-price">&euro;<span class="addonPriceHolder"></span><span class="forPeriod"></span><span class="addonPricePerMonth"></span> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="title">6. Server Hostname - FQDN</div>
+                                <span style="display: block; width: 32px; height: 2px; margin: 10px 0; background: #007bfc;"></span>
+                                <div class="form">
+                                    <div class="form-group hostname-holder">
+                                        <div class="row clearfix">
+                                            <div class="quantity-nav col-md-4 col-sm-5" style="display:none">
+                                                <label for="domain">Servers Qty:<br>
+                                                    <small>Order Multiple Servers with the same Parameters.</small>
+                                                </label>
+                                                <div class="form-group">
+                                                    <div class="input-group server-quantity">
+                                                        <span class="input-group-addon remove-server"><i class="fas fa-minus"></i></span>
+                                                        <input type="text" class="form-control" value="1 server" disabled="disabled">
+                                                        <span class="input-group-addon add-server"><i class="fas fa-plus"></i></span>
+                                                    </div>
+                                                    <div class="max-msg" style="font-size: 12px; margin-top: 5px; display: none;">
+                                                        You Reached the Maximum Number of Servers you can Order at once.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="input-holder col-md-8 col-sm-7">
+                                                <label for="hostname"><small><i class="fas fa-info-circle" style="color: #007bfc;"></i>&nbsp; A Hostname is a Human Readable name that corresponds to a Server. It can be the same as a Domain Name, but not always.</small></label>
+                                                <div class="input-wrapper">
+                                                    <input type="text" name="hostname" id="hostname" class="form-control" placeholder="Server #1" value="ubuntu-4GB" style="width:50%">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div id="deploy_ordersummary">
+                                    <div class="sidebar-info">
+                                        <div id="deploy-summary-info">
+                                            <!--<span style="display: block; color:#9da2a6; font-size:13px; font-weight: 700;">Servers Qty:</span>
+                                            <div style="border:1px solid #DCDEE0; border-radius:4px; display:flex; display:-webkit-flex; line-height:34px;">
+                                                <button class="input-group-addon remove-server instanceCountButton"><i class="fas fa-minus"></i></button>
+                                                <span style="display:block; width:40px; text-align:center; font-weight:bold; color:#1e88e5;" id="instanceCount">1</span>
+                                                <button class="input-group-addon add-server instanceCountButton"><i class="fas fa-plus"></i></button>
+                                            </div>-->
+                                        </div>
+                                        <div id="deploy-summary-price">
+                                            <span style="display: block; color:#9da2a6; font-size:13px; font-weight: 700;">Total Due Today:</span>
+                                            <div id="order_total_block">
+                                                <span id="order_total">
+                                                    &euro;<span class="totalPrice"></span>
+
+                                                    <span id="order_total_spacer"> (<span id="order_total_hr">21% IE VAT Included</span>)</span>                                                </span>
+                                            </div>
+                                        </div>
+                                        <a class="button confirmordersubmit saveOrder"><i class="fas fa-chevron-right"></i> Deploy Now</a>
+                                    </div>
+
+                                    <div class="additional-info">
+                                        <i class="fas fa-info-circle" style="color: #007bfc;"></i>&nbsp;</span>This Order Form is provided in a Secure Environment and to help Protect against Fraud your current IP Address (79.97.205.78) is being Logged.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.9/js/bootstrap-select.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/headhesive/1.2.4/headhesive.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.min.js"></script>
+        <script src="https://www.my.ssdcloud.io/assets/js/app.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+        <script src="https://www.ssdcloud.io/assets/js/app.min.js"></script>
+        <script>
+            $(function() {
+                $(".radio-content").click(function() {
+                    $(this).find("input:radio").prop("checked", !0)
+                });
+                window.swal = Swal.mixin({
+                    focusCancel: true,
+                });
+            });
+        </script>
+
+        <script>
+            $(function() {
+                var amount = '29.95',
+                    plan_id = '21',
+                    plan_label = "4GB",
+                    planChangedNewPrice = 0,
+                    promoPercentage, promoMinPeriod, payment_method_id = $('.radio-payment-methods.active').attr('data-id'),
+                    billing_cycle = parseInt("1"),
+                    isPartialPaid = false,
+                    promo_code = null,
+                    server_max_quantity = parseInt("10");
+                var os_id = '1',
+                    totalHostnames = '1',
+                    ips = '0',
+                    cpanel = '0',
+                    isPromo = '';
+                isPartialPaid = 'false';
+                isPartialPaid = isPartialPaid == 'true' ? true : false;
+                if (totalHostnames > 1) {
+                    $('.server-quantity input').val(totalHostnames + (totalHostnames == 1 ? " server" : " servers"));
+                    if (totalHostnames == server_max_quantity) {
+                        $('.max-msg').slideDown(500);
+                    }
+                }
+                if (os_id) {
+                    $('.os-menu .item').removeClass('selected');
+                    $('.os-menu .os-select option[value=' + os_id + ']').closest('.os-menu .item').addClass('selected');
+                    $('.item.selected .os-select').val(os_id).selectpicker('refresh');
+                }
+                if (ips == 1) {
+                    $(".ip_count_holder").show();
+                }
+                if (cpanel == 1) {
+                    $(".cpanel_license_holder").show();
+                }
+                $('.add-server').click(function() {
+                    var serverQuantityStr = $('.server-quantity input').val().split(" ");
+                    if (parseInt(serverQuantityStr[0]) < server_max_quantity) {
+                        var totalServers = parseInt(serverQuantityStr[0]) + 1;
+                        if (totalServers == server_max_quantity) {
+                            $('.max-msg').slideDown(500);
+                        }
+                        $('.server-quantity input').val(totalServers + " servers");
+                        var input = $('.hostname-holder .input-wrapper input').first().clone().css({
+                            marginTop: '10px',
+                            display: 'none'
+                        }).val(null).attr('placeholder', "Server" + " #" + totalServers);
+                        $('.hostname-holder .input-wrapper').append(input);
+                        updateServerNames();
+                        $('.hostname-holder .input-wrapper input').last().slideDown(500, function() {
+                            setTimeout(function() {
+                                recalculate();
+                            }, 100);
+                        });
+                    }
+                });
+                $('.remove-server').click(function() {
+                    var serverQuantityStr = $('.server-quantity input').val().split(" ");
+                    if (parseInt(serverQuantityStr[0]) > 1) {
+                        $('.max-msg').slideUp(500);
+                        $('.hostname-holder .input-wrapper input').last().slideUp(200, function() {
+                            $(this).remove();
+                            setTimeout(function() {
+                                recalculate();
+                            }, 100);
+                            updateServerNames();
+                            var totalServers = parseInt(serverQuantityStr[0]) - 1;
+                            $('.server-quantity input').val(totalServers + (totalServers == 1 ? " server" : " servers"));
+                        });
+                    }
+                });
+                $('.hostname-holder input').focusout(function() {
+                    //updateHash();
+                });
+                $('.remove-balance').click(function() {
+                    isPartialPaid = false;
+                    recalculate();
+                });
+                $(".domain_ssl").on("input", function() {
+                    $(".admin_email").find("option").each(function(i, k) {
+                        $(this).text($(this).attr("data-mail") + $(".domain_ssl").val());
+                    });
+                    $(".admin_email").selectpicker("refresh");
+                    //updateHash();
+                });
+                $("#domain").on("input", function() {
+                    $('.domain_ssl').val($("#domain").val());
+                    $(".admin_email").find("option").each(function(i, k) {
+                        $(this).text($(this).attr("data-mail") + $(".domain_ssl").val());
+                    });
+                    $(".admin_email").selectpicker("refresh");
+                    //updateHash();
+                });
+                if ($('.domain_ssl').val()) {
+                    $(".admin_email").find("option").each(function(i, k) {
+                        $(this).text($(this).attr("data-mail") + $(".domain_ssl").val());
+                    });
+                    $(".admin_email").selectpicker("refresh");
+                }
+                $('.radio-plans').click(function() {
+                    if ($(this).parent().hasClass('out-of-stock')) {
+                        return false;
+                    }
+                    var stock_amount = $(this).attr('data-stock');
+                    if (stock_amount != server_max_quantity) {
+                        updateServerQuantity(stock_amount);
+                    }
+                    $('.radio-plans').removeClass('active');
+                    $(this).addClass('active');
+                    amount = $(this).attr('data-amount');
+                    planChangedNewPrice = $(this).attr('data-amount');
+                    plan_id = parseInt($(this).attr('data-id'));
+                    var old_label = plan_label;
+                    plan_label = $(this).attr('data-label');
+                    updateServerNames(null, old_label);
+                    if (promo_code != null) {
+                        checkPromoCode(promo_code, false);
+                    } else {
+                        removePromoCode();
+                    }
+                    recalculate();
+                });
+
+                function updateServerQuantity(new_quantity) {
+                    server_max_quantity = new_quantity;
+                    var current_quantity = $('.server-quantity input').val().split(" ");
+                    current_quantity = parseInt(current_quantity[0]);
+                    if (new_quantity < current_quantity) {
+                        var i;
+                        for (i = 0; i < (current_quantity - new_quantity); i++) {
+                            $('.hostname-holder .input-wrapper input').last().remove();
+                        }
+                        if (!$('.max-msg').is(':visible')) {
+                            $('.max-msg').slideDown(500);
+                        }
+                        var totalServers = current_quantity - (current_quantity - new_quantity);
+                        $('.server-quantity input').val(totalServers + (totalServers == 1 ? " server" : " servers"));
+                    } else if (new_quantity != current_quantity) {
+                        $('.max-msg').slideUp(500);
+                    } else if (new_quantity != 1) {
+                        $('.max-msg').slideDown(500);
+                    }
+                    if ($('.quantity-nav').is(":hidden")) {
+                        $('.quantity-nav').addClass('col-md-4').addClass('col-sm-5').removeClass('hide');
+                        $('.input-holder').addClass('col-md-8').addClass('col-sm-7').removeClass('col-md-12');
+                    } else if (new_quantity == 1) {
+                        $('.quantity-nav').removeClass('col-md-4').removeClass('col-sm-5').addClass('hide');
+                        $('.input-holder').removeClass('col-md-8').removeClass('col-sm-7').addClass('col-md-12');
+                    }
+                }
+                $('.radio-payment-methods').click(function() {
+                    $('.radio-payment-methods').removeClass('active');
+                    $(this).addClass('active');
+                    payment_method_id = parseInt($(this).attr('data-id'));
+                    if (promo_code) {
+                        checkPromoCode(promo_code, false);
+                    }
+                    recalculate();
+                });
+                $('.radio-period').on('click', function() {
+                    var old_plan_promo = $('.radio-period.active').attr('data-promo-code');
+                    $('.radio-period').removeClass('active');
+                    $(this).addClass('active');
+                    billing_cycle = parseInt($(this).attr('data-period'));
+                    if ($(this).attr('data-promo-code') && ($(this).attr('data-promo-code') != old_plan_promo || !promo_code)) {
+                        $.ajax({
+                            type: "POST",
+                            dataType: "json",
+                            url: "#",
+                            data: {
+                                promo_period: $(this).attr('data-promo-code'),
+                            },
+                            success: function(response) {
+                                if (response.success) {
+                                    promo_period = response.promo_period;
+                                    var toggleButtons = true;
+                                    if (promo_code) {
+                                        toggleButtons = false
+                                    }
+                                    applyPromoCodes(toggleButtons);
+                                }
+                            },
+                        });
+                    } else if (!$(this).attr('data-promo-code') && old_plan_promo != null && promo_code != null && old_plan_promo == promo_code) {
+                        removePromoCode();
+                    } else if (promo_code) {
+                        checkPromoCode(promo_code, false);
+                    } else {
+                        recalculate(false);
+                    }
+                });
+                $('.os-menu .item').on("click", function() {
+                    var old_os = $('.os-menu .item.selected').attr('data-name');
+                    $('.os-menu .item').removeClass("selected");
+                    $(this).addClass("selected");
+                    updateServerNames(old_os);
+                    if ($("input[name='addons[3]']").is(':checked') && $('.os-menu .item.selected').attr('data-name') == 'centos') {
+                        $(".cpanel-error").slideUp(500);
+                    } else if ($("input[name='addons[3]']").is(':checked') && $('.os-menu .item.selected').attr('data-name') != 'centos') {
+                        $(".cpanel-error").slideDown(500);
+                    }
+                    //updateHash();
+                });
+
+                function updateServerNames(old_os = null, old_plan = null) {
+                    $('.hostname-holder .input-wrapper input').each(function(i, input) {
+                        var currentPlanLabel = plan_label;
+                        var currentOS = $('.os-menu .item.selected').attr('data-name');
+                        var newDefaultLabel = currentOS + '-' + plan_label;
+                        var newCpanelLabel = 'cpanel.centos.org';
+                        if ($("input[name='addons[3]']").is(':checked')) {
+                            var defaultLabel = currentOS + '-' + plan_label;
+                            var oldOsLabel = old_os + '-' + plan_label;
+                            if ($(input).val() == newCpanelLabel || $(input).val() == newCpanelLabel + '-' + (i + 1) || $(input).val() == defaultLabel || $(input).val() == defaultLabel + '-' + (i + 1) || !$(input).val() || $(input).val() == oldOsLabel || $(input).val() == oldOsLabel + '-' + (i + 1)) {
+                                $(input).val(newCpanelLabel);
+                            }
+                        } else {
+                            if ($('.hostname-holder .input-wrapper input').length > 1) {
+                                newDefaultLabel += '-' + (i + 1);
+                            }
+                            if (old_os) {
+                                currentOS = old_os;
+                            }
+                            if (old_plan) {
+                                currentPlanLabel = old_plan;
+                            }
+                            var currentLabel = currentOS + '-' + currentPlanLabel;
+                            if ($(input).val() == currentLabel || $(input).val() == currentLabel + '-' + (i + 1) || $(input).val() == newCpanelLabel || $(input).val() == newCpanelLabel + '-' + (i + 1) || !$(input).val()) {
+                                $(input).val(newDefaultLabel);
+                            }
+                        }
+                    });
+                }
+                $(".removePromo").on("click", function(e) {
+                    e.preventDefault();
+                    removePromoCode();
+                });
+                $(".addPromo").on("click", function(e) {
+                    e.preventDefault();
+                    var promoInput = document.createElement("input");
+                    promoInput.classList.add('swall-input');
+                    promoInput.id = "promoCodeModal";
+                    window.swal.fire({
+                        title: "Please enter the Promo Code in the Field below:",
+                        html: promoInput,
+                        customClass: 'swal-custom',
+                        showCancelButton: true,
+                        cancelButtonText: 'Cancel',
+                        confirmButtonText: 'Validate',
+                    }).then((result) => {
+                        var promoCode = $("#promoCodeModal").val();
+                        if (result.value) {
+                            $.ajax({
+                                type: "POST",
+                                dataType: "json",
+                                //url: "/getPromo",
+                                data: {
+                                    promo_code: promoCode,
+                                    validate: 1,
+                                    period: billing_cycle,
+                                    plan_id: plan_id,
+                                    payment_method_id: payment_method_id
+                                },
+                                success: function(response) {
+                                    if (response.success) {
+                                        custom_promo = {
+                                            code: response.code,
+                                            percentage: response.percentage,
+                                            min_period: response.min_period,
+                                        };
+                                        applyPromoCodes(true);
+                                    }
+                                },
+                                error: function(data) {
+                                    var errors = JSON.parse(data.responseText);
+                                    var errorMessage = "";
+                                    for (var m in errors) {
+                                        errorMessage += errors[m];
+                                    }
+                                    window.swal.fire({
+                                        title: "Oops...",
+                                        text: errorMessage,
+                                        type: "error"
+                                    });
+                                },
+                            });
+                        }
+                    });
+                });
+                var aff_promo = null,
+                    promo_period = null,
+                    custom_promo = null;
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    //url: "/getPromo",
+                    data: {
+                        promo_period: $('.radio-period.active').attr('data-promo-code'),
+                        aff_hash: '',
+                        promo_code: isPromo,
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            promo_period = response.promo_period;
+                            aff_promo = response.aff_promo;
+                            custom_promo = response.custom_promo;
+                            applyPromoCodes();
+                        }
+                    },
+                });
+
+                function applyPromoCodes(toggleButtons = true) {
+                    if (custom_promo && $('.radio-period[data-promo-code=' + custom_promo.code + ']').length) {
+                        custom_promo = null;
+                    }
+                    if (custom_promo && aff_promo && promo_period && custom_promo.percentage > aff_promo.percentage && custom_promo.percentage > promo_period.percentage) {
+                        checkPromoCode(custom_promo.code, toggleButtons);
+                    } else if (custom_promo && aff_promo && custom_promo.percentage > aff_promo.percentage) {
+                        checkPromoCode(custom_promo.code, toggleButtons);
+                    } else if (custom_promo && promo_period && custom_promo.percentage > promo_period.percentage) {
+                        checkPromoCode(custom_promo.code, toggleButtons);
+                    } else if (aff_promo && promo_period && aff_promo.percentage >= promo_period.percentage) {
+                        checkPromoCode(aff_promo.code, toggleButtons);
+                    } else if (promo_period) {
+                        checkPromoCode(promo_period.code, toggleButtons);
+                    } else if (aff_promo) {
+                        checkPromoCode(aff_promo.code, toggleButtons);
+                    } else if (custom_promo) {
+                        checkPromoCode(custom_promo.code, toggleButtons);
+                    }
+                }
+
+                function removePromoCode(toggleButtons = true) {
+                    promoPercentage = undefined;
+                    promoMinPeriod = 0;
+                    promo_code = null;
+                    custom_promo = null;
+                    if (toggleButtons) {
+                        togglePromoButtons();
+                        $(".promoPriceHolder").slideUp(500);
+                        $(".promoPriceHolderBefore").slideUp(500);
+                    }
+                    updatePlanPrices();
+                    recalculate();
+                }
+                var checkingCode = false;
+
+                function checkPromoCode(promoCode, toggleButtons = true) {
+                    if (!promoCode) {
+                        return false;
+                    }
+                    if (!checkingCode) {
+                        checkingCode = true;
+                        var data = {
+                                promo_code: promoCode,
+                                period: billing_cycle,
+                                plan_id: plan_id,
+                                payment_method_id: payment_method_id
+                            },
+                            button = $('.addPromo');
+                        $.ajax({
+                            type: "POST",
+                            dataType: "json",
+                            url: "/order/checkPromo",
+                            data: data,
+                            beforeSend: function() {
+                                if (toggleButtons) {
+                                    button.attr("disabled", 'disabled');
+                                    button.html('<div class="ld ld-ring ld-spin" style="width: 13px; height: 13px;"></div>');
+                                }
+                            },
+                            success: function(data) {
+                                if (data.success) {
+                                    promo_code = data.code;
+                                    promoPercentage = data.percentage;
+                                    promoMinPeriod = data.min_period;
+                                    $('.promo-code-holder .promo-code span').text(promo_code);
+                                    $(".promoCodeMinPeriod").text(promoMinPeriod);
+                                    $(".promoCodePercentage").text(promoPercentage.toFixed(0) + "%");
+                                    if (toggleButtons) {
+                                        togglePromoButtons();
+                                    }
+                                    recalculate();
+                                    updatePlanPrices()
+                                }
+                            },
+                            error: function(data) {
+                                if (!toggleButtons && promo_code) {
+                                    removePromoCode();
+                                } else {
+                                    recalculate();
+                                }
+                                if (custom_promo) {
+                                    custom_promo = null;
+                                }
+                                var errors = JSON.parse(data.responseText);
+                                var errorMessage = "";
+                                for (var m in errors) {
+                                    errorMessage += errors[m];
+                                }
+                                window.swal.fire({
+                                    title: "Oops...",
+                                    text: errorMessage,
+                                    type: "error"
+                                });
+                            },
+                            complete: function() {
+                                checkingCode = false;
+                                if (toggleButtons) {
+                                    button.removeAttr("disabled");
+                                    button.html('<span>Apply promo code</span>');
+                                }
+                            },
+                        });
+                    }
+                }
+
+                function togglePromoButtons() {
+                    if ($(window).width() > 769) {
+                        if (!promo_code) {
+                            $('.promo-code-holder .moving-part').stop().animate({
+                                left: 0,
+                            }, 200);
+                            $('.promo-code-holder .moving-part .promo-code').stop().animate({
+                                opacity: 0,
+                            }, 150, function() {
+                                $(this).hide();
+                            });
+                            $('.promo-code-holder .moving-part .removePromo').stop().animate({
+                                opacity: 0,
+                            }, 150, function() {
+                                $(this).hide();
+                            });
+                        } else {
+                            $('.promo-code-holder .moving-part').stop().animate({
+                                left: '-150px',
+                            }, 200);
+                            $('.promo-code-holder .moving-part .promo-code').stop().show().animate({
+                                opacity: 1,
+                            }, 150);
+                            $('.promo-code-holder .moving-part .removePromo').stop().show().animate({
+                                opacity: 1,
+                            }, 150);
+                        }
+                    } else {
+                        console.log(promo_code);
+                        if (!promo_code) {
+                            $('.promo-code-holder .moving-part .removePromo').fadeOut(250, function() {
+                                $('.promo-code-holder .moving-part .promo-code').fadeOut(250, function() {
+                                    $('.promo-code-holder .moving-part .addPromo').fadeIn(250);
+                                });
+                            });
+                        } else {
+                            $('.promo-code-holder .moving-part .addPromo').fadeOut(250, function() {
+                                $('.promo-code-holder .moving-part .promo-code').fadeIn(250, function() {
+                                    $('.promo-code-holder .moving-part .removePromo').fadeIn(250);
+                                });
+                            });
+                        }
+                    }
+                }
+
+                function updatePlanPrices() {
+                    $('.radio-content').each(function(i, value) {
+                        if (promoPercentage) {
+                            var price = parseFloat($(this).find('.price').attr('data-default')).toFixed(2);
+                            var newPrice = (price - (price * (promoPercentage / 100))).toFixed(2);
+                            $(this).find('.price span').html(newPrice.toString().replace(".00", ""));
+                            //$(this).find('.old-price span').html(price.toString().replace(".00", ""));
+                            //$(this).find('.old-price').slideDown(500);
+                        } else {
+                            $(this).find('.price span').html($(this).find('.price').attr('data-default'));
+                            //$('.old-price').slideUp(500);
+                        }
+                    });
+                }
+
+                function recalculate(checkPromoCodes = true) {
+                    var addonsTotalPrice = 0;
+                    var serverQuantity = 1;
+                    if ($('.server-quantity input').val()) {
+                        var serverQuantityStr = $('.server-quantity input').val().split(" ");
+                        serverQuantity = parseInt(serverQuantityStr[0]);
+                    }
+                    if (checkPromoCodes) {
+                        if (promo_code && aff_promo && aff_promo.percentage > promoPercentage) {
+                            checkPromoCode(aff_promo.code, false)
+                        } else if (promo_code && promo_period && promo_period.percentage > promoPercentage) {
+                            checkPromoCode(promo_period.code, false);
+                        } else if (billing_cycle < promoMinPeriod) {
+                            removePromoCode();
+                        }
+                    }
+                    if (planChangedNewPrice == 0) {
+                        amount = '29.95';
+                    } else {
+                        amount = planChangedNewPrice;
+                    }
+                    var promoPrice = 0;
+                    var tax_rate = parseFloat('1.21');
+                    amount = amount * billing_cycle * serverQuantity;
+                    if (promoPercentage !== undefined) {
+                        promoPrice = ((amount * promoPercentage) / 100).toFixed(2);
+                        amount = (amount - promoPrice).toFixed(2);
+                        promoPrice = (promoPrice * tax_rate).toFixed(2);
+                        var promoWithoutVat = promoPrice / tax_rate;
+                        var oldPrice = ((parseFloat(amount) + parseFloat(promoWithoutVat)) * tax_rate).toFixed(2);
+                        var oldPricePerMonth = (oldPrice / billing_cycle).toFixed(2);
+                        $(".promoPrice2").text(promoPrice);
+                        $(".promoPriceHolder").slideDown(500);
+                        $(".promoPriceBefore").text(oldPrice);
+                        $(".promoPriceHolderBefore").slideDown(500);
+                        if (billing_cycle != 1) {
+                            $(".perMonthOldPrice").text('(€' + oldPricePerMonth + '/m.)');
+                            $(".perMonthOldPrice").show();
+                        }
+                    }
+                    var amountPerMonth = (amount * tax_rate / billing_cycle).toFixed(2);
+                    if (billing_cycle != 1) {
+                        $(".forPeriod").text('/' + billing_cycle + 'm.');
+                        $(".forPeriod").show();
+                    } else {
+                        $(".forPeriod").hide();
+                    }
+                    var promo_label = "";
+                    if (promoPercentage !== undefined) {
+                        promo_label = " (-" + promoPercentage.toFixed(0) + "%)";
+                    }
+                    $(".perMonthPrice").text('€' + amountPerMonth + '' + promo_label);
+                    if ($("input[name='addons[3]']").is(":checked")) {
+                        var cpanel = 1;
+                        if ($(".os-menu .item.selected").attr("data-name") == "centos") {
+                            $(".cpanel-error").slideUp(500);
+                        } else {
+                            $(".cpanel-error").slideDown(500);
+                        }
+                    } else {
+                        $(".cpanel-error").slideUp(500);
+                    }
+                    if ($("input[name='addons[0]']").is(":checked")) {
+                        var ddos = 1;
+                    }
+                    if ($("input[name='addons[1]']").is(":checked")) {
+                        var backup = 1;
+                    }
+                    if ($("input[name='addons[2]']").is(":checked")) {
+                        var ip = 1;
+                    }
+                    if ($("input[name='addons[4]']").is(":checked")) {
+                        var ssl = 1;
+                        $(".ssl_options").slideDown(500);
+                    } else {
+                        $(".ssl_options").slideUp(500);
+                    }
+                    var cpanel_unit_price = $(".cpanel").attr("data-price") * serverQuantity;
+                    var ddos_unit_price = $(".ddos").attr("data-price") * serverQuantity;
+                    var backup_unit_price = $(".backup").attr("data-price") * serverQuantity;
+                    var ssl_unit_price = $(".addon-ssl").attr("data-price") * serverQuantity;
+                    var ips_count = $(".ip_count").selectpicker('val');
+                    var ip_unit_price = $(".addon-ip").attr("data-price") * serverQuantity;
+                    if (cpanel == 1) {
+                        if ($(".cpanel_license option:selected").attr('data-price') != "" || $(".cpanel_license option:selected").attr('data-price') != undefined) {
+                            cpanel_unit_price = $(".cpanel_license option:selected").attr('data-price') * serverQuantity;
+                        }
+                    }
+                    if (cpanel == 1) {
+                        amount = parseFloat(amount) + cpanel_unit_price * billing_cycle;
+                        addonsTotalPrice = addonsTotalPrice + cpanel_unit_price * billing_cycle;
+                    }
+                    if (ddos == 1) {
+                        amount = parseFloat(amount) + ddos_unit_price * billing_cycle;
+                        addonsTotalPrice = addonsTotalPrice + ddos_unit_price * billing_cycle;
+                    }
+                    if (backup == 1) {
+                        amount = parseFloat(amount) + backup_unit_price * billing_cycle;
+                        addonsTotalPrice = addonsTotalPrice + backup_unit_price * billing_cycle;
+                    }
+                    $(".cPanel-addon .addonPriceHolder").text((cpanel_unit_price * tax_rate * billing_cycle).toFixed(2));
+                    $(".ddos-addon .addonPriceHolder").text((ddos_unit_price * tax_rate * billing_cycle).toFixed(2));
+                    $(".backup-addon .addonPriceHolder").text((backup_unit_price * tax_rate * billing_cycle).toFixed(2));
+                    if (billing_cycle != 1) {
+                        $(".cPanel-addon .addonPricePerMonth").text(' (€' + (cpanel_unit_price * tax_rate).toFixed(2) + '/m.)');
+                        $(".ddos-addon .addonPricePerMonth").text(' (€' + (ddos_unit_price * tax_rate).toFixed(2) + '/m.)');
+                        $(".backup-addon .addonPricePerMonth").text(' (€' + (backup_unit_price * tax_rate).toFixed(2) + '/m.)');
+                    } else {
+                        $(".cPanel-addon .addonPricePerMonth").text('/m.');
+                        $(".ddos-addon .addonPricePerMonth").text('/m.');
+                        $(".backup-addon .addonPricePerMonth").text('/m.');
+                    }
+                    if (ip == 1) {
+                        amount = parseFloat(amount) + ((ips_count * ip_unit_price) * billing_cycle);
+                        addonsTotalPrice = addonsTotalPrice + ((ips_count * ip_unit_price) * billing_cycle);
+                    } else {
+                        ips_count = 0;
+                    }
+                    if (ips_count == 0) {
+                        var tmp_ips_count = 1;
+                    } else {
+                        var tmp_ips_count = ips_count;
+                    }
+                    $(".ip-addon .addonPriceHolder").text(((tmp_ips_count * ip_unit_price * tax_rate) * billing_cycle).toFixed(2));
+                    if (billing_cycle != 1) {
+                        $(".ip-addon .addonPricePerMonth").text(' (€' + (ip_unit_price * tmp_ips_count * tax_rate).toFixed(2) + '/m.)');
+                    } else {
+                        $(".ip-addon .addonPricePerMonth").text('/m.');
+                    }
+                    if (ssl == 1) {
+                        amount = parseFloat(amount) + parseFloat(ssl_unit_price);
+                        addonsTotalPrice = parseFloat(addonsTotalPrice) + parseFloat(ssl_unit_price);
+                    }
+                    $(".ssl-addon .addonPriceHolder").text(((ssl_unit_price * tax_rate)).toFixed(2));
+                    $(".ssl-addon .forPeriod").show();
+                    if (billing_cycle <= 12) {
+                        $(".ssl-addon .forPeriod").text(' for 1 year');
+                    } else {
+                        $(".ssl-addon .addonPriceHolder").text(((ssl_unit_price * tax_rate * 2)).toFixed(2));
+                        if (ssl == 1) {
+                            addonsTotalPrice = parseFloat(addonsTotalPrice) + parseFloat(ssl_unit_price);
+                            amount = parseFloat(amount) + parseFloat(ssl_unit_price);
+                        }
+                        $(".ssl-addon .forPeriod").text(' for 2 years');
+                    }
+                    if (ip === 1 || cpanel === 1 || ssl == 1 || ddos === 1 || backup === 1) {
+                        $(".addonsTotal").removeClass("hidden");
+                        addonsTotalPrice = addonsTotalPrice * tax_rate;
+                        $(".addonsTotal .addonPriceHolder").text(addonsTotalPrice.toFixed(2));
+                        if (billing_cycle != 1) {
+                            $(".addonsTotal .addonPricePerMonth").text(' (€' + (addonsTotalPrice / billing_cycle).toFixed(2) + '/m.)');
+                        } else {
+                            $(".addonsTotal .addonPricePerMonth").text('/m.');
+                        }
+                    } else {
+                        $(".addonsTotal").addClass("hidden");
+                    }
+                    if ($("input[name='addons[3]']").is(":checked")) {
+                        $(".wpo-addon").removeClass("hidden");
+                    } else {
+                        $(".wpo-addon").addClass("hidden");
+                    }
+                    amount = (amount * tax_rate).toFixed(2);
+                    if (billing_cycle != 1) {
+                        $(".forPeriodFinal").text('/' + billing_cycle + 'm.');
+                        $(".forPeriodFinal").show();
+                        $(".perMonthPriceFinal").text('(€' + ((amount - (ssl_unit_price * tax_rate)) / billing_cycle).toFixed(2) + '/m.)');
+                        $(".perMonthPriceFinal").show();
+                    } else {
+                        $(".perMonthPriceFinal").hide();
+                        $(".forPeriodFinal").hide();
+                    }
+                    if (payment_method_id == 8) {
+                        $('.remove-balance').hide();
+                    }
+                    if (payment_method_id == 8 || isPartialPaid == true) {
+                        var balance = '0';
+                        balance = (balance * tax_rate).toFixed(2);
+                        var newPrice = 0;
+                        if (amount - balance > 0) {
+                            newPrice = amount - balance;
+                        }
+                        $('.balancePrice .balance-price span').html('&euro;' + (amount - newPrice).toFixed(2) + '');
+                        $(".totalPrice").text(newPrice.toFixed(2));
+                        $('.balancePrice').slideDown(500);
+                    } else {
+                        $('.balancePrice').slideUp(500);
+                        $(".totalPrice").text(amount);
+                    }
+                    if (ssl == 1) {
+                        if (billing_cycle <= 12) {
+                            $(".addonPriceHolder  .addonPricePerMonth").text('/12m.');
+                            $(".addonPriceHolder  .forPeriod").hide();
+                        }
+                    }
+                    //updateHash();
+                }
+                $("input[name='addons[0]']").change(function() {
+                    recalculate();
+                });
+                $("input[name='addons[1]']").change(function() {
+                    recalculate();
+                });
+                $(".addon-ip").change(function() {
+                    if ($(this).is(":checked")) {
+                        $(".ip_count_holder").slideDown(500);
+                    } else {
+                        $(".ip_count_holder").slideUp(500);
+                    }
+                    recalculate();
+                });
+                $("input[name='addons[3]']").change(function() {
+                    if ($(this).is(":checked")) {
+                        var os = $('.os-menu .item.selected').attr('data-name');
+                        $('.os-menu .item').removeClass("selected");
+                        $('.os-menu .item[data-name="centos"]').addClass('selected');
+                        $('.item.selected .os-select').val($('.item.selected .os-select option:last').attr('value')).selectpicker('refresh');
+                        $(".cpanel_license_holder").slideDown(500);
+                        updateServerNames(os);
+                    } else {
+                        $(".cpanel_license_holder").slideUp(500);
+                        updateServerNames();
+                    }
+                    setTimeout(function() {
+                        recalculate();
+                    }, 150);
+                });
+                $('.cpanel_license').change(function() {
+                    recalculate();
+                });
+                $(".addon-ssl").change(function() {
+                    recalculate();
+                });
+                $(".ip_count").change(function() {
+                    recalculate();
+                });
+                $("input[name='addons[3]']").change(function() {
+                    recalculate();
+                });
+                $('.saveOrder').click(function() {
+                    recalculate();
+                    var formData = getFormData();
+                    var button = $(this);
+                    validate(formData, button);
+                    return false;
+                });
+
+                function validate(formData, button) {
+                    $.ajax({
+                        type: "POST",
+                        url: "https://www.my.ssdcloud.io/deploy/vps/provision/",
+                        data: formData,
+                        beforeSend: function() {
+                            button.attr("disabled", 'disabled');
+                            button.html('<div class="ld ld-ring ld-spin"></div>');
+                        },
+                        success: function(data) {
+                            window.location.href = "https://www.my.ssdcloud.io/order/detail/" + data.id + "/";
+                            if (!data.isPaid) {
+                                Cookies.set('order-created', 1);
+                            }
+                            if (data.isAff) {
+                                Cookies.set('aff_hash', '', {
+                                    expires: -1,
+                                    path: '/'
+                                });
+                            }
+                        },
+                        error: function(data) {
+                            button.removeAttr("disabled");
+                            button.text('Continue');
+                            var errors = JSON.parse(data.responseText);
+                            var errorMessage = "";
+                            for (var m in errors) {
+                                errorMessage += errors[m];
+                            }
+                            window.swal.fire({
+                                title: "Oops...",
+                                text: errorMessage,
+                                type: "error"
+                            });
+                        },
+                        dataType: "json"
+                    });
+                }
+
+                function getFormData() {
+                    var cpanel = 0;
+                    var ip = 0;
+                    var ddos = 0;
+                    var backup = 0;
+                    if ($("input[name='addons[3]']").is(":checked")) {
+                        var cpanel = 1;
+                    }
+                    if ($("input[name='addons[2]']").is(":checked")) {
+                        var ip = 1;
+                    }
+                    if ($("input[name='addons[0]']").is(":checked")) {
+                        var ddos = 1;
+                    }
+                    if ($("input[name='addons[1]']").is(":checked")) {
+                        var backup = 1;
+                    }
+                    var formData = {
+                        os: $(".os-menu .item.selected .os-select").selectpicker('val'),
+                        period: billing_cycle,
+                        addons: {
+                            'ddos': ddos,
+                            'backup': backup
+                        },
+                        plan_id: plan_id,
+                        payment_method_id: payment_method_id,
+                        //ip_count: $(".ip_count").selectpicker("val"),
+                        //cpanel_license_type: $(".cpanel_license").selectpicker('val'),
+                        //promo_code: promo_code,
+                        //hostname: $('input[name^=hostname]').map(function(idx, elem) {
+                        //    return $(elem).val();
+                        //}).get(),
+                        hostname: $("#hostname").val(),
+                        amount: amount,
+                        hash: $('#hash').val(),
+                    };
+                    formData.isPartialPaid = isPartialPaid;
+                    return formData
+                }
+                var isRunning = false;
+
+                /*function updateHash() {
+                    if (!isRunning) {
+                        isRunning = true;
+                        $.ajax({
+                            type: "POST",
+                            data: getFormData(),
+                            success: function(data) {
+                                var hash = '';
+                                if (data.hash) {
+                                    hash = data.hash;
+                                    $('#hash').val(data.hash);
+                                }
+                            },
+                            complete: function() {
+                                setTimeout(function() {
+                                    isRunning = false;
+                                }, 1);
+                            },
+                            dataType: "json"
+                        });
+                    }
+                }*/
+                recalculate();
+            });
+        </script>
+    </body>
+</html>
