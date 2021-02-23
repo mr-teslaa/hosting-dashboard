@@ -13,7 +13,7 @@
         <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" rel="stylesheet" />
         <link href="//cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
         <link href="https://www.ssdcloud.io/assets/css/app.min.css" rel="stylesheet" />
-        <link href="/assets/css/style.css" rel="stylesheet" />
+        <link href="/assets/css/test.css" rel="stylesheet" />
         <link href="https://www.ssdcloud.io/assets/images/favicon.png" type="image/png" rel="icon" />
         <link href="https://www.my.ssdcloud.io/" rel="canonical" />
         <script src="//copypoison.com/cp.js" async></script>
@@ -246,6 +246,29 @@
                         </div>
                     </div>
                 </div-->
+
+                <script>
+                    // SHOW MENU
+                    const showMenu = (toggleId, navbarId, bodyId) =>{
+                        const toggle = document.getElementById(toggleId),
+                        navbar = document.getElementById(navbarId),
+                        bodypadding = document.getElementById(bodyId)
+
+                        if(toggle && navbar){
+                            toggle.addEventListener('click', ()=>{
+                                // APARECER MENU
+                                navbar.classList.toggle('show')
+                                // ROTATE TOGGLE
+                                toggle.classList.toggle('rotate')
+                                // PADDING BODY
+                                bodypadding.classList.toggle('expander')
+                            })
+                        }
+                    }
+                    showMenu('nav-toggle','navbar','body')
+                </script>
+
+
             </header>
 
             <main class="main-content bg-minimal ml__sidebar">
@@ -586,23 +609,20 @@
         <script>
 
             // SHOW MENU
-            const showMenu = (toggleId, navbarId, bodyId) => {
-                const toggle = document.getElementById(toggleId),
-                    navbar = document.getElementById(navbarId),
-                    bodypadding = document.getElementById(bodyId)
+            const showMenu = (toggleId, navbarId) => {
+                const toggle = document.querySelector(toggleId),
+                    navbar = document.querySelector(navbarId)
+                console.log(toggle)
+                console.log(navbar)
 
-                if (toggle && navbar) {
+                if(toggle && navbar) {
                     toggle.addEventListener('click', () => {
-                        // APARECER MENU
-                        navbar.classList.toggle('show')
-                        // ROTATE TOGGLE
-                        toggle.classList.toggle('rotate')
-                        // PADDING BODY
-                        bodypadding.classList.toggle('expander')
+                        navbarId.classList.toggle('show')
                     })
                 }
             }
-            showMenu('nav-toggle', 'navbar', 'body')
+
+            showMenu('nav-toggle', 'navbar')
 
         </script>
 
