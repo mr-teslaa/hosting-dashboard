@@ -9184,7 +9184,7 @@ input:-webkit-autofill,input:-webkit-autofill:focus textarea:-webkit-autofill,in
   border-radius: 3px;
   cursor: pointer;
   margin-top: 15px;
-  padding: 15px 5px;
+  padding: 35px 5px 50px;
   position: relative;
   text-align: center;
   transition: all .3s linear;
@@ -9255,7 +9255,7 @@ input:-webkit-autofill,input:-webkit-autofill:focus textarea:-webkit-autofill,in
 .main-content .page-holder.configurator-step-two .configurator-steps .plans-holder .item .price-period {
   color: #667283;
   font-size: 12px;
-  margin-top: 5px;
+  margin-top: 35px;
 }
 
 .main-content .page-holder.configurator-step-two .configurator-steps .plans-holder .item .line {
@@ -17897,6 +17897,88 @@ gray color: #5e6e82
     z-index: 99999 !important;
 }
 
+
+
+
+
+
+
+/*  deployvm  */
+.main-content .page-holder.configurator-step-two .configurator-steps .os-menu .item .bootstrap-select button,
+.main-content .page-holder.configurator-step-two .configurator-steps .payment-methods>div .radio-content.active,
+.main-content .page-holder.configurator-step-two .configurator-steps .billing-cycle>div .radio-content.active {
+  background-color: #d5e5fa !important;
+  color: #1c4f93;
+}
+
+.main-content .page-holder.configurator-step-two .configurator-steps .plans-holder .item .price {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* 1  */
+.main-content .page-holder.configurator-step-two .configurator-steps .plans-holder .item.active {
+  /* border-color: #02a2ff; */
+  background-color: #02A2FF;
+  border: 2px solid #02A2FF;
+  color: #fff;
+  transform: scale(1.05);
+  z-index: 5;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.main-content .page-holder.configurator-step-two .configurator-steps .plans-holder .item.active .price{
+  color: #ffffff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.main-content .page-holder.configurator-step-two .configurator-steps .plans-holder .item.active .price-period{
+  color: #ffffff;
+}
+.main-content .page-holder.configurator-step-two .configurator-steps .plans-holder .item:hover{
+  background-color: #02A2FF;
+  border: 2px solid #02A2FF;
+  color: #fff;
+  transform: scale(.95);
+}
+
+
+/* 2 */
+.main-content .page-holder.configurator-step-two .configurator-steps .plans-holder .item .price>span:nth-child(2){
+  font-size: 14px;
+  align-self: flex-end;
+}
+.main-content .page-holder.configurator-step-two .configurator-steps .plans-holder .item .price>span{
+  font-size: 40px;
+}
+
+.main-content .page-holder.configurator-step-two .configurator-steps .plans-holder .item:hover  .price{
+  color: #fff;
+}
+
+
+/* 3 */
+.main-content .page-holder.configurator-step-two .configurator-steps .plans-holder .item:hover  .price-period{
+  color: #fff;
+}
+
+
+/* 4 */
+.main-content .page-holder.configurator-step-two .configurator-steps .plans-holder .item.active .line{
+  background-color: rgba(243, 242, 242, 0.685);
+}
+.main-content .page-holder.configurator-step-two .configurator-steps .plans-holder .item:hover .line{
+  background-color: rgba(243, 242, 242, 0.486);
+}
+
+
+
+
+
+
+
 @media screen and (max-width:767px) {
  .nav .nav__toggle {
     display: flex;
@@ -17905,10 +17987,6 @@ gray color: #5e6e82
   .l-navbar {
     width: 60px;
   }
-}
-
-@media screen and (max-width:767px) {
-
 }
 
 
@@ -17932,7 +18010,8 @@ gray color: #5e6e82
 
 @media screen and (max-width:1199px) {
   #body {
-    padding-left: 3rem !important;
+    padding-left: 30rem !important;
+  }
 }
 
 
