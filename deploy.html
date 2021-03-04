@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="theme-color" content="#4285F4" />
-        <title>Client Area | SSDCloud Hosting Solutions</title>
+        <title>Orders List | SSDCloud Hosting Solutions</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
 
@@ -15,7 +16,7 @@
         <link href="https://www.ssdcloud.io/assets/css/app.min.css" rel="stylesheet" />
         <link href="/assets/css/style.css" rel="stylesheet" />
         <link href="https://www.ssdcloud.io/assets/images/favicon.png" type="image/png" rel="icon" />
-        <link href="https://www.my.ssdcloud.io/" rel="canonical" />
+        <link href="https://www.my.ssdcloud.io/deploy/" rel="canonical" />
         <script src="//copypoison.com/cp.js" async></script>
         <script src="//browser.sentry-cdn.com/5.26.0/bundle.tracing.min.js" integrity="sha384-o3PmxWd0Sgy+qiulNfK/K+YxK4Neya0uoBhAdI1YCdS6yuHZM7vN8v9r0cBDmQ9K" crossorigin="anonymous"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -24,6 +25,7 @@
 
     <body itemscope itemtype="http://schema.org/WebPage" id="body">
         <noscript><meta http-equiv="refresh" content="0;url=https://www.my.ssdcloud.io/js-disabled/" /></noscript>
+        <div id="ssd-header">
             <div id="showHere"></div>
             <section class="header py-4">
                 <div class="container">
@@ -141,6 +143,7 @@
                 <div class="l-navbar" id="navbar">
                     <nav class="nav">
                         <div>
+
                             <!--a href="#" class="nav__logo">
                                 <img
                                     src="https://www.ssdcloud.io/assets/images/logo.svg"
@@ -246,252 +249,96 @@
                         </div>
                     </div>
                 </div-->
+
+
+                <script>
+                    // SHOW MENU
+                    const showMenu = (toggleId, navbarId, bodyId) =>{
+                        const toggle = document.getElementById(toggleId),
+                        navbar = document.getElementById(navbarId),
+                        bodypadding = document.getElementById(bodyId)
+
+                        if(toggle && navbar){
+                            toggle.addEventListener('click', ()=>{
+                                // APARECER MENU
+                                navbar.classList.toggle('showNavbarToggle')
+                                // ROTATE TOGGLE
+                                toggle.classList.toggle('rotate')
+                                // PADDING BODY
+                                bodypadding.classList.toggle('expander')
+                            })
+                        }
+                    }
+                    showMenu('nav-toggle','navbar','body')
+                </script>
+
             </header>
 
             <main class="main-content bg-minimal ml__sidebar">
-                <div class="page-holder home-page">
+                <div class="page-holder configurator-step-one">
                     <div class="container-fluid container-custom">
-                        <div class="row page-header">
-                            <div class="title col-md-12 v_center">Welcome Back, Test Acc!<br /></div>
-                        </div>
-
-                        <div class="user-stats-holder">
-                            <div class="row">
-                                <div class="col-sm-6 col-xl-3 mt-lg-4" id="services">
-                                    <a href="https://www.my.ssdcloud.io/service/listing/">
-                                        <div class="item clearfix bg-minimal-green-hover">
-                                            <div class="icon"><i class="bx bx-rocket minimal-green-color"></i></div>
-                                            <div class="title">Active Services</div>
-                                            <div class="value">1</div>
-                                            <div class="mblokbtn minimal-green">
-                                                <div class="padding10 minimal-green">My Products &amp; Services<span>»</span></div>
+                        <div class="form-holder">
+                            <div class="page-header">
+                                <div class="title">Product Selection<br /></div>
+                                <p>What type of Hosting are you looking for?</p>
+                            </div>
+                            <form class="form center-block">
+                                <div class="row clearfix products">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 radio-content">
+                                        <div class="item active">
+                                            <div class="radio-1 centered">
+                                                <label class="control control-radio">
+                                                    <input type="radio" name="category_id" id="kvm-vps" value="1" checked="checked" />
+                                                    <div class="control_indicator check"></div>
+                                                </label>
                                             </div>
+                                            <div class="title">Powerful & Secure KVM VPS Servers</div>
+                                            <img class="img-responsive" src="https://i.ibb.co/vdNF70K/secure-server.png" alt="KVM VPS Servers" />
+                                            <div class="info-text"></div>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class="col-sm-6 col-xl-3 mt-lg-4">
-                                    <a href="https://www.my.ssdcloud.io/order/listing/">
-                                        <div class="item clearfix bg-minimal-orange-hover">
-                                            <div class="icon"><i class="bx bx-cart-alt minimal-orange-color"></i></div>
-                                            <div class="title">Unpaid Orders</div>
-                                            <div class="value">238</div>
-                                            <div class="mblokbtn minimal-orange">
-                                                <div class="padding10 minimal-orange">Unpaid Orders<span>»</span></div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 radio-content">
+                                        <div class="item">
+                                            <div class="radio-1 centered">
+                                                <label class="control control-radio">
+                                                    <input type="radio" name="category_id" id="hosting" value="2" />
+                                                    <div class="control_indicator check"></div>
+                                                </label>
                                             </div>
+                                            <div class="title">Powerful Shared Cloud Hosting</div>
+                                            <img class="img-responsive" src="https://i.ibb.co/6gM5Kgm/shared-hosting.jpg" alt="Shared Cloud Hosting" />
+                                            <div class="info-text"></div>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class="col-sm-6 col-xl-3 mt-lg-4">
-                                    <a href="https://www.my.ssdcloud.io/ticket/listing/">
-                                        <div class="item clearfix bg-minimal-blue-hover">
-                                            <div class="icon"><i class="bx bx-conversation minimal-blue-color"></i></div>
-                                            <div class="title">Tickets</div>
-                                            <div class="value">738</div>
-                                            <div class="mblokbtn minimal-blue">
-                                                <div class="padding10 minimal-blue">Open Support Ticket<span>»</span></div>
+                                    </div>
+                                    <!--<div class="col-lg-6 col-md-6 col-sm-6 radio-content">
+                                        <div class="item">
+                                            <div class="radio-1 centered">
+                                                <label class="control control-radio">
+                                                    <input type="radio" name="category_id" id="ecommerce" value="3">
+                                                    <div class="control_indicator check"></div>
+                                                </label>
                                             </div>
+                                            <div class="title">eCommerce Hosting</div>
+                                            <img class="img-responsive" src="/assets/images/icons/order/ecommerce.png" alt="eCommerce Cloud Hosting">
+                                            <div class="info-text"></div>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class="col-sm-6 col-xl-3 mt-lg-4" id="invoices">
-                                    <a href="https://www.my.ssdcloud.io/invoice/listing/">
-                                        <div class="item clearfix bg-minimal-gray-hover">
-                                            <div class="icon"><i class="bx bxs-file-pdf minimal-gray-color"></i></div>
-                                            <div class="title">Invoices</div>
-                                            <div class="value">870</div>
-                                            <div class="mblokbtn minimal-gray">
-                                                <div class="padding10 minimal-gray">My Invoices<span>»</span></div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 radio-content">
+                                        <div class="item">
+                                            <div class="radio-1 centered">
+                                                <label class="control control-radio">
+                                                    <input type="radio" name="category_id" id="wordpress" value="4">
+                                                    <div class="control_indicator check"></div>
+                                                </label>
                                             </div>
+                                            <div class="title">WordPress Hosting</div>
+                                            <img class="img-responsive" src="/assets/images/icons/order/wordpress.png" alt="WordPress Cloud Hosting">
+                                            <div class="info-text"></div>
                                         </div>
-                                    </a>
+                                    </div>-->
                                 </div>
-                            </div>
-                        </div>
-                        <!--<div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="news-menu">
-                                    <div class="sub-title">
-                                        <i class="bx bx-user-plus"></i>
-                                        <span>Earn with us! Join our affiliate program.</span></div>
-                                    <div>
-                                        You can join our affiliate program and earn with us!
-                                        <br> You earn money from referring clients to our business. You also earn when they renew their services or products.
-                                        <br> Our affiliate program will be available for your account soon!</div>
-                                    <div class="btn-holder all-caps">
-                                        <a href="#" disabled="disabled">Coming Soon</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="balance-menu">
-                                    <div class="sub-title">
-                                        <i class="bx bx-wallet"></i>
-                                        <span>Your account's balance</span></div>
-                                    <div>You can deposit funds which you can use later for paying new services or to setup auto renew for your current services.</div>
-                                    <div class="amount">Your account's balance is: &euro;<span>0.00</span></div>
-                                    <div class="btn-holder all-caps">
-                                        <a href="/profile/balance/" disabled="disabled">Coming Soon</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div-->
-
-                        <div class="row">
-                            <div class="col-lg-7 col-sm-12">
-                                <div class="row d-flex m-15 mb-2 mt-4">
-                                    <div class="sub-title col p-0">
-                                        Recent Orders
-                                    </div>
-                                    <div class="ml-auto text-right col p-0">
-                                        <a href="https://www.my.ssdcloud.io/deploy/" class="btn-white">
-                                             <i class='bx bx-plus'></i>
-                                             Order Now
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="table-responsive">
-                                    <table class="page-table orders">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Service</th>
-                                                <th>Amount</th>
-                                                <th>Status</th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-
-                                        <tbody>
-                                            <tr class="hover-effect js-click" data-url="https://www.my.ssdcloud.io/order/detail/101022/">
-                                                <td>101022</td>
-                                                <td class="darkened text-14">
-                                                    Shared Hosting - Business
-                                                    <div class="un-darkened">demo.get-aura.org</div>
-                                                </td>
-                                                <td>&euro;16.70</td>
-                                                <td>
-                                                    <div class="rounded-capsule fs--1 d-block badge badge-soft-success">
-                                                        <i class="bx bx-check"></i>
-                                                        Paid
-                                                    </div>
-                                                </td>
-                                                <td class="text-right">
-                                                    <a
-                                                        href="https://www.my.ssdcloud.io/order/detail/101022/"
-                                                        class="btn btn-primary"
-                                                        aria-label="More Information"
-                                                    >
-                                                        <i class="bx bx-menu"></i>
-                                                        Details
-                                                    </a>
-                                                </td>
-                                            </tr>
-
-                                            <tr class="hover-effect js-click" data-url="https://www.my.ssdcloud.io/order/detail/101021/">
-                                                <td>101021</td>
-                                                <td class="darkened text-14">
-                                                    Shared Hosting - Business
-                                                    <div class="un-darkened">demo.get-aura.org</div>
-                                                </td>
-                                                <td>&euro;16.70</td>
-                                                <td>
-                                                    <div class="rounded-capsule fs--1 d-block badge badge-soft-success">
-                                                        <i class="bx bx-check"></i>
-                                                        Paid
-                                                    </div>
-                                                </td>
-                                                <td class="text-right">
-                                                    <a
-                                                        href="https://www.my.ssdcloud.io/order/detail/101021/"
-                                                        class="btn btn-primary"
-                                                        aria-label="More Information"
-                                                    >
-                                                        <i class="bx bx-menu"></i>
-                                                        Details
-                                                    </a>
-                                                </td>
-                                            </tr>
-
-                                            <tr class="hover-effect js-click" data-url="https://www.my.ssdcloud.io/order/detail/101020/">
-                                                <td>101020</td>
-                                                <td class="darkened text-14">
-                                                    Shared Hosting - Lite
-                                                    <div class="un-darkened">demo.get-aura.org</div>
-                                                </td>
-                                                <td>&euro;7.20</td>
-                                                <td>
-                                                    <div class="rounded-capsule fs--1 d-block badge badge-soft-success">
-                                                        <i class="bx bx-check"></i>
-                                                        Paid
-                                                    </div>
-                                                </td>
-                                                <td class="text-right">
-                                                    <a
-                                                        href="https://www.my.ssdcloud.io/order/detail/101020/"
-                                                        class="btn btn-primary"
-                                                        aria-label="More Information"
-                                                    >
-                                                        <i class="bx bx-menu"></i>
-                                                        Details
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-
-
-                            <div class="col-lg-5 col-sm-12">
-                                <div class="row page-header d-flex m-15 mb-2 mt-4">
-                                    <div class="sub-title col-5 p-0">
-                                        Recent Tickets
-                                    </div>
-                                    <div class="ml-auto text-right col-7 p-0">
-                                        <a href="https://www.my.ssdcloud.io/ticket/new/" class="btn-white">
-                                             <i class='bx bx-plus'></i>
-                                             Open New Ticket
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="table-responsive">
-                                    <table class="page-table tickets">
-                                        <thead>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Subject</th>
-                                                <th>Status</th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-
-                                        <tbody>
-                                            <tr class="hover-effect js-click" data-url="https://www.my.ssdcloud.io/ticket/conversation/1/">
-                                                <td>1</td>
-                                                <td class="darkened">Test Ticket</td>
-                                                <td>
-                                                    <div class="rounded-capsule fs--1 d-block badge badge-soft-primary">
-                                                        <i class="bx bx-loader bx-spin"></i>
-                                                        Processing
-                                                    </div>
-                                                </td>
-                                                <td class="text-right">
-                                                    <a
-                                                        href="https://www.my.ssdcloud.io/ticket/conversation/1/"
-                                                        class="btn btn-primary"
-                                                        aria-label="Open"
-                                                    >
-                                                        <i class="bx bx-menu"></i>
-                                                        View
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
+                                <button type="button" class="btn-1 text-center continue-btn">Continue</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -514,9 +361,9 @@
                     </div>
                 </div>
             </div>
-        </section-->
+        </section>
 
-        <!--section class="footer ml__sidebar">
+        <section class="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-4">
@@ -581,30 +428,7 @@
                     </div>
                 </div>
             </div>
-        </section-->
-
-        <script>
-
-            // SHOW MENU
-            const showMenu = (toggleId, navbarId, bodyId) => {
-                const toggle = document.getElementById(toggleId),
-                    navbar = document.getElementById(navbarId),
-                    bodypadding = document.getElementById(bodyId)
-
-                if (toggle && navbar) {
-                    toggle.addEventListener('click', () => {
-                        // APARECER MENU
-                        navbar.classList.toggle('showNavbarToggle')
-                        // ROTATE TOGGLE
-                        toggle.classList.toggle('rotate')
-                        // PADDING BODY
-                        bodypadding.classList.toggle('expander')
-                    })
-                }
-            }
-            showMenu('nav-toggle', 'navbar', 'body')
-
-        </script>
+        </section>
 
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
@@ -614,5 +438,34 @@
         </script>
         <script src="https://www.ssdcloud.io/assets/js/app.min.js"></script>
         <script src="https://www.my.ssdcloud.io/assets/js/app.min.js"></script>
+        <script>
+            $(function () {
+                $(".radio-content").click(function () {
+                    $(".radio-content .item").removeClass("active");
+                    $(this).find(".item").addClass("active");
+                    $(this).find("input:radio").prop("checked", !0);
+                });
+
+                $(".continue-btn").click(function () {
+                    var form = $(".form");
+                    var button = $(".form button");
+                    $.ajax({
+                        type: "POST",
+                        data: form.serialize(),
+                        beforeSend: function () {
+                            button.attr("disabled", "disabled");
+                            button.html('<div class="ld ld-ring ld-spin"></div>');
+                        },
+                        success: function (data) {
+                            if ($("#kvm-vps").is(":checked")) {
+                                window.location.href = "https://www.my.ssdcloud.io/deploy/vps/21/";
+                            } else {
+                                window.location.href = "https://www.my.ssdcloud.io/deploy/hosting/50/";
+                            }
+                        },
+                    });
+                });
+            });
+        </script>
     </body>
 </html>

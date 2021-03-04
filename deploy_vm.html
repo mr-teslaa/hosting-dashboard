@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -142,9 +140,10 @@
             <header class="main-header">
 
                 <!-- custom sidebar -->
-                <!--div class="l-navbar" id="navbar">
+                <div class="l-navbar" id="navbar">
                     <nav class="nav">
                         <div>
+
                             <!--a href="#" class="nav__logo">
                                 <img
                                     src="https://www.ssdcloud.io/assets/images/logo.svg"
@@ -153,7 +152,7 @@
                                 />
                             </a-->
 
-                            <!--div class="nav__toggle" id="nav-toggle">
+                            <div class="nav__toggle" id="nav-toggle">
                                 <i class='bx bxs-chevron-right' ></i>
                             </div>
 
@@ -209,7 +208,7 @@
                             </ul>
                         </div>
                     </nav>
-                </div-->
+                </div>
 
                 <!--div class="vertical-ghost-menu">
                     <div class="vertical-menu-holder">
@@ -256,7 +255,7 @@
                         if(toggle && navbar){
                             toggle.addEventListener('click', ()=>{
                                 // APARECER MENU
-                                navbar.classList.toggle('show')
+                                navbar.classList.toggle('showNavbarToggle')
                                 // ROTATE TOGGLE
                                 toggle.classList.toggle('rotate')
                                 // PADDING BODY
@@ -270,7 +269,7 @@
 
             </header>
 
-            <main class="main-content">
+            <main class="main-content bg-minimal ml__sidebar">
                 <div class="page-holder configurator-step-two">
                     <div class="container-fluid container-custom vps">
                         <div class="form-holder">
@@ -305,9 +304,8 @@
                                             </div>
                                             <div class="price" data-default="14.46">
                                                 &euro;<span>14.46</span>
-                                                <p class="price-period">/month</p>
                                             </div>
-                                            <!-- <div class="price-period">per month</div> -->
+                                            <div class="price-period">per month</div>
                                             <div class="line"></div>
                                             <div class="parameters">
                                                 <div><span class="value">1vCPU</span> Core</div>
@@ -338,9 +336,8 @@
                                             <div class="old-price" style="display: none;">&euro;<span> </span></div>
                                             <div class="price" data-default="36.24">
                                                 &euro;<span>36.24</span>
-                                                <p class="price-period">/month</p>
                                             </div>
-                                            <!-- <div class="price-period">per month</div> -->
+                                            <div class="price-period">per month</div>
                                             <div class="line"></div>
                                             <div class="parameters">
                                                 <div><span class="value">2vCPU</span> Core</div>
@@ -373,9 +370,8 @@
                                             </div>
                                             <div class="price" data-default="60.44">
                                                 &euro;<span>60.44</span>
-                                                <p class="price-period"> /month </p>
                                             </div>
-                                            <!--div class="price-period">per month</div-->
+                                            <div class="price-period">per month</div>
                                             <div class="line"></div>
                                             <div class="parameters">
                                                 <div><span class="value">2vCPU</span> Core</div>
@@ -408,9 +404,8 @@
                                             </div>
                                             <div class="price" data-default="157.24">
                                                 &euro;<span>157.24</span>
-                                                <p class="price-period"> /month </p>
                                             </div>
-                                            <!--div class="price-period">per month</div-->
+                                            <div class="price-period">per month</div>
                                             <div class="line"></div>
                                             <div class="parameters">
                                                 <div><span class="value">4vCPU</span> Core</div>
@@ -443,9 +438,8 @@
                                             </div>
                                             <div class="price" data-default="314.54">
                                                 &euro;<span>314.54</span>
-                                                <p class="price-period"> /month </p>
                                             </div>
-                                            <!--div class="price-period">per month</div-->
+                                            <div class="price-period">per month</div>
                                             <div class="line"></div>
                                             <div class="parameters">
                                                 <div><span class="value">8vCPU</span> Core</div>
@@ -599,12 +593,16 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-4 clearfix backup-addon text-right">
-                                                <span class="option-price">&euro;<span class="addonPriceHolder"></span><span class="forPeriod"></span><span class="addonPricePerMonth"></span> </span>
+                                                <span class="option-price p-2">
+                                                    &euro;<span class="addonPriceHolder"></span>
+                                                    <span class="forPeriod"></span>
+                                                    <span class="addonPricePerMonth"></span>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
 
-<div class="item">
+                                    <div class="item">
                                         <div class="row">
                                             <div class="col-md-8 checkbox-1">
                                                 <label class="control control-checkbox">
@@ -614,7 +612,11 @@
                                                 </label>
                                             </div>
                                             <div class="col-md-4 clearfix ddos-addon text-right">
-                                                <span class="option-price">&euro;<span class="addonPriceHolder"></span><span class="forPeriod"></span><span class="addonPricePerMonth"></span> </span>
+                                                <span class="option-price p-2">
+                                                    &euro;<span class="addonPriceHolder"></span>
+                                                    <span class="forPeriod"></span>
+                                                    <span class="addonPricePerMonth"></span>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
@@ -652,18 +654,49 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row pr-5">
                                 <div id="deploy_ordersummary">
-                                    <div class="sidebar-info">
-                                        <div id="deploy-summary-info">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <!--div id="deploy-summary-info">
                                             <!--<span style="display: block; color:#9da2a6; font-size:13px; font-weight: 700;">Servers Qty:</span>
                                             <div style="border:1px solid #DCDEE0; border-radius:4px; display:flex; display:-webkit-flex; line-height:34px;">
                                                 <button class="input-group-addon remove-server instanceCountButton"><i class="fas fa-minus"></i></button>
                                                 <span style="display:block; width:40px; text-align:center; font-weight:bold; color:#1e88e5;" id="instanceCount">1</span>
                                                 <button class="input-group-addon add-server instanceCountButton"><i class="fas fa-plus"></i></button>
                                             </div>-->
+                                        <!--/div-->
+
+                                        <div id="deploy-summary-price col-md-8">
+                                            <span style="display: block; color:#9da2a6; font-size:13px; font-weight: 700;">Total Due Today:</span>
+                                            <div id="order_total_block">
+                                                <span id="order_total">
+                                                    &euro;<span class="totalPrice"></span>
+
+                                                    <span id="order_total_spacer"> (<span id="order_total_hr">21% IE VAT Included</span>)</span>                                                </span>
+                                            </div>
                                         </div>
-                                        <div id="deploy-summary-price">
+                                        <a class="btn btn-lg btn-primary confirmordersubmit saveOrder col-md-4 "><i class="fas fa-chevron-right"></i> Deploy Now</a>
+                                    </div>
+
+                                    <div class="additional-info">
+                                        <i class="fas fa-info-circle" style="color: #007bfc;"></i>&nbsp;</span>This Order Form is provided in a Secure Environment and to help Protect against Fraud your current IP Address (79.97.205.78) is being Logged.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--div class="row">
+                                <div id="deploy_ordersummary">
+                                    <div class="sidebar-info">
+                                        <!--div id="deploy-summary-info">
+                                            <!--<span style="display: block; color:#9da2a6; font-size:13px; font-weight: 700;">Servers Qty:</span>
+                                            <div style="border:1px solid #DCDEE0; border-radius:4px; display:flex; display:-webkit-flex; line-height:34px;">
+                                                <button class="input-group-addon remove-server instanceCountButton"><i class="fas fa-minus"></i></button>
+                                                <span style="display:block; width:40px; text-align:center; font-weight:bold; color:#1e88e5;" id="instanceCount">1</span>
+                                                <button class="input-group-addon add-server instanceCountButton"><i class="fas fa-plus"></i></button>
+                                            </div>-->
+                                        <!--/div-->
+
+                                        <!--div id="deploy-summary-price">
                                             <span style="display: block; color:#9da2a6; font-size:13px; font-weight: 700;">Total Due Today:</span>
                                             <div id="order_total_block">
                                                 <span id="order_total">
@@ -679,7 +712,7 @@
                                         <i class="fas fa-info-circle" style="color: #007bfc;"></i>&nbsp;</span>This Order Form is provided in a Secure Environment and to help Protect against Fraud your current IP Address (79.97.205.78) is being Logged.</span>
                                     </div>
                                 </div>
-                            </div>
+                            </div-->
                         </div>
                     </div>
                 </div>

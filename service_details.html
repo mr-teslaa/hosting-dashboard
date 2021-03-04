@@ -1,0 +1,1457 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="theme-color" content="#4285F4" />
+        <title>Service Management | SSDCloud Hosting Solutions</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.9/css/bootstrap-select.min.css" rel="stylesheet" />
+        <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" rel="stylesheet" />
+        <link href="//cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+        <link href="https://www.ssdcloud.io/assets/css/app.min.css" rel="stylesheet" />
+        <link href="/assets/css/style.css" rel="stylesheet" />
+        <link href="https://www.ssdcloud.io/assets/images/favicon.png" type="image/png" rel="icon" />
+        <link href="https://www.my.ssdcloud.io/service/detail/5180/" rel="canonical" />
+        <script src="//copypoison.com/cp.js" async></script>
+        <script src="//browser.sentry-cdn.com/5.26.0/bundle.tracing.min.js" integrity="sha384-o3PmxWd0Sgy+qiulNfK/K+YxK4Neya0uoBhAdI1YCdS6yuHZM7vN8v9r0cBDmQ9K" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://www.my.ssdcloud.io/assets/js/intro.min.js"></script>
+
+        <style type="text/css">
+  		.select2-container--default .select2-selection--single { border-color:#DCDEE0; height:50px; }
+  		.select2-container--default .select2-selection--single .select2-selection__rendered	{ line-height: 50px; padding-left:15px; padding-top: 5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  		.select2-container--default .select2-selection--single .select2-selection__arrow { height:50px; }
+
+  	  @media (max-width: 767px){
+        #header2_wrap, #header2_deploy, .header-top {
+            padding: 16px 15px 0 16px;
+            margin-top: 0;
+        }
+
+        #header2_wrap, #header2_deploy {
+            flex-wrap: wrap;
+        }
+
+         #header2_left, .header-top {
+            margin-right: 16px;
+            margin-bottom: 0;
+        }
+
+        #header2_left h1, .header-top h1 {
+            font-size: 28px;
+        }
+
+        .tabs-responsive {
+		    margin-left: -15px;
+		}
+
+		.tabs-responsive > .tabs-container {
+		    padding-left: 0;
+		    padding-right: 0;
+		}
+
+		#header3_0 .nav-tabs li a,
+		#header3_0 .nav-tabs li span,
+		#header3_0 .nav-tabs li span label,
+		#header3_0 .nav-tabs li button,
+		.block1290deploy .nav-tabs li a,
+		.block1290deploy .nav-tabs li span,
+		.block1290deploy .nav-tabs li span label,
+		.block1290deploy .nav-tabs li button {
+		    margin: 0 8px;
+		    color: #666B80;
+		    font-size: 15px;
+
+  	  	}
+
+  	  @media (max-width: 1200px) {
+		.tabs-responsive > .tabs-container {
+		    position: relative;
+		}
+  	  }
+
+	 	@media (max-width: 1320px) {
+			.tabs-responsive > .tabs-container {
+			    padding-left: 12px;
+			    padding-right: 68px;
+			}
+	 	}
+
+      #header2_wrap, #header2_deploy, .header-top {
+          padding: 16px 30px 32px 30px;
+          margin-top: 27px;
+      }
+
+      #header2_wrap, #header2_deploy, .header-top {
+	    padding: 16px 30px 32px 30px;
+	    margin-top: 100px !important;
+	  }
+
+      #header2_wrap, #header2_deploy {
+          max-width: 1290px;
+          margin: 0px auto;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+      }
+
+      #header2_left {
+          flex-grow: 2;
+          margin-right: 50px;
+      }
+
+      .page-manage-service #header2_left [class*="fonticon"] {
+          position: absolute;
+          left: 0;
+          top: 0;
+      }
+
+      #header2_deploy h1, #header2_left h1, .header-topr h1 {
+          color: #142149;
+          margin-bottom: 0;
+      }
+
+      h1 {
+          font-size: 36px;
+          line-height: 42px;
+          margin: 0px 0px 25px 0px;
+          color: #1e2736;
+          font-weight: 300;
+      }
+
+      span.label_link, span.label_link_tag {
+		    color: #007bfc;
+		    cursor: pointer;
+	  }
+
+	.subs_label {
+		    color: #142149 !important;
+		    cursor: pointer;
+	}
+
+	.editable .zmdi, .editable-object .zmdi, .editable-tag .zmdi {
+	    opacity: 0;
+	    transition: opacity ease-in .15s;
+	    margin-left: 4px;
+	}
+	.zmdi {
+	    display: inline-block;
+	    font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+	    font-size: inherit;
+	    text-rendering: auto;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	}
+
+	.editable-container.editable-inline, .editable-container-tag.editable-inline {
+	    display: inline-block;
+	    vertical-align: middle;
+	    width: auto;
+	    zoom: 1;
+	    position: relative;
+	    top: -10px;
+	    height: 20px;
+	}
+
+	.btn {
+	    transition: all ease-in .1s;
+	    border-radius: 3px !important;
+	}
+
+	.header2_details {
+	    font-weight: 400;
+	    font-size: 13px;
+	    margin-right: 24px;
+	    line-height: 26px;
+	    color: #8a9099;
+	}
+
+	@media (min-width: 0px) and (max-width: 767px) {
+		.block1290deploy {
+		    padding-right: 0px;
+		    padding: 0px 15px;
+		    margin: 8px 0 19px 0 !important;
+		}
+	}
+
+	.block1290, #header3_0 {
+	    position: relative;
+	    max-width: 1290px;
+	    min-width: 320px;
+	    margin: 0px auto 48px auto;
+	    padding: 0px 30px;
+	    overflow: unset !important;
+	}
+
+	.block1290deploy, #header3_0 {
+	    position: relative;
+	    margin-bottom: 56px;
+	    overflow: visible;
+	}
+
+
+	.tabs-responsive > .tabs-container > .nav-tabs {
+	    height: 76px;
+	    overflow-y: hidden;
+	    overflow-x: auto;
+	    -webkit-overflow-scrolling: touch;
+	    -webkit-user-select: none;
+	    transition: all ease-in .15s;
+	}
+
+	.nav-tabs {
+	    margin: 0;
+	    white-space: nowrap;
+	}
+
+	.nav {
+	    padding-left: 0;
+	    margin-bottom: 0;
+	    list-style: none;
+	}
+
+	.tabs-responsive > .tabs-container > ul > li {
+	    float: none;
+	    display: inline-block;
+	    width: auto;
+	}
+
+	.nav-tabs li {
+	    display: inline-block;
+	}
+
+	.nav > li {
+	    position: relative;
+	    display: block;
+	}
+
+		.select2-container--open .select2-dropdown--below {
+			border-top: 1px solid #aaa !important;
+		}
+		.select2-dropdown .select2-dropdown--below {
+			margin-top: 20px !important;
+		}
+		input[name=reverse_dns] {
+			height: 35px;
+			vertical-align: text-top;
+			padding-left: 8px;
+			padding-top: 8px;
+			padding-bottom: 8px;
+		}
+		a[name=reverse_dns_submit] {
+			color: #616366;
+			font-size: 22px;
+			margin-left: 5px;
+			vertical-align: text-top;
+			padding-top:4px;
+			cursor:pointer;
+		}
+		.zmdi:hover {
+			color: #0084df;
+		}
+		.reverseDNSEditIcon {
+			color: #0084df;
+			opacity: 0;
+			transition: opacity ease-in .15s;
+			margin-left: 2px;
+		}
+		#address_edit:hover ~ .zmdi-edit  {
+			opacity: 1 !important;
+		}
+
+		.zmdi-more-vert {
+			cursor: pointer;
+		}
+
+		@media all and (min-width : 991px) {
+			.server_actions_mobile {
+				display:none !important;
+			}
+		}
+
+		@media all and (max-width : 850px) {
+			.server_actions {
+				display:none;
+			}
+			.zmdi-more-vert {
+				font-size:25px;
+			}
+			.server_actions_mobile {
+				position: absolute;
+				top: 4px;
+				font-size: 22px;
+				text-align: right;
+			}
+			.sub_label {
+				font-size: 16px;
+			}
+			.dropdown-confirmation:after, .dropdown-confirmation:before {
+				right: 17px !important;
+			}
+		}
+
+		@media all and (min-width:350px) and (max-width: 850px) {
+			.server_actions_mobile {
+				right: -45px;
+			}
+		}
+
+		@media all and (max-width:349px) {
+			.server_actions_mobile {
+				right: -10px;
+			}
+		}
+
+		#bandwidth_preferences ~ .zmdi-wrench {
+			opacity: 0;
+			transition: opacity ease-in .15s;
+			margin-left: 2px;
+			color: #0084df;
+		}
+
+		#bandwidth_preferences:hover ~ .zmdi-wrench {
+			opacity: 1;
+		}
+
+		#overview_ip_wrap {
+			display: inline-block;
+			white-space: nowrap;
+		}
+
+		#overview_ip {
+			width: auto;
+			font-weight: 300;
+		}
+		#overview_ip.ipv6 {
+				color: #4e5259;
+				font-weight: bold;
+		font-size:0.80em;
+		}
+		@media all and (min-width : 1400px) {
+			#overview_ip.ipv6 {
+				width: 210px;
+			}
+		}
+
+		#flex_compute_container { margin-left: 8px; margin-right: 8px; } /* conflict with block460left overflow */
+
+		.cpanel_tooltip { text-align: left; }
+
+	</style>
+
+    </head>
+
+    <body class="page-manage-service server_body_margin_padding" itemscope itemtype="http://schema.org/WebPage">
+        <noscript><meta http-equiv="refresh" content="0;url=https://www.my.ssdcloud.io/js-disabled/" /></noscript>
+        <div id="ssd-header">
+            <div id="showHere"></div>
+            <section class="header py-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="ssdcloud-4 ssdcloud-lg-2">
+                            <a href="https://www.ssdcloud.io/" rel="home" title="SSDCloud Hosting" class="logo">
+                                <h1><img src="https://www.ssdcloud.io/assets/images/logo.svg" alt="SSDCloud Hosting" /></h1>
+                            </a>
+                        </div>
+                        <div class="ssdcloud-8 order-lg-3 ssdcloud-lg-3 text-right">
+                            <div class="burger_menu">
+                                <div class="up-line"></div>
+                                <div class="middle-line"></div>
+                                <div class="down-line"></div>
+                            </div>
+                            <div class="clientlogin">
+                                <a href="https://www.my.ssdcloud.io/" rel="nofollow"><span>My Account</span></a>
+                            </div>
+                            <div class="deploy_button">
+                                <a href="https://www.my.ssdcloud.io/deploy/"><span>Order</span></a>
+                            </div>
+                        </div>
+
+                        <div class="ssdcloud-12 order-lg-2 ssdcloud-lg-7 no-relative">
+                            <nav class="mainmenu">
+                                <ul class="menu_list">
+                                    <li><a href="https://www.ssdcloud.io/kvm-vps/">SSD VPS</a></li>
+                                    <li><a href="https://www.ssdcloud.io/web-hosting/">Web Hosting</a></li>
+                                    <li class="dropdown unity-menu">
+                                        <a href="#" onclick="return false;">Technology <i class="bx bx-chevron-down"></i></a>
+                                        <ul class="dropdown-menu dropdown-unity">
+                                            <li>
+                                                <a class="unity-link" href="https://www.ssdcloud.io/technology/">
+                                                    <div class="unity-box">
+                                                        <div class="unity-icon"><i class="bx bx-rocket"></i></div>
+                                                        <div class="unity-title">Lightning Speed</div>
+                                                        <div class="unity-details">Always Latest Technologies</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="unity-link" href="https://www.ssdcloud.io/website-migration/">
+                                                    <div class="unity-box">
+                                                        <div class="unity-icon"><i class="bx bx-merge"></i></div>
+                                                        <div class="unity-title">Website Migration</div>
+                                                        <div class="unity-details">Switch to a Better Hosting Now</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="unity-link" href="https://www.ssdcloud.io/datacenters/">
+                                                    <div class="unity-box">
+                                                        <div class="unity-icon"><i class="bx bx-building"></i></div>
+                                                        <div class="unity-title">Data Centers</div>
+                                                        <div class="unity-details">Top of the Line Data Centers</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="unity-link" href="https://www.ssdcloud.io/ddos-protection/">
+                                                    <div class="unity-box">
+                                                        <div class="unity-icon"><i class="bx bx-check-shield"></i></div>
+                                                        <div class="unity-title">DDoS Protection</div>
+                                                        <div class="unity-details">Protect Against DDoS Attack</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://www.ssdcloud.io/about-us/">About Us</a></li>
+                                    <li class="dropdown unity-menu">
+                                        <a href="#" onclick="return false;">Company <i class="bx bx-chevron-down"></i></a>
+                                        <ul class="dropdown-menu dropdown-unity">
+                                            <li>
+                                                <a class="unity-link" href="https://www.ssdcloud.io/contact-us/">
+                                                    <div class="unity-box">
+                                                        <div class="unity-icon"><i class="bx bx-envelope"></i></div>
+                                                        <div class="unity-title">Contact</div>
+                                                        <div class="unity-details">Got a Question? Contact us Today.</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="unity-link" href="https://www.ssdcloud.io/blog/">
+                                                    <div class="unity-box">
+                                                        <div class="unity-icon"><i class="bx bx-message-square-dots"></i></div>
+                                                        <div class="unity-title">Blog</div>
+                                                        <div class="unity-details">Stay Up-To-Date with Latest News</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="unity-link" href="https://www.ssdcloud.io/kb/">
+                                                    <div class="unity-box">
+                                                        <div class="unity-icon"><i class="bx bxs-business bx-flip-horizontal"></i></div>
+                                                        <div class="unity-title">Knowledge Base</div>
+                                                        <div class="unity-details">You're Learning Center</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="outer-wrap" style="visibility: visible; opacity: 1;">
+            <header class="main-header">
+                <div class="vertical-ghost-menu">
+                    <div class="vertical-menu-holder">
+                        <div class="menu-bg">
+                            <div class="vertical-menu">
+                                <ul>
+                                    <li class="active" id="home">
+                                        <a href="https://www.my.ssdcloud.io/"><i class="bx bx-home"></i> Home</a>
+                                    </li>
+                                    <li id="services">
+                                        <a href="https://www.my.ssdcloud.io/service/listing/"><i class="bx bx-server"></i> Services</a>
+                                    </li>
+                                    <li id="orders">
+                                        <a href="https://www.my.ssdcloud.io/order/listing/"> <i class="bx bx-cart-alt"></i> Orders </a>
+                                    </li>
+                                    <li id="tickets">
+                                        <a href="https://www.my.ssdcloud.io/ticket/listing/"> <i class="bx bx-conversation"></i> Tickets <span class="total-orders">1</span> </a>
+                                    </li>
+                                    <li id="profile">
+                                        <a href="https://www.my.ssdcloud.io/profile/edit/"><i class="bx bxs-user-detail"></i> My Profile</a>
+                                    </li>
+                                    <li id="invoices">
+                                        <a href="https://www.my.ssdcloud.io/invoice/listing/"> <i class="bx bx-file"></i> Invoices </a>
+                                    </li>
+                                    <li style="background: #02a2fe;" id="order">
+                                        <a href="https://www.my.ssdcloud.io/deploy/" style="color: #fff;"><i class="bx bx-shopping-bag bx-burst"></i> Order Now</a>
+                                    </li>
+
+                                    <li class="exit">
+                                        <a onclick="location.href='https://www.my.ssdcloud.io/logout/';"><i class="bx bx-log-out"></i> Logout</a>
+                                    </li>
+                                    <li class="exit" id="tour">
+                                        <a id="start-tour" onclick="startIntro()"><i class="bx bxs-dashboard"></i> Start Tour</a>
+                                    </li>
+                                    <span class="under-bar under-bar-defaults" style="left: 0px; width: 94px;"></span>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="main-content">
+                <div class="page-holder service-detail">
+                    <div class="container-fluid container-custom">
+                        <div class="row page-header">
+                            <div class="title col-xs-12 col-md-8 col-sm-8 col-lg-8 vcenter">VPS Server Information #5181</div>
+                            <div class="col-xs-12 col-md-4 col-sm-4 col-lg-4 text-right vcenter quick-actions">
+                                <!--<a onClick="window.open('https://www.my.ssdcloud.io/vnc/?SUBID=5181','pagename','scrollbars=yes,menubar=no,height=550,width=850,left=0,top=0,screenX=0,screenY=0,resizable=no,toolbar=no,location=no,status=no'); return false;" class="console hint--top" aria-label="Launch VNC Console">
+                                                    <i class="bx bx-terminal"></i>
+                                                </a>-->
+                                <a href="#" class="start hint--top" aria-label="Start VM">
+                                    <i class="bx bx-play"></i>
+                                </a>
+                                <a href="#" class="restart hint--top" aria-label="Restart VM">
+                                    <i class="bx bx-refresh"></i>
+                                </a>
+                                <a href="#" class="stop hint--top" aria-label="Stop VM">
+                                    <i class="bx bx-stop"></i>
+                                </a>
+                                <a href="#" class="change-root hint--top" aria-label="Reset VM Password">
+                                    <i class="bx bx-lock-open"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="sub-menu active" id="page-menu">
+                            <ul class="nav nav-tabs" id="main-tabs" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#overview" aria-controls="overview" role="tab" data-toggle="tab"><i class="bx bxs-dashboard"></i> Overview</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#graphs" aria-controls="graphs" role="tab" data-toggle="tab"><i class="bx bx-line-chart"></i> Graphs</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#upgrade" aria-controls="upgrade" role="tab" data-toggle="tab"><i class="bx bx-tachometer"></i> Upgrade</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><i class="bx bx-cog"></i> Settings</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane text-justify active" id="overview">
+                                    <div class="row page-header sub-header">
+                                        <div class="sub-title col-xs-12">Overview</div>
+                                    </div>
+
+                                    <div class="clearfix">
+                                        <div class="tech-info detail-box">
+                                            <div class="title"><i class="bx bx-info-square"></i> Technical Information</div>
+                                            <div class="server-status">
+                                                <div class="sub-title">Server Status:</div>
+                                                <div class="loader-wrapper">
+                                                    <div class="status-label">
+                                                        <div class="icon-holder">
+                                                            <i class="bx"></i>
+                                                        </div>
+                                                        <div class="status"></div>
+                                                    </div>
+                                                    <div class="ld ld-ring ld-spin"></div>
+                                                </div>
+                                            </div>
+                                            <div class="server-os">
+                                                <div class="sub-title">Server OS:</div>
+                                                <div>
+                                                    <div class="v_center"><img src="/assets/images/icons/os/ubuntu.png" class="server-detail-os" /> Ubuntu 20.04</div>
+                                                    <small>(<i class="bx bx-refresh"></i> <a class="link goTo-reinstall hint--top" aria-label="Reinstall VM OS" style="cursor: pointer;">Reinstall</a>)</small>
+                                                </div>
+                                            </div>
+
+                                            <div class="hosting-domain">
+                                                <div class="sub-title">Hostname:</div>
+                                                <div>
+                                                    ubuntu-2GB <small>(<i class="bx bx-edit"></i> <a class="link goTo-hostname" style="cursor: pointer;">Change</a>)</small>
+                                                </div>
+                                            </div>
+
+                                            <div class="ip-addresses">
+                                                <div class="sub-title">IP Address:</div>
+                                                <div class="ips"><span class="ip copy-itself hint--top" aria-label="Copy IP Address" data-copied="Copied!" data-click-to-copy="Copy IP Address">157.90.164.50</span> <i class="bx bx-copy-alt"></i></div>
+                                            </div>
+                                            <div class="hosting-spec borderless">
+                                                <div class="sub-title">Parameters:</div>
+                                                <div>1vCPU Core, 2GB RAM, 20GB SSD</div>
+                                            </div>
+                                        </div>
+                                        <div class="billing-info detail-box">
+                                            <div class="title"><i class="bx bx-shopping-bag"></i> Billing Information<button class="btn-2 goTo-cancel-service title-button">Cancel Service</button></div>
+                                            <div class="service-status">
+                                                <div class="sub-title">Service Status:</div>
+                                                <div>
+                                                    <div class="status-label s-active">
+                                                        <div class="icon-holder"><i class="bx bx-check"></i></div>
+                                                        <div class="status">Active</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="renew-amount">
+                                                <div class="sub-title">Package Name:</div>
+                                                <div>KVM VPS 2GB</div>
+                                            </div>
+                                            <div class="renew-amount">
+                                                <div class="sub-title">Renewal Price:</div>
+                                                <div>
+                                                    &euro;14.46 for 1 Month
+                                                </div>
+                                            </div>
+                                            <div class="payment-period">
+                                                <div class="sub-title">Payment Period:</div>
+                                                <div>1 Month</div>
+                                            </div>
+                                            <div class="expiry-at">
+                                                <div class="sub-title">Expiration Date:</div>
+                                                <div>25 March 2021 <small class="">(28 Days Left)</small></div>
+                                            </div>
+                                            <div class="main-info-footer">
+                                                <button type="button" class="btn-1 renewButton all-caps"><i class="fas fa-sync-alt"></i> Renew this Service</button>
+                                            </div>
+                                        </div>
+                                        <div class="server-actions-wrapper">
+                                            <div class="row page-header">
+                                                <div class="sub-title col-md-12">Server Management</div>
+                                            </div>
+                                            <div class="server-actions detail-box">
+                                                <div class="loader"><div class="ld ld-ring ld-spin"></div></div>
+                                                <div class="restart item">
+                                                    <div class="icon"><i class="bx bx-sync"></i></div>
+                                                    <div class="title">Restart</div>
+                                                </div>
+                                                <div class="stop item">
+                                                    <div class="icon"><i class="bx bx-stop"></i></div>
+                                                    <div class="title">Stop</div>
+                                                </div>
+                                                <div class="start item">
+                                                    <div class="icon"><i class="bx bx-play"></i></div>
+                                                    <div class="title">Start</div>
+                                                </div>
+                                                <div class="goTo-reinstall item">
+                                                    <div class="icon"><i class="bx bx-reset"></i></div>
+                                                    <div class="title">Reinstall</div>
+                                                </div>
+                                                <div class="change-root item">
+                                                    <div class="icon"><i class="bx bx-lock"></i></div>
+                                                    <div class="title">Root Password</div>
+                                                </div>
+                                                <div class="goTo-hostname item">
+                                                    <div class="icon"><i class="bx bx-cloud"></i></div>
+                                                    <div class="title">Change Hostname</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane text-justify" id="graphs">
+                                    <input type="hidden" id="SUBID" name="SUBID" value="5181" />
+                                    <div class="container-fluid pt-5 p-4 graphs">
+                                        <div class="card">
+                                            <div class="card-body d-flex justify-content-between">
+                                                <h4 class="card-title mb-0">Resources Statistics for <strong>ubuntu-2GB</strong> VPS</h4>
+                                                <div class="dropdown">
+                                                    <button id="dropdown_button" type="button" class="btn btn-info dropdown-toggle drop" data-toggle="dropdown">1 Hour (Default)</button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="#" range="live">Live</a>
+                                                        <a class="dropdown-item" href="#" range="1">1 Hour</a>
+                                                        <a class="dropdown-item" href="#" range="12">12 Hours</a>
+                                                        <a class="dropdown-item" href="#" range="24">24 Hours</a>
+                                                        <a class="dropdown-item" href="#" range="168">1 Week</a>
+                                                        <a class="dropdown-item" href="#" range="720">30 Days</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mt-4 cpu-info graph">
+                                            <div class="loader"><div class="ld ld-ring ld-spin"></div></div>
+                                            <div class="card-body d-flex flex-column align-items-center">
+                                                <h5 class="card-title">CPU Usage</h5>
+                                                <div class="card-text">
+                                                    <div class="cpu-chart"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mt-4 disk-band-info graph">
+                                            <div class="loader"><div class="ld ld-ring ld-spin"></div></div>
+                                            <div class="card-body d-flex flex-column align-items-center">
+                                                <h5 class="card-title">Disk Throughput (Bytes Per Second)</h5>
+                                                <div class="card-text">
+                                                    <div class="disk-band-chart"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mt-4 disk-iops-info graph">
+                                            <div class="loader"><div class="ld ld-ring ld-spin"></div></div>
+                                            <div class="card-body d-flex flex-column align-items-center">
+                                                <h5 class="card-title">Disk IOPS (Number of IO Operations Per Second)</h5>
+                                                <div class="card-text">
+                                                    <div class="disk-iops-chart"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mt-4 network-info graph">
+                                            <div class="loader"><div class="ld ld-ring ld-spin"></div></div>
+                                            <div class="card-body d-flex flex-column align-items-center">
+                                                <h5 class="card-title">Network Traffic</h5>
+                                                <div class="card-text">
+                                                    <div class="network-band-chart"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mt-4 network-info graph">
+                                            <div class="loader"><div class="ld ld-ring ld-spin"></div></div>
+                                            <div class="card-body d-flex flex-column align-items-center">
+                                                <h5 class="card-title">Network PPS (Packets Per Second)</h5>
+                                                <div class="card-text">
+                                                    <div class="network-pps-chart"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane text-justify" id="upgrade">
+                                    <div class="row page-header sub-header">
+                                        <div class="sub-title col-xs-12">Service Upgrade</div>
+                                        <div class="green-info">
+                                            <div style="padding: 20px;">
+                                                <i class="bx bx-tachometer"></i>
+                                                If you would like to Upgrade to a New Package, then you can easily Upgrade it through this area. The Difference will be Calculated depending on the End Date of your Current Package.
+                                            </div>
+                                        </div>
+                                        <small>Your Service is Prepaid until <strong>25 March 2021</strong>. <small class="">28 Days Left</small></small><br />
+                                    </div>
+                                    <div class="table-responsive">
+                                        <div class="table-label">Please Choose a Plan:</div>
+                                        <table class="page-table">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>Name</th>
+                                                    <th>CPU</th>
+                                                    <th>RAM</th>
+                                                    <th>NVMe SSD Space</th>
+                                                    <th>Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="js-select-plan current disabled" style="border-left: 3px solid #02a2ff;" data-id="20" data-amount="14.46">
+                                                    <td class="radio-1"></td>
+                                                    <td>KVM VPS 2GB <small style="color: #02a2ff; font-weight: 800;">(Current)</small></td>
+                                                    <td>1vCPU <span class="label-key">cores</span></td>
+                                                    <td>2GB <span class="label-key">RAM</span></td>
+                                                    <td>20GB <span class="label-key">SSD Space</span></td>
+                                                    <td class="amount"><span>&euro;14.46</span> / <small>per month</small></td>
+                                                </tr>
+                                                <tr class="js-select-plan" data-id="21" data-amount="36.24">
+                                                    <td class="radio-1">
+                                                        <label class="control control-radio clearfix">
+                                                            <input type="radio" name="plan" />
+                                                            <div class="control_indicator"></div>
+                                                        </label>
+                                                    </td>
+                                                    <td>KVM VPS 4GB</td>
+                                                    <td>2vCPU <span class="label-key">cores</span></td>
+                                                    <td>4GB <span class="label-key">RAM</span></td>
+                                                    <td>40GB <span class="label-key">SSD Space</span></td>
+                                                    <td class="amount"><span>&euro;36.24</span> / <small>per month</small></td>
+                                                </tr>
+                                                <tr class="js-select-plan" data-id="22" data-amount="60.44">
+                                                    <td class="radio-1">
+                                                        <label class="control control-radio clearfix">
+                                                            <input type="radio" name="plan" />
+                                                            <div class="control_indicator"></div>
+                                                        </label>
+                                                    </td>
+                                                    <td>KVM VPS 8GB</td>
+                                                    <td>2vCPU <span class="label-key">cores</span></td>
+                                                    <td>8GB <span class="label-key">RAM</span></td>
+                                                    <td>80GB <span class="label-key">SSD Space</span></td>
+                                                    <td class="amount"><span>&euro;60.44</span> / <small>per month</small></td>
+                                                </tr>
+                                                <tr class="js-select-plan" data-id="23" data-amount="157.24">
+                                                    <td class="radio-1">
+                                                        <label class="control control-radio clearfix">
+                                                            <input type="radio" name="plan" />
+                                                            <div class="control_indicator"></div>
+                                                        </label>
+                                                    </td>
+                                                    <td>KVM VPS 16GB</td>
+                                                    <td>4vCPU <span class="label-key">cores</span></td>
+                                                    <td>16GB <span class="label-key">RAM</span></td>
+                                                    <td>160GB <span class="label-key">SSD Space</span></td>
+                                                    <td class="amount"><span>&euro;157.24</span> / <small>per month</small></td>
+                                                </tr>
+                                                <tr class="js-select-plan" data-id="24" data-amount="314.54">
+                                                    <td class="radio-1">
+                                                        <label class="control control-radio clearfix">
+                                                            <input type="radio" name="plan" />
+                                                            <div class="control_indicator"></div>
+                                                        </label>
+                                                    </td>
+                                                    <td>KVM VPS 32GB</td>
+                                                    <td>8vCPU <span class="label-key">cores</span></td>
+                                                    <td>32GB <span class="label-key">RAM</span></td>
+                                                    <td>240GB <span class="label-key">SSD Space</span></td>
+                                                    <td class="amount"><span>&euro;314.54</span> / <small>per month</small></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="form-holder">
+                                        <div class="title">Payment Method:</div>
+                                        <form class="form">
+                                            <div class="payment-methods-radio row">
+                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                    <div class="radio-content radio-payment-methods active" data-id="1">
+                                                        <div class="radio-1">
+                                                            <label class="control control-radio clearfix">
+                                                                <img src="/assets/images/icons/payments/card.png" /> <span>Credit/Debit Card</span>
+
+                                                                <input type="radio" name="payment_method_id" value="1" checked />
+
+                                                                <div class="control_indicator"></div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                                    <div class="radio-content radio-payment-methods" data-id="2">
+                                                        <div class="radio-1">
+                                                            <label class="control control-radio clearfix">
+                                                                <img src="/assets/images/icons/payments/paypal.png" /> <span>PayPal</span>
+
+                                                                <input type="radio" name="payment_method_id" value="2" />
+
+                                                                <div class="control_indicator"></div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="upgrade-amount text-right">Due Today: &euro;<span>0</span> (21% VAT Included)</div>
+                                            <button type="submit" class="btn-1 text-center upgradePlan">Continue</button>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane text-justify" id="settings">
+                                    <div class="sub-sub-menu">
+                                        <ul class="nav nav-tabs" id="sub-tabs" role="tablist">
+                                            <li role="presentation">
+                                                <a href="#ipv4" aria-controls="ipv4" role="tab" data-toggle="tab"><i class="bx bx-network-chart"></i> IPv4</a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a href="#reinstall" aria-controls="reinstall" role="tab" data-toggle="tab"><i class="bx bx-refresh"></i> Reinstall</a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a href="#hostname" aria-controls="hostname" role="tab" data-toggle="tab"><i class="bx bxs-edit"></i> Change Hostname</a>
+                                            </li>
+                                            <li role="presentation">
+                                                <a href="#cancel-service" aria-controls="cancel-service" role="tab" data-toggle="tab"><i class="bx bx-message-square-x"></i> Request Cancellation</a>
+                                            </li>
+                                        </ul>
+
+                                        <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane text-justify active" id="ipv4">
+                                                <div class="ip-addresses">
+                                                    <div class="title"><span>IP Addresses</span></div>
+                                                    <div class="table-responsive">
+                                                        <table class="page-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>IPv4</th>
+                                                                    <th>IPv6</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="ip">
+                                                                        <span class="ip copy-itself hint--top" aria-label="Copy IP Address" data-copied="Copied!" data-click-to-copy="Copy IP Address">157.90.164.50</span>
+                                                                    </td>
+                                                                    <td class="ip">
+                                                                        <span class="ip copy-itself hint--top" aria-label="Copy IP Address" data-copied="Copied!" data-click-to-copy="Copy IP Address">2a01:4f8:1c0c:40dc::/64</span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div role="tabpanel" class="tab-pane text-justify" id="reinstall">
+                                                <div class="title">Reinstallation of Server</div>
+                                                <div class="row">
+                                                    <div class="col-xs-10">
+                                                        <div class="red-info">
+                                                            <div style="padding: 16px;">
+                                                                <i class="bx bx-error bx-burst"></i>
+                                                                Reinstalling your Server <strong>will result in Full Data Loss</strong>. Please make a Backup of the Important Data before Reinstallation. After the Server is Reinstalled, it is not possible
+                                                                to Restore it.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-holder">
+                                                    <form class="form form-reinstall">
+                                                        <div class="row">
+                                                            <div class="col-sm-7">
+                                                                <div class="form-group">
+                                                                    <label>Operating System</label>
+                                                                    <select class="os-select selectpicker" name="os">
+                                                                        <option value="1" data-content="<img src='https://www.my.ssdcloud.io//assets/images/icons/os/ubuntu.png' class='select-img'> Ubuntu 20.04"></option>
+                                                                        <option value="2" data-content="<img src='https://www.my.ssdcloud.io//assets/images/icons/os/ubuntu.png' class='select-img'> Ubuntu 18.04"></option>
+                                                                        <option value="3" data-content="<img src='https://www.my.ssdcloud.io//assets/images/icons/os/debian.png' class='select-img'> Debian 10"></option>
+                                                                        <option value="4" data-content="<img src='https://www.my.ssdcloud.io//assets/images/icons/os/debian.png' class='select-img'> Debian 9"></option>
+                                                                        <option value="5" data-content="<img src='https://www.my.ssdcloud.io//assets/images/icons/os/centos.png' class='select-img'> CentOS 8"></option>
+                                                                        <option value="6" data-content="<img src='https://www.my.ssdcloud.io//assets/images/icons/os/centos.png' class='select-img'> CentOS 7"></option>
+                                                                        <option value="7" data-content="<img src='https://www.my.ssdcloud.io//assets/images/icons/os/fedora.png' class='select-img'> Fedora 32"></option>
+                                                                    </select>
+                                                                </div>
+                                                                <button type="button" class="form-btn btn-1 reinstall">Reinstall</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+
+                                            <div role="tabpanel" class="tab-pane text-justify" id="hostname">
+                                                <div class="title">Change Server Hostname</div>
+                                                <p>
+                                                    A Server Hostname is a Name that is given to a Server that is attached to the Network that Uniquely Identifies over a Network and thus Allows it to be accessed without using its IP Address. If you run
+                                                    hostname Command without any Options, it will display the current hostname and Domain Name of your Linux System.
+                                                </p>
+                                                <div class="row">
+                                                    <div class="col-md-7">
+                                                        <div class="blue-info">
+                                                            <div style="padding: 15px;">
+                                                                <i class="fas fa-exclamation-triangle"></i>
+                                                                For Active Servers, you may Change the Hostname by logging into the Server OS. We have guides for
+                                                                <a href="https://www.ssdcloud.io/kb/how-to-set-or-change-system-hostname-12/" target="_blank">Most Platforms</a>.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div role="tabpanel" class="tab-pane text-justify" id="cancel-service">
+                                                <div class="title"><span>Service Cancellation Request for ubuntu-2GB</span></div>
+
+                                                <div class="red-info">
+                                                    <div style="padding: 20px;">
+                                                        <i class="bx bx-sad"></i>
+                                                        <p>
+                                                            SSDCloud Hosting Solutions are sorry to see you wish to Cancel your Service with us.<br />
+                                                            <br />
+                                                            Did you know that unlike almost all other Hosting Providers SSDCloud re-invest in our Services Continuously to Provide the Fastest and Most Modern Service.<br />
+                                                            <br />
+
+                                                            For example, All of our VPS Servers
+                                                            <strong>Include Free of Charge Speedy NVMe SSDs, Powerful Intel Xeon/AMD EPYC Processors, Blazing Fast Network and along with that Basic DDoS Protection</strong> too which are often Not Included
+                                                            with other Providers.<br />
+                                                            <br />
+
+                                                            We are confident moving from SSDCloud Hosting Solutions will be a huge Downgrade for your Website/Service as you'll lose all of the above Benefits and our Amazing Technical Support.
+                                                        </p>
+                                                    </div>
+
+                                                    <div style="border-top: 2px dashed #8c8b8b; width: 100%; margin-top: 20px; margin-bottom: 20px;"></div>
+
+                                                    <div style="padding: 20px;">
+                                                        <i class="bx bx-error bx-burst" style="margin: -3px 35px 0 20px;"></i>
+                                                        Please have in mind that when your <strong>Service is Cancelled ALL Data Related to your Account will be Permanently Deleted, including All Backups, Databases and Email Accounts</strong>.
+                                                    </div>
+                                                </div>
+
+                                                <form class="form form-cancel-service">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Please, choose when you want to Cancel your Service:</label>
+                                                                <select class="cancel selectpicker" name="type">
+                                                                    <option value="0">End of Billing Cycle</option>
+                                                                    <option value="1">Immediate</option>
+                                                                </select>
+                                                            </div>
+                                                            <input type="hidden" name="service_id" value="5181" />
+                                                            <button type="submit" class="form-btn btn-1 cancelService" style="background: red;"><i class="bx bxs-x-circle"></i> Request Service Cancellation</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="powered_by" style="text-align: center;">Powered by <a href="https://www.ssdcloud.io/" target="_blank">SSDCloud Labs</a></p>
+            </main>
+        </div>
+
+        <section class="payment_methods">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="we_accept">We Accept:</h3>
+                        <div class="payment_methods_images">
+                            <img src="/assets/images/icons/payments/visa.png" alt="SSDCloud Visa Card" />
+                            <img src="/assets/images/icons/payments/mastercard.png" alt="SSDCloud Mastercard" />
+                            <img src="/assets/images/icons/payments/mastero.png" alt="SSDCloud Maestro" />
+                            <img src="/assets/images/icons/payments/american-express.png" alt="SSDCloud American Express" />
+                            <img src="/assets/images/icons/payments/paypal.png" alt="SSDCloud PayPal" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <ul>
+                            <li>
+                                <img src="https://www.ssdcloud.io/assets/images/logo-white.png" alt="SSD Cloud Hosting Solutions" style="width: 200px;" /><br />
+                                &copy; 2021 SSDCloud Hosting Solutions.<br />
+                                All Rights Reserved.
+                            </li>
+                            <li>
+                                <ul class="social">
+                                    <li></li>
+                                    <li>
+                                        <a class="facebook" href="https://www.facebook.com/ssdcloudio/" target="_blank" rel="publisher"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="twitter" href="https://twitter.com/ssdcloudio/" target="_blank" rel="publisher"><i class="fab fa-twitter f" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="instagram" href="https://www.instagram.com/ssdcloud/" target="_blank" rel="publisher"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="linkedin" href="https://www.linkedin.com/company/ssdcloud/" target="_blank" rel="publisher"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="widget-title">
+                            <h4 class="title">Company</h4>
+                        </div>
+                        <ul>
+                            <li><a href="https://www.ssdcloud.io/about-us/">About Us</a></li>
+                            <li><a href="https://www.ssdcloud.io/blog/">Company Blog</a></li>
+                            <li><a href="https://www.ssdcloud.io/kb/">Knowledge Base</a></li>
+                            <li><a href="https://www.ssdcloud.io/contact-us/">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="widget-title">
+                            <h4 class="title">Services</h4>
+                        </div>
+                        <ul>
+                            <li><a href="https://www.ssdcloud.io/kvm-vps/">SSD VPS Servers</a></li>
+                            <li><a href="https://www.ssdcloud.io/web-hosting/">Web Hosting</a></li>
+                            <li><a href="https://www.ssdcloud.io/website-migration/">Website Migration</a></li>
+                            <li><a href="https://www.ssdcloud.io/ddos-protection/">DDoS Protection</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <div class="widget-title">
+                            <h4 class="title">Site Policies</h4>
+                        </div>
+                        <ul>
+                            <li><a href="https://www.ssdcloud.io/terms/">Terms &amp; Conditions</a></li>
+                            <li><a href="https://www.ssdcloud.io/privacy/">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+        <script src="https://www.ssdcloud.io/assets/js/app.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.9/js/bootstrap-select.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.min.js"></script>
+        <script src="https://www.my.ssdcloud.io/assets/js/app.min.js"></script>
+        <script>
+            $(function () {
+                $(".radio-content").click(function () {
+                    $(this).find("input:radio").prop("checked", !0);
+                });
+                window.swal = Swal.mixin({
+                    focusCancel: true,
+                });
+
+                $(".radio-payment-methods").click(function () {
+                    $(".radio-payment-methods").removeClass("active");
+                    $(this).addClass("active");
+                    payment_method_id = parseInt($(this).attr("data-id"));
+                });
+
+                $(".goTo-cancel-service").click(function () {
+                    $(".nav-tabs li").removeClass("active");
+                    $('#main-tabs a[href="#settings"]').tab("show");
+                    $('#main-tabs a[href="#settings"]').closest("li").addClass("active");
+
+                    $('#sub-tabs a[href="#cancel-service"]').tab("show");
+                    $('#sub-tabs a[href="#cancel-service"]').closest("li").addClass("active");
+                    $("#cancel-service")[0].scrollIntoView();
+                });
+
+                $(".nav-tabs#main-tabs li a").click(function (e) {
+                    var href = $(this).attr("href");
+
+                    $(".nav-tabs#main-tabs li").removeClass("active");
+                    $('.nav-tabs#main-tabs li a[href="' + href + '"]')
+                        .closest("li")
+                        .addClass("active");
+
+                    $(".nav-tabs#main-tabs .tab-pane").removeClass("active");
+                    $(".nav-tabs#main-tabs .tab-pane" + href).addClass("active");
+                });
+
+                var url = $("#sub-tabs a:first").attr("href");
+                $('#sub-tabs a[href="' + url + '"]').tab("show");
+                $('#sub-tabs a[href="' + url + '"]')
+                    .closest("li")
+                    .addClass("active");
+                $(".nav-tabs#sub-tabs li a").click(function (e) {
+                    var href = $(this).attr("href");
+
+                    $(".nav-tabs#sub-tabs li").removeClass("active");
+                    $('.nav-tabs#sub-tabs li a[href="' + href + '"]')
+                        .closest("li")
+                        .addClass("active");
+
+                    $(".nav-tabs#sub-tabs .tab-pane").removeClass("active");
+                    $(".nav-tabs#sub-tabs .tab-pane" + href).addClass("active");
+                });
+
+                function setSelectedValue(selectObj, valueToSet) {
+                    for (var i = 0; i < selectObj.options.length; i++) {
+                        if (selectObj.options[i].value == valueToSet) {
+                            selectObj.options[i].selected = true;
+                            return;
+                        }
+                    }
+                }
+
+                $(".renewButton").on("click", function () {
+                    /*var promoCode = document.createElement("input");
+                    promoCode.id = "promoCode";
+                    promoCode.setAttribute('placeholder', "Promo code");
+                    if ($(this).attr("data-promo").length !== 0) {
+                        promoCode.value = $(this).attr("data-promo");
+                    }*/
+                    var months = document.createElement("select");
+                    months.classList.add("selectpicker");
+                    var type1 = document.createElement("option");
+                    type1.value = 1;
+                    type1.text = "1 Month";
+                    var type2 = document.createElement("option");
+                    type2.value = 3;
+                    type2.text = "3 Months";
+                    var type3 = document.createElement("option");
+                    type3.value = 6;
+                    type3.text = "6 Months";
+                    months.appendChild(type1);
+                    months.appendChild(type2);
+                    months.appendChild(type3);
+                    setSelectedValue(months, $(this).attr("data-period"));
+                    //var inputDiv = document.createElement('div');
+                    //inputDiv.appendChild(promoCode);
+                    var selectDiv = document.createElement("div");
+                    selectDiv.classList.add("select-div");
+                    selectDiv.appendChild(months);
+                    var wrapperDiv = document.createElement("div");
+                    //wrapperDiv.appendChild(inputDiv);
+                    wrapperDiv.appendChild(selectDiv);
+                    var button = $(this);
+                    window.swal
+                        .fire({
+                            title: "Please Select a Period for which you want to Renew the Service.",
+                            html: wrapperDiv,
+                            onBeforeOpen: () => {
+                                $(".selectpicker").selectpicker();
+                            },
+                            customClass: "swal-custom",
+                            showCancelButton: true,
+                            cancelButtonText: "Cancel",
+                            confirmButtonText: "Renew",
+                        })
+                        .then((result) => {
+                            if (result.value) {
+                                $.ajax({
+                                    type: "POST",
+                                    dataType: "json",
+                                    url: "https://www.my.ssdcloud.io/service/renew/",
+                                    data: {
+                                        id: "5180",
+                                        period: months.options[months.selectedIndex].value,
+                                        //promo_code: promoCode.value,
+                                    },
+                                    beforeSend: function () {
+                                        button.attr("disabled", "disabled");
+                                        button.html('<div class="ld ld-ring ld-spin" style="width: 16px;height: 16px;"></div>');
+                                    },
+                                    success: function (data) {
+                                        if (data) {
+                                            window.location.href = "https://www.my.ssdcloud.io/order/detail/" + data.id + "/";
+                                        } else {
+                                            window.swal.fire({
+                                                title: "Oops...",
+                                                text: data.errorMessage,
+                                                type: "error",
+                                            });
+                                        }
+                                    },
+                                    error: function (data) {
+                                        var errors = JSON.parse(data.responseText);
+                                        var errorMessage = "";
+                                        for (var m in errors) {
+                                            errorMessage += errors[m];
+                                        }
+                                        swal({
+                                            title: "Oops...",
+                                            text: errorMessage,
+                                            icon: "error",
+                                        });
+                                    },
+                                    complete: function () {
+                                        button.removeAttr("disabled");
+                                        button.html('<i class="fas fa-sync-alt"></i> Renew this service ');
+                                    },
+                                });
+                            }
+                        });
+                });
+
+                $(".cancelService").click(function (e) {
+                    e.preventDefault();
+                    var clickedElement = $(this);
+                    var button = clickedElement;
+                    if ($(this).find(".title").length > 0) {
+                        button = $(this).find(".title");
+                    }
+                    window.swal
+                        .fire({
+                            title: "Are you sure?",
+                            text: "Are you sure you want to Cancel the Service?",
+                            type: "question",
+                            width: 580,
+                            showCancelButton: true,
+                            cancelButtonText: "No!",
+                            confirmButtonText: "Yes, I am sure!",
+                        })
+                        .then((result) => {
+                            if (result.value) {
+                                $.ajax({
+                                    method: "POST",
+                                    dataType: "json",
+                                    url: "https://www.my.ssdcloud.io/service/cancel-service/",
+                                    data: {
+                                        type: $(".cancel").selectpicker("val"),
+                                        id: "5180",
+                                    },
+                                    beforeSend: function () {
+                                        button.attr("disabled", "disabled");
+                                        button.html('<div class="ld ld-ring ld-spin"></div>');
+                                    },
+                                    success: function (data) {
+                                        if (data.success) {
+                                            window.swal
+                                                .fire({
+                                                    title: "Hurray!",
+                                                    text: "Your Cancellation Request has been Submitted. If you have Done this in Error, Open a Support Ticket to Notify us Immediately or your Account may be Terminated.",
+                                                    type: "success",
+                                                    position: "top-end",
+                                                    showConfirmButton: false,
+                                                    timer: 2000,
+                                                })
+                                                .then(function () {
+                                                    location.reload();
+                                                });
+                                        } else {
+                                            window.swal.fire({
+                                                title: "Oops...",
+                                                text: data.errorMessage,
+                                                type: "error",
+                                            });
+                                        }
+                                    },
+                                    complete: function () {
+                                        button.removeAttr("disabled");
+                                        button.html("Request Service Cancellation");
+                                    },
+                                });
+                            }
+                        });
+                });
+
+                $(".js-select-plan.current").next("tr").addClass("selected");
+                $(".js-select-plan.current").closest("tr").next().find("input[name=plan]").attr("checked", true);
+                $(".js-select-plan").click(function () {
+                    var newPrice = $(this).attr("data-amount") - ($(".js-select-plan.current").attr("data-amount") / 30) * parseInt("18");
+                    $(".upgrade-amount span").html(newPrice.toFixed(2));
+                    $(this).find("input").prop("checked", true);
+                });
+                var newPrice = $(".js-select-plan.selected").attr("data-amount") - ($(".js-select-plan.current").attr("data-amount") / 30) * parseInt("18");
+                $(".upgrade-amount span").html(newPrice.toFixed(2));
+
+                $(".upgradePlan").click(function () {
+                    if ($(".js-select-plan").find("input:checked").parent().parent().parent().attr("data-id") == parseInt("52")) {
+                        return false;
+                    }
+                    var button = $(this);
+                    $.ajax({
+                        method: "POST",
+                        dataType: "json",
+                        url: "https://www.my.ssdcloud.io/service/upgrade/",
+                        data: {
+                            service_id: "5180",
+                            new_plan: $(".js-select-plan").find("input:checked").parent().parent().parent().attr("data-id"),
+                            payment_method_id: $(".radio-payment-methods.active").attr("data-id"),
+                        },
+                        beforeSend: function () {
+                            button.attr("disabled", "disabled");
+                            button.html('<div class="ld ld-ring ld-spin"></div>');
+                        },
+                        success: function (data) {
+                            if (data) {
+                                window.location.href = "https://www.my.ssdcloud.io/order/detail/" + data.id + "/";
+                            } else {
+                                window.swal.fire({
+                                    title: "Oops...",
+                                    text: data.errorMessage,
+                                    type: "error",
+                                });
+                            }
+                        },
+                        error: function (data) {
+                            var errors = JSON.parse(data.responseText);
+                            var errorMessage = "";
+                            for (var m in errors) {
+                                errorMessage += errors[m];
+                            }
+                            swal({
+                                title: "Oops...",
+                                text: errorMessage,
+                                icon: "error",
+                            });
+                        },
+                        complete: function () {
+                            button.removeAttr("disabled");
+                            button.html('<i class="fas fa-sync-alt"></i> Renew this service ');
+                        },
+                    });
+                    return false;
+                });
+            });
+        </script>
+
+        <script>
+            $(function () {
+                $(".changeDomain").on("click", function () {
+                    var domain = document.createElement("input");
+                    domain.id = "domain";
+                    domain.setAttribute("placeholder", "New Main Domain");
+                    var inputDiv = document.createElement("div");
+                    inputDiv.appendChild(domain);
+                    var wrapperDiv = document.createElement("div");
+                    wrapperDiv.appendChild(inputDiv);
+                    var button = $(this);
+
+                    window.swal
+                        .fire({
+                            title: "Enter New Hosting Main Domain",
+                            html: wrapperDiv,
+                            customClass: "swal-custom",
+                            showCancelButton: true,
+                            cancelButtonText: "Cancel",
+                            confirmButtonText: "Change",
+                        })
+                        .then((result) => {
+                            if (result.value) {
+                                $.ajax({
+                                    type: "POST",
+                                    dataType: "json",
+                                    url: "https://www.my.ssdcloud.io/service/update-domain/",
+                                    data: {
+                                        id: "5180",
+                                        domain: domain.value,
+                                    },
+                                    beforeSend: function () {
+                                        button.attr("disabled", "disabled");
+                                        button.html('<div class="ld ld-ring ld-spin" style="width: 16px;height: 16px;"></div>');
+                                    },
+                                    success: function (data) {
+                                        if (data.success) {
+                                            window.swal
+                                                .fire({
+                                                    title: "Hurray!",
+                                                    text: "The Main Domain has been Successfully Changed!",
+                                                    type: "success",
+                                                    position: "top-end",
+                                                    showConfirmButton: false,
+                                                    timer: 2000,
+                                                })
+                                                .then(function () {
+                                                    location.reload();
+                                                });
+                                        } else {
+                                            window.swal.fire({
+                                                title: "Oops...",
+                                                text: data.errorMessage,
+                                                type: "error",
+                                            });
+                                        }
+                                    },
+                                    error: function (data) {
+                                        var errors = JSON.parse(data.responseText);
+                                        var errorMessage = "";
+                                        for (var m in errors) {
+                                            errorMessage += errors[m];
+                                        }
+                                        swal({
+                                            title: "Oops...",
+                                            text: errorMessage,
+                                            icon: "error",
+                                        });
+                                    },
+                                    complete: function () {
+                                        button.removeAttr("disabled");
+                                        button.html("Change");
+                                    },
+                                });
+                            }
+                        });
+                });
+            });
+        </script>
+    </body>
+</html>
