@@ -20638,12 +20638,6 @@ tr.introjs-showElement > th {
 
 
 /*  full css file  */
-@charset "UTF-8";
-
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=greek,vietnamese");
-* {
-  box-sizing: border-box;
-}
 
 .server_body_margin_padding {
     height: 120vh;
