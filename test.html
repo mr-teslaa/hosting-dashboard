@@ -10,7 +10,7 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" rel="stylesheet" />
     <link href="//cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
     <link href="https://www.ssdcloud.io/assets/css/app.min.css" rel="stylesheet" />
-    <link href="/assets/css/style-main.css" rel="stylesheet" />
+    <link href="/assets/css/style.css" rel="stylesheet" />
     <!--link href="/assets/css/hur.css" rel="stylesheet" /-->
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
@@ -207,10 +207,10 @@
 		</nav>
 	</div>
 
-	<main class="ml__sidebar mt-5 height_120">
+	<main class="ml__sidebar fix_responsive_height height_140">
 
 		<div id="header2_wrap">
-			<div style="width: 100%; position: relative;">
+			<div class="d-flex" style="width: 100%; position: relative;">
 				<div id="header2_left" style="padding-left:70px;">
 					<div class="fonticon_debian">
 						<img src="http://demo.get-aura.org/assets/images/icons/os/debian.png" height="50" width="50" alt="server logo">
@@ -237,77 +237,42 @@
 				</div>
 
 				<div id="header2_right" class="server_actions_mobile">
-				<div style="display:inline-block; position:relative;">
-					<i class='bx bx-dots-vertical-rounded' onclick="hideDropdowns();"></i>
-				</div>
+					<div class="dropdown">
+						<a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="bx bx-dots-vertical-rounded"></i>
+						</a>
+							
+						<div class="dropdown-menu fix_position_toggle" aria-labelledby="dropdownMenuLink">
+							<a class="dropdown-item d-flex" href="#">
+								<i class="bx bx-terminal mt-4 mr-4"></i> 
+								<p> View Console </p>
+							</a>
+							
+							<a class="dropdown-item d-flex" href="#">
+								<i class="bx bx-power-off mt-4 mr-4"></i>
+								<p> Stop Server </p>
+							</a>
+							
+							<a class="dropdown-item d-flex" href="#">
+								<i class="bx bx-refresh mt-4 mr-4"></i>
+								<p> Restart Server </p>
+							</a>
+							
+							<a class="dropdown-item d-flex" href="#">
+								<i class="bx bx-disc mt-4 mr-4"></i>
+								<p> Reinstall Server </p>
+							</a>
+							
+							<a class="dropdown-item d-flex" href="#">
+								<i class="bx bx-trash mt-4 mr-4"></i>
+								<p> Distroy Server </p>
+							</a>
+							
+	
+						</div>
+					</div>
 				</div>
 			</div>
-
-			<!-- <div id="header2_right" class="server_actions">
-				<button
-				  aria-label="View Console"
-				  class="header2_viewconsole"
-				  style="position:relative;"
-				  data-popup2="VmlldyBDb25zb2xl"
-				  onclick="viewConsole('6a84cdbf-6130-4164-9c76-51bfa428b595'); return false;"
-				  data-original-title="View Console"
-				>
-				  <span
-					style="position:absolute; top:-2px; left:18px; font-size:8px; font-weight:bold; font-family:courier;"
-					>&gt;_</span
-				  >
-				</button>
-				<button
-				  aria-label="Stop Server"
-				  class="header2_substop has-dropdown"
-				  data-popup2="U2VydmVyIFN0b3A="
-				  dropdown-info="MjA5LjI1MC4yNDcuMjE2IA=="
-				  dropdown-disclaimer="Are you sure you want to stop your server? This will hard power off the server. You will need to start the server again via the restart button. 
-				  <div class='alert alert-info' style='margin-top:10px;margin-bottom:0px;'>
-					  <div>
-						  NOTE: Stopped instances continue to incur charges. If you want to stop charges, DESTROY your server. <u><a href='/support/#knowledgebase'>For more information, please view our FAQ</a></u>.
-					  </div>
-				  </div>"
-				  dropdown-action="stop"
-				  dropdown-function="$('#vpsformstop').submit();"
-				  onclick="showConfirmationDropdown($(this));"
-				  data-original-title="Server Stop"
-				  aria-describedby="tooltip177231"
-				></button>
-				<button
-				  aria-label="Restart Server"
-				  class="header2_subrestart has-dropdown"
-				  data-popup2="U2VydmVyIFJlc3RhcnQ="
-				  dropdown-info="MjA5LjI1MC4yNDcuMjE2IA=="
-				  dropdown-disclaimer="Are you sure you want to restart your server? This is a hard restart."
-				  dropdown-action="restart"
-				  dropdown-function="$('#vpsformrestart').submit();"
-				  onclick="showConfirmationDropdown($(this));"
-				  data-original-title="Server Restart"
-				></button>
-				<button
-				  aria-label="Reinstall Server"
-				  class="header2_subreinstall has-dropdown"
-				  data-popup2="U2VydmVyIFJlaW5zdGFsbA=="
-				  dropdown-info="MjA5LjI1MC4yNDcuMjE2IA=="
-				  dropdown-disclaimer="Are you sure you want to reinstall your server? Any data on your server will be permanently lost!"
-				  dropdown-action="reinstall"
-				  dropdown-function="$('#vpsformreinstall').submit();"
-				  onclick="showCheckConfirmationDropdown($(this));"
-				  data-original-title="Server Reinstall"
-				></button>
-				<button
-				  aria-label="Destroy Server"
-				  class="header2_subdestroy has-dropdown"
-				  data-popup2="U2VydmVyIERlc3Ryb3k="
-				  dropdown-info="MjA5LjI1MC4yNDcuMjE2IA=="
-				  dropdown-disclaimer="Are you sure you want to destroy this server? Any data on your server will be permanently lost!"
-				  dropdown-action="destroy"
-				  dropdown-function="$('#vpsformdestroy').submit();"
-				  onclick="showCheckConfirmationDropdown($(this));"
-				  data-original-title="Server Destroy"
-				></button>
-			  </div> -->
 			  
 
 			<div id="header2_right" class="server_actions">
@@ -320,7 +285,7 @@
 					<div class="dropdown--on-hover ml-0" style="position: relative;">
 						<i class="bx bx-power-off header2_viewconsole" id="powerbtn"></i>
 						
-						<div id="dropdown_show-toggle" class="dropdown-confirmation dropdown-confirmation-blue" style="position: absolute; top: 40px; left: -190px; opacity: 1; margin-top: 20px; display: block;">
+						<div id="show_powerbtn_content" class="dropdown-confirmation dropdown-confirmation-blue" style="position: absolute; top: 40px; left: -190px; opacity: 1; margin-top: 20px; display: block;">
 							<div class="dropdown-body">
 								<h5 class="dropdown-title text-info">
 									<i class='bx bx-info-circle'></i>
@@ -356,9 +321,9 @@
 					</div>
 				
 					<div class="dropdown--on-hover ml-0" style="position: relative;">
-						<i class="bx bx-refresh header2_viewconsole"></i>
+						<i class="bx bx-refresh header2_viewconsole" id="refresh"></i>
 
-						<div id="toggle_button_show" class="dropdown-confirmation dropdown-confirmation-blue" style="position: absolute; top: 40px; left: -180px; opacity: 1; margin-top: 20px; display: block;">
+						<div id="show_refreshbtn_content" class="dropdown-confirmation dropdown-confirmation-blue" style="position: absolute; top: 40px; left: -180px; opacity: 1; margin-top: 20px; display: block;">
 							<div class="dropdown-body">
 								<h5 class="dropdown-title text-info">
 									<i class='bx bx-info-circle'></i>
@@ -391,9 +356,9 @@
 					</div>
 
 					<div class="dropdown--on-hover ml-0" style="position: relative;">
-						<i class="bx bx-disc header2_subreinstall has-dropdown"></i>
+						<i class="bx bx-disc header2_subreinstall has-dropdown" id="reinstall"></i>
 						
-						<div id="toggle_button_show" class="dropdown-confirmation dropdown-confirmation-red" style="opacity: 1; margin-top: 20px; position: absolute; top: 40px; left: -190px; display: block;">
+						<div id="show_reinstallbtn_content" class="dropdown-confirmation dropdown-confirmation-red" style="opacity: 1; margin-top: 20px; position: absolute; top: 40px; left: -190px; display: block;">
 							<div class="dropdown-body">
 								<h5 class="dropdown-title text-danger">
 									<i class='bx bx-info-circle'></i>
@@ -428,9 +393,9 @@
 					</div>
 					
 					<div class="dropdown--on-hover ml-0" style="position: relative;">
-						<i class="bx bx-trash header2_subreinstall has-dropdown"></i>
+						<i class="bx bx-trash header2_subreinstall has-dropdown" id="trash"></i>
 					
-						<div id="toggle_button_show" class="dropdown-confirmation dropdown-confirmation-red" style="opacity: 1; margin-top: 20px; position: absolute; top: 40px; left: -190px; display: block;">
+						<div id="show_trashbtn_content" class="dropdown-confirmation dropdown-confirmation-red" style="opacity: 1; margin-top: 20px; position: absolute; top: 40px; left: -190px; display: block;">
 							<div class="dropdown-body">
 								<h5 class="dropdown-title text-danger">
 									<i class='bx bx-info-circle'></i>
@@ -466,15 +431,81 @@
 
 					<script>
 
-						var powerbtn = document.getElementById('#powerbtn');
-						if (powerbtn) {
-							console.log('sucess');
-						} else {
-							console.log('fail');
+						var dropdown_status = false; 
+						
+						//get the powerbutton
+						var powerbtn = document.getElementById('powerbtn');
+						var show_powerbtn_content = document.getElementById('show_powerbtn_content');
+						
+						//get the refresh/restart button
+						var refreshbtn = document.getElementById('refresh');
+						var show_refreshbtn_content = document.getElementById('show_refreshbtn_content');
+						
+						//get the reinstall button
+						var reinstallbtn = document.getElementById('reinstall');
+						var show_reinstallbtn_content = document.getElementById('show_reinstallbtn_content');
+						
+						//get the trash/delete button
+						var trashbtn = document.getElementById('trash');
+						var show_trashbtn_content = document.getElementById('show_trashbtn_content');
+
+						powerbtn.onclick = function() {
+							if(dropdown_status != false) {
+								dropdown_status = false;
+								// close dropdown when click out of dropdown
+								show_powerbtn_content.classList.remove('dropdown_show-toggle');
+							} else {
+								dropdown_status = true;
+								show_powerbtn_content.classList.add('dropdown_show-toggle');
+							}
 						}
-						/* window.onclick = function(event) {
-							openCloseDropdown(event);
-						} */		
+
+						refreshbtn.onclick = function() {
+							if(dropdown_status != false) {
+								dropdown_status = false;
+								// close dropdown when click out of dropdown
+								show_refreshbtn_content.classList.remove('dropdown_show-toggle');
+							} else {
+								dropdown_status = true;
+								show_refreshbtn_content.classList.add('dropdown_show-toggle');
+							}
+						}
+
+						reinstallbtn.onclick = function() {
+							if(dropdown_status != false) {
+								dropdown_status = false;
+								// close dropdown when click out of dropdown
+								show_reinstallbtn_content.classList.remove('dropdown_show-toggle');
+							} else {
+								dropdown_status = true;
+								show_reinstallbtn_content.classList.add('dropdown_show-toggle');
+							}
+						}
+						
+						trashbtn.onclick = function() {
+							if(dropdown_status != false) {
+								dropdown_status = false;
+								// close dropdown when click out of dropdown
+								show_trashbtn_content.classList.remove('dropdown_show-toggle');
+							} else {
+								dropdown_status = true;
+								show_trashbtn_content.classList.add('dropdown_show-toggle');
+							}
+						}
+
+						/* alert(dropdown_status);
+					
+						window.onclick = function() {
+							if(dropdown_status = true) {
+								alert(dropdown_status);
+								show_trashbtn_content.classList.remove('dropdown_show-toggle');
+								show_reinstallbtn_content.classList.remove('dropdown_show-toggle');
+								show_refreshbtn_content.classList.remove('dropdown_show-toggle');
+								show_powerbtn_content.classList.remove('dropdown_show-toggle');
+							} else {
+								alert('everything is fine');
+							}		
+						} */
 
 						/* function closeAllDropdown() {
 							var dropdowns = document.getElementsByClassName('.dropdown_expand');
@@ -509,52 +540,35 @@
 			<div class="tabs-responsive">
 				<div class="tabs-container overlay_scrollbar">
 					<ul class="tabs">
-						<li id="" class="tab_links active">
-							<a href=""> Overview </a>
+						<li id="" class="tab_links active" data-for-tab="1">
+							<a href="#"> Overview </a>
 						</li>
 
-						<li id="tabl_subsusage" class="tab_links">
-							<a href=""> Usage Graphs </a>
+						<li id="tabl_subsusage" class="tab_links" data-for-tab="1">
+							<a href="#"> Usage Graphs </a>
 						</li>
 
-						<li id="tabl_subssettings" class="tab_links">
-							<a href=""> Settings </a>
+						<li id="tabl_subssettings" class="tab_links" data-for-tab="1">
+							<a href="#"> Settings </a>
 						</li>
 						
-						<li id="tabl_subssnapshots" class="tab_links">
-							<a href=""> Snapshots </a>
+						<li id="tabl_subssnapshots" class="tab_links" data-for-tab="1">
+							<a href="#"> Snapshots </a>
 						</li>
 						
-						<li id="tabl_subsbackups" class="tab_links">
-							<a href=""> Backups </a>
+						<li id="tabl_subsbackups" class="tab_links" data-for-tab="1">
+							<a href="#"> Backups </a>
 						</li>
 						
-						<li id="tabl_subsddos" class="tab_links">
-							<a href=""> DDOS </a>
+						<li id="tabl_subsddos" class="tab_links" data-for-tab="1">
+							<a href="#"> DDOS </a>
 						</li>
 					</ul>
-
-					<button
-					class="button-tab btn btn-prev btn-nonmain-prev"
-					type="button"
-					data-click="prev-tab"
-					>
-					<span class="fonticon fonticon_chevron_left"></span>
-					</button>
-					
-					<button
-					class="button-tab btn btn-next btn-nonmain-next"
-					type="button"
-					data-click="next-tab"
-					>
-					<span class="fonticon fonticon_chevron_right"></span>
-					
-					</button>
 				</div>
 			
 			</div>
 
-			<div class="quick-add-actions dropdown dropdown--on-hover">
+			<div class="quick-add-actions">
 				<a class="quick-add-btn" href="https://ssdcloud.io">
 					<i class='bx bx-plus'></i>
 				</a>
@@ -813,21 +827,22 @@
 
 		</div>
 
-		<div class="block1290">
-
-			<div class="warning_message">
-				Your server is currently being installed. Most server actions will be
-				unavailable until this has completed
-			</div>
+		<div class="block1290 d-flex">
 		
-			<div class="submenutabcontent">
+			<div class="submenutabcontent tabs__content" data-tab="1">
+				
+				<div class="warning_message">
+					Your server is currently being installed. Most server actions will be
+					unavailable until this has completed
+				</div>
+
 				<div class="container_fluid_custom mb-5">
 					
 					<div class="row">
 					
 						<div class="col-md-4">
 							<a href="https://ssdcloud.io">
-								<div class="boxLink">
+								<div class="boxLink box__shadow">
 									<div class="boxLink_title">Bandwidth Usage</div>
 									<div>
 									<span class="boxLink_content">0GB</span>
@@ -840,7 +855,7 @@
 
 						<div class="col-md-4">
 							<a href="https://ssdcloud.io">
-								<div class="boxLink">
+								<div class="boxLink box__shadow">
 									<div style="float: left; width: 50%; overflow: hidden;">
 									<div class="boxLink_title">CPU Usage</div>
 									<div>
@@ -862,7 +877,7 @@
 
 						<div class="col-md-4">
 							<a href="https://ssdcloud.io">
-								<div class="boxLink">
+								<div class="boxLink box__shadow">
 									<div class="boxLink_title">Current Charges</div>
 									<div>
 									<span class="boxLink_content">$0.01</span>
@@ -986,7 +1001,7 @@
 				</div>
 			</div>
 		
-			<div class="submenutabcontent" id="tabc_subsusage" style="display: none;">
+			<div class="submenutabcontent tabs__content" data-tab="2">
 			<h3>Monthly Bandwidth</h3>
 			<table class="tabledata">
 				<tbody>
@@ -994,7 +1009,7 @@
 					<td>Usage:</td>
 					<td>
 					<a
-						href="https://my.vultr.com/settings/#settingsnotifications"
+						href="https://ssdcloud.io"
 						id="bandwidth_preferences"
 					>
 						0 GB of 1000 GB (0%)
@@ -1153,1136 +1168,15 @@
 			</div>
 			</div>
 		
-			<div
-			class="flex3column submenutabcontent"
-			id="tabc_subssettings"
-			style="display: none;"
-			>
-			<label class="floatinglabel mobile-submenu-container">
-				<span style="display: inline;">Navigation</span>
-				<select
-				name="mobile-submenu"
-				class="mobile-submenu no-search select2-hidden-accessible"
-				style="display: none; padding-top: 14px; width: 100%;"
-				data-xselect2="yes"
-				data-minimum-results-for-search="-1"
-				tabindex="-1"
-				aria-hidden="true"
-				>
-				<option
-					value="settings_ipv4"
-					onchange="loadTabData('ipv4');changeSideTab(this, 'subssettings'); hidePostMessages(); loadReverseDNS();"
-				>
-					IPv4
-				</option>
-				<option
-					value="settings_ipv6"
-					onchange="changeSideTab(this, 'subssettings'); hidePostMessages(); getHTMLIPv6ReverseDNS();"
-				>
-					IPv6
-				</option>
-				<option
-					value="settings_firewall"
-					onchange="loadTabData('firewall'); changeSideTab(this, 'subssettings'); hidePostMessages();"
-				>
-					Firewall
-				</option>
-				<option
-					value="settings_customiso"
-					onchange="loadTabData('customiso'); changeSideTab(this, 'subssettings'); hidePostMessages();"
-				>
-					Custom ISO
-				</option>
-				<option
-					value="settings_changehostname"
-					onchange="changeSideTab(this, 'subssettings'); hidePostMessages();"
-				>
-					Change Hostname
-				</option>
-				<option
-					value="settings_changeplan"
-					onchange="changeSideTab(this, 'subssettings'); hidePostMessages();"
-				>
-					Change Plan
-				</option>
-				<option
-					value="settings_changeos"
-					onchange="changeSideTab(this, 'subssettings'); hidePostMessages();"
-				>
-					Change OS
-				</option>
-				<option
-					value="settings_changeapplication"
-					onchange="changeSideTab(this, 'subssettings'); hidePostMessages();"
-				>
-					Change Application
-				</option>
-				<option
-					value="settings_changesshkey"
-					onchange="changeSideTab(this, 'subssettings'); hidePostMessages();"
-				>
-					Reinstall SSH Keys
-				</option>
-				<option
-					value="settings_changestartupscript"
-					onchange="changeSideTab(this, 'subssettings'); hidePostMessages();"
-				>
-					Change Startup Script
-				</option>
-				<option
-					value="settings_ipv4"
-					onchange="loadTabData('ipv4');changeSideTab(this, 'subssettings'); hidePostMessages(); loadReverseDNS();"
-				>
-					IPv4
-				</option>
-				<option
-					value="settings_ipv6"
-					onchange="changeSideTab(this, 'subssettings'); hidePostMessages(); getHTMLIPv6ReverseDNS();"
-				>
-					IPv6
-				</option>
-				<option
-					value="settings_firewall"
-					onchange="loadTabData('firewall'); changeSideTab(this, 'subssettings'); hidePostMessages();"
-				>
-					Firewall
-				</option>
-				<option
-					value="settings_customiso"
-					onchange="loadTabData('customiso'); changeSideTab(this, 'subssettings'); hidePostMessages();"
-				>
-					Custom ISO
-				</option>
-				<option
-					value="settings_changehostname"
-					onchange="changeSideTab(this, 'subssettings'); hidePostMessages();"
-				>
-					Change Hostname
-				</option>
-				<option
-					value="settings_changeplan"
-					onchange="changeSideTab(this, 'subssettings'); hidePostMessages();"
-				>
-					Change Plan
-				</option>
-				<option
-					value="settings_changeos"
-					onchange="changeSideTab(this, 'subssettings'); hidePostMessages();"
-				>
-					Change OS
-				</option>
-				<option
-					value="settings_changeapplication"
-					onchange="changeSideTab(this, 'subssettings'); hidePostMessages();"
-				>
-					Change Application
-				</option>
-				<option
-					value="settings_changesshkey"
-					onchange="changeSideTab(this, 'subssettings'); hidePostMessages();"
-				>
-					Reinstall SSH Keys
-				</option>
-				<option
-					value="settings_changestartupscript"
-					onchange="changeSideTab(this, 'subssettings'); hidePostMessages();"
-				>
-					Change Startup Script
-				</option></select
-				><span
-				class="select2 select2-container select2-container--default"
-				dir="ltr"
-				style="width: 100%;"
-				><span class="selection"
-					><span
-					class="select2-selection select2-selection--single"
-					role="combobox"
-					aria-haspopup="true"
-					aria-expanded="false"
-					tabindex="-1"
-					aria-labelledby="select2-mobile-submenu-fn-container"
-					><span
-						class="select2-selection__rendered"
-						id="select2-mobile-submenu-fn-container"
-						title="IPv4"
-						>IPv4</span
-					><span class="select2-selection__arrow" role="presentation"
-						><b role="presentation"></b></span></span></span
-				><span class="dropdown-wrapper" aria-hidden="true"></span></span
-				><span
-				class="select2 select2-container select2-container--default"
-				dir="ltr"
-				style="width: 100%;"
-				><span class="selection"
-					><span
-					class="select2-selection select2-selection--single"
-					role="combobox"
-					aria-haspopup="true"
-					aria-expanded="false"
-					tabindex="0"
-					aria-labelledby="select2-mobile-submenu-wh-container"
-					><span
-						class="select2-selection__rendered"
-						id="select2-mobile-submenu-wh-container"
-						title="IPv4"
-						>IPv4</span
-					><span class="select2-selection__arrow" role="presentation"
-						><b role="presentation"></b></span></span></span
-				><span class="dropdown-wrapper" aria-hidden="true"></span
-				></span>
-			</label>
-			<div class="flex3column_left submenu">
-				<input
-				type="radio"
-				name="settings"
-				value=""
-				id="settings_ipv4"
-				class="tabmenu_radio"
-				onchange="loadTabData('ipv4');changeSideTab(this, 'subssettings'); hidePostMessages(); loadReverseDNS();"
-				checked="checked"
-				/>
-				<label for="settings_ipv4"> IPv4 </label>
-				<input
-				type="radio"
-				name="settings"
-				value=""
-				id="settings_ipv6"
-				class="tabmenu_radio"
-				onchange="changeSideTab(this, 'subssettings'); hidePostMessages(); getHTMLIPv6ReverseDNS();"
-				/>
-				<label for="settings_ipv6"> IPv6 </label>
-		
-				<input
-				type="radio"
-				name="settings"
-				value=""
-				id="settings_firewall"
-				class="tabmenu_radio"
-				onchange="loadTabData('firewall'); changeSideTab(this, 'subssettings'); hidePostMessages();"
-				/>
-				<label for="settings_firewall"> Firewall </label>
-		
-				<input
-				type="radio"
-				name="settings"
-				value=""
-				id="settings_customiso"
-				class="tabmenu_radio"
-				onchange="loadTabData('customiso'); changeSideTab(this, 'subssettings'); hidePostMessages();"
-				/>
-				<label for="settings_customiso"> Custom ISO </label>
-				<input
-				type="radio"
-				name="settings"
-				value=""
-				id="settings_changehostname"
-				class="tabmenu_radio"
-				onchange="changeSideTab(this, 'subssettings'); hidePostMessages();"
-				/>
-				<label for="settings_changehostname"> Change Hostname </label>
-				<input
-				type="radio"
-				name="settings"
-				value=""
-				id="settings_changeplan"
-				class="tabmenu_radio"
-				onchange="changeSideTab(this, 'subssettings'); hidePostMessages();"
-				/>
-				<label for="settings_changeplan"> Change Plan </label>
-				<input
-				type="radio"
-				name="settings"
-				value=""
-				id="settings_changeos"
-				class="tabmenu_radio"
-				onchange="changeSideTab(this, 'subssettings'); hidePostMessages();"
-				/>
-				<label for="settings_changeos"> Change OS </label>
-				<input
-				type="radio"
-				name="settings"
-				value=""
-				id="settings_changeapplication"
-				class="tabmenu_radio"
-				onchange="changeSideTab(this, 'subssettings'); hidePostMessages();"
-				/>
-				<label for="settings_changeapplication"> Change Application </label>
-				<input
-				type="radio"
-				name="settings"
-				value=""
-				id="settings_changesshkey"
-				class="tabmenu_radio"
-				onchange="changeSideTab(this, 'subssettings'); hidePostMessages();"
-				/>
-				<label for="settings_changesshkey"> Reinstall SSH Keys </label>
-				<input
-				type="radio"
-				name="settings"
-				value=""
-				id="settings_changestartupscript"
-				class="tabmenu_radio"
-				onchange="changeSideTab(this, 'subssettings'); hidePostMessages();"
-				/>
-				<label for="settings_changestartupscript"> Change Startup Script </label>
-			</div>
-			<div class="flex3column_center">
-				<div>
-				<h3>Public Network</h3>
-				Need assistance? View our
-				<a
-					href="https://my.vultr.com/subs/netconfig/?id=6a84cdbf-6130-4164-9c76-51bfa428b595"
-					>networking configuration</a
-				>
-				tips and examples.
-		
-				<div class="flexwidth100">
-					<div class="responsivetable responsivetable_iplist">
-					<div>
-						<span>Address</span>
-						<span>Netmask</span>
-						<span>Gateway</span>
-						<span>Reverse DNS</span>
-						<span>&nbsp;</span>
-					</div>
-					<div>
-						<div>
-						209.250.247.216
-						<span class="label label-success">Main IP</span>
-						</div>
-						<div>255.255.254.0</div>
-						<div>209.250.246.1</div>
-						<div>
-						<div style="height:32px;">
-							<form
-							method="POST"
-							style="display:none;"
-							id="reverseform_3522885592"
-							onsubmit="update_reverse($(this)); return false;"
-							>
-							<input
-								type="hidden"
-								name="csrf_token"
-								value="GjguL2KtcX/4v6/4wNijrbBejtsVSfOYO5cRpnpOlro="
-							/>
-							<input type="hidden" name="action" value="update_reverse" />
-							<input type="hidden" name="address" value="3522885592" />
-							<input
-								type="text"
-								name="reverse_dns"
-								id="input_3522885592"
-							/>
-							<a
-								name="reverse_dns_submit"
-								class="zmdi zmdi-check"
-								aria-label="Update Reverse DNS"
-								data-popup2="VXBkYXRlIFJldmVyc2UgRE5T"
-								onclick="$(this).parent().submit();"
-								data-original-title="Update Reverse DNS"
-							></a>
-							<a
-								name="reverse_dns_submit"
-								class="zmdi zmdi-close"
-								aria-label="Cancel Changes"
-								data-popup2="Q2FuY2VsIENoYW5nZXM="
-								onclick="hideReverseForm('3522885592');"
-								data-original-title="Cancel Changes"
-							></a>
-							</form>
-							<span
-							name="address_3522885592"
-							id="address_edit"
-							style="cursor:pointer;"
-							onclick="showReverseForm('3522885592')"
-							>
-							<i class="sp-blue"></i>
-							</span>
-							<i class="zmdi zmdi-edit reverseDNSEditIcon"></i>
-							<span id="reverselabel_3522885592"></span>
-						</div>
-						</div>
-						<div></div>
-					</div>
-					</div>
-				</div>
-		
-				<hr class="hr50" />
-				<h3 style="margin-bottom:15px;">
-					Additional IPv4 IP
-					<span
-					style="font-size:15px; color:#0084df; cursor:pointer;"
-					onclick="$(this).hide(); $('#additional_ipv4_details').show();"
-					>( Show Details )</span
-					>
-				</h3>
-				<div id="additional_ipv4_details" style="display:none;">
-					<ul>
-					<li>IPv4 Addresses cost $2/month or $0.003/hour.</li>
-					<li>
-						You will need to manually configure additional IPs on your VPS.
-					</li>
-					<li>
-						You are limited to a maximum of 2 additional IPv4 IPs per VPS.
-					</li>
-					</ul>
-				</div>
-				<form method="post" id="add_extra_ip_form">
-					<input
-					type="hidden"
-					name="csrf_token"
-					value="GjguL2KtcX/4v6/4wNijrbBejtsVSfOYO5cRpnpOlro="
-					/>
-					<input type="hidden" name="action" value="add_v4_ip" />
-					<input
-					type="hidden"
-					name="id"
-					value="6a84cdbf-6130-4164-9c76-51bfa428b595"
-					/>
-					<input
-					aria-label="Add IPv4 Address"
-					dropdown-action="add-ipv4"
-					dropdown-disclaimer="Please note: Your server will require a server restart to add the IP address and you will need to manually configure it in your OS.<br><br>Additional IPs are billed at $0.003/hour."
-					class="has-dropdown"
-					dropdown-info="MjA5LjI1MC4yNDcuMjE2"
-					dropdown-function="$('#add_extra_ip_form').submit();"
-					onclick="showConfirmationDropdown($(this));"
-					type="button"
-					value="Add Another IPv4 Address"
-					/>
-				</form>
-		
-				<hr class="hr50" />
-				<h3 style="margin-bottom:15px;">
-					Private Network
-					<a
-					style="font-size:15px; color:#0084df; cursor:pointer;"
-					href="https://my.vultr.com/network/#network-private-network"
-					>( Manage )</a
-					>
-				</h3>
-				<div id="private_network_details" style="display:none;">
-					<ul>
-					<li>Private network traffic is unmetered.</li>
-					<li>
-						Private networks are per-location. For example, a machine in New
-						Jersey cannot communicate with a machine in Chicago.
-					</li>
-					<li>
-						Private networks only have your machines. You cannot communicate
-						with other customer's machines.
-					</li>
-					<li>
-						You will need to manually configure your private network
-						connection.
-					</li>
-					<li>
-						You can use any IP range to your liking on the private network. We
-						assign one IP by default, but you can ignore it and use other ones
-						if you would prefer.
-					</li>
-					</ul>
-				</div>
-				<div id="private_network">
-					<div id="loading_ipv4" style="height: 60px; position: relative;">
-					<span class="spinner spinner-md"></span>
-					</div>
-					<div
-					id="ipv4_error"
-					style="display: none; text-align: center; margin: 30px 8px 8px 8px;"
-					></div>
-				</div>
-				</div>
-		
-				<div style="display:none;">
-				IPv6 is currently available for this server, but a subnet has not yet
-				been assigned.
-				<br />
-				<br />
-				<form method="post" id="assign-ipv6">
-					<input
-					type="hidden"
-					name="csrf_token"
-					value="GjguL2KtcX/4v6/4wNijrbBejtsVSfOYO5cRpnpOlro="
-					/>
-					<input type="hidden" name="action" value="assign_ipv6" />
-					<input
-					type="hidden"
-					name="id"
-					value="6a84cdbf-6130-4164-9c76-51bfa428b595"
-					/>
-					<input
-					aria-label="Assign IPv6 Network"
-					dropdown-action="assign-ipv6"
-					dropdown-disclaimer="Assigning an IPv6 network will reboot your VPS. Are you sure you want to continue?"
-					class="has-dropdown"
-					dropdown-info="MjA5LjI1MC4yNDcuMjE2"
-					dropdown-function="$('#assign-ipv6').submit();"
-					onclick="showConfirmationDropdown($(this));"
-					type="button"
-					value="Assign IPv6 Network"
-					/>
-				</form>
-				</div>
-		
-				<div class="block460left" style="display: none;">
-				<h3>
-					Firewall
-					<a style="font-size:15px;" href="https://my.vultr.com/firewall/"
-					>( Manage )</a
-					>
-				</h3>
-				<div id="loading_firewall" style="height: 60px; position: relative;">
-					<span class="spinner spinner-md"></span>
-				</div>
-				<div
-					id="firewall_error"
-					style="display: none; text-align: center; margin: 30px 8px 8px 8px;"
-				></div>
-				<div id="firewall_section"></div>
-				</div>
-		
-				<div class="block460left" style="display: none;">
-				<h3>
-					Custom ISO
-					<a style="font-size:15px;" href="https://my.vultr.com/iso/"
-					>( Upload/Manage )</a
-					>
-				</h3>
-				<div id="loading_customiso" style="height: 60px; position: relative;">
-					<span class="spinner spinner-md"></span>
-				</div>
-				<div
-					id="customiso_error"
-					style="display: none; text-align: center; margin: 30px 8px 8px 8px;"
-				></div>
-				<div id="customiso_section" style="overflow: hidden;"></div>
-				<hr class="hr20" />
-				<h3>ISO Library</h3>
-				<form method="POST" id="attachisoform" class="flexlayoutform">
-					<input
-					type="hidden"
-					name="csrf_token"
-					value="GjguL2KtcX/4v6/4wNijrbBejtsVSfOYO5cRpnpOlro="
-					/>
-					<input type="hidden" name="action" value="attachiso" />
-					<input
-					type="hidden"
-					name="id"
-					value="6a84cdbf-6130-4164-9c76-51bfa428b595"
-					/>
-					<label class="floatinglabel flexwidth100">
-					<span style="display: inline;">ISO Library</span>
-					<select
-						name="ISOID"
-						data-xselect2="yes"
-						style="padding-top: 14px; width: 100%;"
-						tabindex="-1"
-						class="select2-hidden-accessible"
-						aria-hidden="true"
-					>
-						<option value="786609">Alpine Linux - 3.12.0 x86_64</option>
-						<option value="769226">Arch Linux - 2020.07.01 x86_64</option>
-						<option value="204515">CentOS 7 - 7 x86_64 Minimal</option>
-						<option value="641216">
-						CentOS 8 x86_64 - CentOS-8-x86_64-1905-dvd1.iso
-						</option>
-						<option value="219815">Core OS - x86_64</option>
-						<option value="716722">Debian 10.3 - Debian 10.3 x86_64</option>
-						<option value="204508">Debian 8 - 8.6 i386 netinstall</option>
-						<option value="291171">Debian 9 - 9.0 x86_64</option>
-						<option value="291172">Debian 9 - 9.0 i386</option>
-						<option value="449567">Devuan ASCII 2.0.0 - 2.0.0 x86-64</option>
-						<option value="449569">Devuan ASCII 2.0.0 - 2.0.0 i386</option>
-						<option value="285970">Devuan Jessie 1.0.0 - 1.0.0 amd64</option>
-						<option value="285971">Devuan Jessie 1.0.0 - 1.0.0 i386</option>
-						<option value="861611">Finnix - 121 x86</option>
-						<option value="449560">FreeBSD 11.2 - 11.2 RELEASE x86-64</option>
-						<option value="449561">FreeBSD 11.2 - 11.2 RELEASE i386</option>
-						<option value="547593">FreeBSD 12.0 - 12.0-RELEASE amd64</option>
-						<option value="547594">FreeBSD 12.0 - 12.0-RELEASE i386</option>
-						<option value="480505">FreeNAS 11.1 - FreeNAS 11.1</option>
-						<option value="794885">FreePBX - SNG7-FPBX-64bit-2008-1</option>
-						<option value="843768">FreePBX - SNG7-FPBX-64bit-2011-5</option>
-						<option value="831654">NixOS 20.09 - 20.09</option>
-						<option value="507904">OpenBSD 6.4 - i386</option>
-						<option value="507903">OpenBSD 6.4 - amd64</option>
-						<option value="466785">openSUSE Leap 15.0 - 15.0 x86_64</option>
-						<option value="827724">OPNsense - 20.7</option>
-						<option value="494963">pfSense CE 2.4.4 - 2.4.4 x86_64</option>
-						<option value="547595">Rancher OS - 1.5 x86_64</option>
-						<option value="522884">Rancher OS - 1.4.2</option>
-						<option value="402928">Rancher OS - 1.3 x86_64</option>
-						<option value="552901">SystemRescueCD - 6.0.1</option>
-						<option value="802022">SystemRescueCD - 6.1.8</option>
-						<option value="51830">
-						Trinity Rescue Kit - 3.4.2 build 372
-						</option>
-						<option value="417366">Ubuntu 18.04 - 18.04 x86_64</option>
-						<option value="547599">VyOS 1.2 - 1.2 x86_64</option></select
-					><span
-						class="select2 select2-container select2-container--default"
-						dir="ltr"
-						style="width: 100%;"
-						><span class="selection"
-						><span
-							class="select2-selection select2-selection--single"
-							role="combobox"
-							aria-haspopup="true"
-							aria-expanded="false"
-							tabindex="-1"
-							aria-labelledby="select2-ISOID-a1-container"
-							><span
-							class="select2-selection__rendered"
-							id="select2-ISOID-a1-container"
-							title="Alpine Linux - 3.12.0 x86_64"
-							>Alpine Linux - 3.12.0 x86_64</span
-							><span class="select2-selection__arrow" role="presentation"
-							><b role="presentation"></b></span></span></span
-						><span class="dropdown-wrapper" aria-hidden="true"></span></span
-					><span
-						class="select2 select2-container select2-container--default"
-						dir="ltr"
-						style="width: 100%;"
-						><span class="selection"
-						><span
-							class="select2-selection select2-selection--single"
-							role="combobox"
-							aria-haspopup="true"
-							aria-expanded="false"
-							tabindex="0"
-							aria-labelledby="select2-ISOID-rv-container"
-							><span
-							class="select2-selection__rendered"
-							id="select2-ISOID-rv-container"
-							title="Alpine Linux - 3.12.0 x86_64"
-							>Alpine Linux - 3.12.0 x86_64</span
-							><span class="select2-selection__arrow" role="presentation"
-							><b role="presentation"></b></span></span></span
-						><span class="dropdown-wrapper" aria-hidden="true"></span
-					></span>
-					</label>
-					<br />
-					<div class="staticlabel flexwidth100">
-					<input type="submit" value="Attach ISO and Reboot" />
-					</div>
-				</form>
-		
-				<hr class="hr20" />
-				<b>Note:</b> Your server was originally deployed using one of our
-				installers. If you reinstall the operating system via a custom ISO, the
-				root password in your control panel will no longer be valid.
-				</div>
-		
-				<div style="display:none;" class="block460left">
-				<h3>Change Default Hostname</h3>
-				Change the hostname recognized when this server is installed.<br />
-				<br />
-				For active servers, you may change the hostname by logging into the OS.
-				We have guides for
-				<a href="http://www.vultr.com/docs/search/?query=change+hostname"
-					>most platforms</a
-				>.<br />
-				<br />
-				<b>Warning:</b> Reinstalling the operating system will wipe all the data
-				on your server.
-				<hr class="hr20" />
-				<input
-					type="text"
-					name="vm_hostname"
-					class="flexwidth100"
-					placeholder="Hostname"
-					value="vultr.guest"
-				/>
-				<hr class="hr10" />
-				<button
-					class="button flexwidth100 has-dropdown"
-					aria-label="Change Hostname"
-					dropdown-info="MjA5LjI1MC4yNDcuMjE2IA=="
-					dropdown-disclaimer="Are you sure you want to change the hostname and reinstall your operating system? All data will be lost in the process."
-					dropdown-action="change-hostname"
-					dropdown-function="changeHostname($('input[type=text][name=vm_hostname]').val());"
-					onclick="showCheckConfirmationDropdown($(this));"
-				>
-					Reinstall
-				</button>
-				<form method="post" id="changehostname" class="flexlayoutform">
-					<input
-					type="hidden"
-					name="csrf_token"
-					value="GjguL2KtcX/4v6/4wNijrbBejtsVSfOYO5cRpnpOlro="
-					/>
-					<input type="hidden" name="action" value="changehostname" />
-					<input
-					type="hidden"
-					name="id"
-					value="6a84cdbf-6130-4164-9c76-51bfa428b595"
-					/>
-					<input type="hidden" name="vm_hostname" value="" />
-				</form>
-				</div>
-		
-				<div id="upgrade_plan" style="display:none;" class="block460left">
-				<h3>Current Plan</h3>
-				<div style="margin-bottom: 25px;">
-					<span style="display: block;">Cloud Compute</span>
-					<span style="display: block;"
-					>1 vCPU, 1024 MB RAM, 25 GB SSD, 1.00 TB Transfer</span
-					>
-				</div>
-				<h3>Change Plan</h3>
-				<div
-					id="upgrade_plan_spinner"
-					style="height: 60px; position: relative;"
-				>
-					<span class="spinner spinner-md"></span>
-				</div>
-				<div id="upgrade_plan_text" style="display:none;"></div>
-				<form id="upgrade_plan_form" method="post" style="display:none;">
-					<input
-					type="hidden"
-					name="csrf_token"
-					value="GjguL2KtcX/4v6/4wNijrbBejtsVSfOYO5cRpnpOlro="
-					/>
-					<input
-					type="hidden"
-					name="id"
-					value="6a84cdbf-6130-4164-9c76-51bfa428b595"
-					/>
-					<input type="hidden" name="action" value="upgrade" />
-					<label class="floatinglabel flexwidth100">
-					<span style="display: inline;">Plan</span>
-					<select
-						id="new_VPSPLANID"
-						name="new_VPSPLANID"
-						class="flexwidth100 select2-hidden-accessible"
-						data-xselect2="yes"
-						style="padding-top: 14px; width: 100%;"
-						tabindex="-1"
-						aria-hidden="true"
-					></select
-					><span
-						class="select2 select2-container select2-container--default"
-						dir="ltr"
-						style="width: 100%;"
-						><span class="selection"
-						><span
-							class="select2-selection select2-selection--single"
-							role="combobox"
-							aria-haspopup="true"
-							aria-expanded="false"
-							tabindex="-1"
-							aria-labelledby="select2-new_VPSPLANID-container"
-							><span
-							class="select2-selection__rendered"
-							id="select2-new_VPSPLANID-container"
-							></span
-							><span class="select2-selection__arrow" role="presentation"
-							><b role="presentation"></b></span></span></span
-						><span class="dropdown-wrapper" aria-hidden="true"></span></span
-					><span
-						class="select2 select2-container select2-container--default"
-						dir="ltr"
-						style="width: 100%;"
-						><span class="selection"
-						><span
-							class="select2-selection select2-selection--single"
-							role="combobox"
-							aria-haspopup="true"
-							aria-expanded="false"
-							tabindex="0"
-							aria-labelledby="select2-new_VPSPLANID-container"
-							><span
-							class="select2-selection__rendered"
-							id="select2-new_VPSPLANID-container"
-							></span
-							><span class="select2-selection__arrow" role="presentation"
-							><b role="presentation"></b></span></span></span
-						><span class="dropdown-wrapper" aria-hidden="true"></span
-					></span>
-					</label>
-					<hr class="hr10" />
-					<input
-					type="button"
-					value="Upgrade"
-					class="flexwidth100 has-dropdown"
-					no-mobile-data-popup="Q2hhbmdlIFBsYW4="
-					aria-label="Change Plan"
-					data-popup2="Q2hhbmdlIFBsYW4="
-					dropdown-disclaimer="You will need to manually resize your partitions in order to take advantage of any additional disk space."
-					dropdown-info=""
-					dropdown-action="change-plan"
-					dropdown-function="$('#upgrade_plan_form').submit();"
-					onclick="changePlan($(this));"
-					data-original-title="Change Plan"
-					/>
-				</form>
-				<br />
-				<br />
-				<div>
-					<b>Note:</b> Downgrading is currently not supported. Shrinking the
-					hard disk is not possible without risking data loss.
-				</div>
-				</div>
-		
-				<div style="display:none;" class="block460left">
-				<h3>New Operating System</h3>
-				<b>Warning:</b> Changing to a different operating system will wipe all
-				the data on your server.<br />
-				<br />
-				<b>Currently Installed:</b> Debian 10 x64 (buster)<br />
-				<hr class="hr20" />
-				<form method="post" id="osform" class="flexlayoutform">
-					<input
-					type="hidden"
-					name="csrf_token"
-					value="GjguL2KtcX/4v6/4wNijrbBejtsVSfOYO5cRpnpOlro="
-					/>
-					<input type="hidden" name="action" value="changeos" />
-					<input
-					type="hidden"
-					name="id"
-					value="6a84cdbf-6130-4164-9c76-51bfa428b595"
-					/>
-					<label class="floatinglabel flexwidth100">
-					<span style="display: inline;">OS</span>
-					<select
-						name="OSID"
-						class="flexwidth100 select2-hidden-accessible"
-						data-xselect2="yes"
-						data-id="changeos_select"
-						style="padding-top: 14px; width: 100%;"
-						tabindex="-1"
-						aria-hidden="true"
-					>
-						<option value="0" selected="">-- Choose New OS --</option>
-						<option value="381">CentOS 7 SELinux x64</option>
-						<option value="167">CentOS 7 x64</option>
-						<option value="401">CentOS 8 Stream x64</option>
-						<option value="362">CentOS 8 x64</option>
-						<option value="194">Debian 8 i386 (jessie)</option>
-						<option value="244">Debian 9 x64 (stretch)</option>
-						<option value="389">Fedora 32 x64</option>
-						<option value="415">Fedora 33 x64</option>
-						<option value="391">Fedora CoreOS</option>
-						<option value="230">FreeBSD 11 x64</option>
-						<option value="327">FreeBSD 12 x64</option>
-						<option value="394">OpenBSD 6.7 x64</option>
-						<option value="412">OpenBSD 6.8 x64</option>
-						<option value="216">Ubuntu 16.04 i386</option>
-						<option value="215">Ubuntu 16.04 x64</option>
-						<option value="270">Ubuntu 18.04 x64</option>
-						<option value="387">Ubuntu 20.04 x64</option>
-						<option value="413">Ubuntu 20.10 x64</option></select
-					><span
-						class="select2 select2-container select2-container--default"
-						dir="ltr"
-						style="width: 100%;"
-						><span class="selection"
-						><span
-							class="select2-selection select2-selection--single"
-							role="combobox"
-							aria-haspopup="true"
-							aria-expanded="false"
-							tabindex="-1"
-							aria-labelledby="select2-OSID-ex-container"
-							><span
-							class="select2-selection__rendered"
-							id="select2-OSID-ex-container"
-							title="-- Choose New OS --"
-							>-- Choose New OS --</span
-							><span class="select2-selection__arrow" role="presentation"
-							><b role="presentation"></b></span></span></span
-						><span class="dropdown-wrapper" aria-hidden="true"></span></span
-					><span
-						class="select2 select2-container select2-container--default"
-						dir="ltr"
-						style="width: 100%;"
-						><span class="selection"
-						><span
-							class="select2-selection select2-selection--single"
-							role="combobox"
-							aria-haspopup="true"
-							aria-expanded="false"
-							tabindex="0"
-							aria-labelledby="select2-OSID-cs-container"
-							><span
-							class="select2-selection__rendered"
-							id="select2-OSID-cs-container"
-							title="-- Choose New OS --"
-							>-- Choose New OS --</span
-							><span class="select2-selection__arrow" role="presentation"
-							><b role="presentation"></b></span></span></span
-						><span class="dropdown-wrapper" aria-hidden="true"></span
-					></span>
-					</label>
-					<hr class="hr10" />
-					<input
-					aria-label="Change OS"
-					class="flexwidth100 has-dropdown"
-					dropdown-action="change-os"
-					dropdown-disclaimer="Are you sure you want to change to a different operating system? All data will be lost in the process! "
-					dropdown-info="MjA5LjI1MC4yNDcuMjE2IA=="
-					dropdown-function="$('#osform').submit();"
-					onclick="showCheckConfirmationDropdown($(this));"
-					type="button"
-					value="Change OS"
-					data-id="changeos_button"
-					disabled=""
-					/>
-				</form>
-				</div>
-		
-				<div style="display:none;" class="block460left">
-				<h3>New Application</h3>
-				<b>Warning:</b> Changing to a different application will wipe all the
-				data on your server.<br />
-				<br />
-				<b>Currently Installed:</b> Debian 10 x64 (buster)<br />
-				<hr class="hr20" />
-				<form method="post" id="frm_changeapp">
-					<input
-					type="hidden"
-					name="csrf_token"
-					value="GjguL2KtcX/4v6/4wNijrbBejtsVSfOYO5cRpnpOlro="
-					/>
-					<input type="hidden" name="action" value="changeapp" />
-					<input
-					type="hidden"
-					name="id"
-					value="6a84cdbf-6130-4164-9c76-51bfa428b595"
-					/>
-					<label class="floatinglabel flexwidth100">
-					<span style="display: inline;">Application</span>
-					<select
-						name="APPID"
-						class="flexwidth100 select2-hidden-accessible"
-						data-xselect2="yes"
-						data-id="changeapp_select"
-						style="padding-top: 14px; width: 100%;"
-						tabindex="-1"
-						aria-hidden="true"
-					>
-						<option value="0" selected="">
-						-- Choose New Application --
-						</option>
-						<option value="17">Docker on CentOS 7 x64</option>
-						<option value="37">Docker on Ubuntu 18.04 x64</option>
-						<option value="15">Drupal on Ubuntu 18.04 x64</option>
-						<option value="21">Joomla on Ubuntu 18.04 x64</option>
-						<option value="41">LAMP on CentOS 7 x64</option>
-						<option value="42">LAMP on Ubuntu 18.04 x64</option>
-						<option value="39">LEMP on CentOS 7 x64</option>
-						<option value="40">LEMP on Ubuntu 18.04 x64</option>
-						<option value="33">Magento on Ubuntu 18.04 x64</option>
-						<option value="23">Mediawiki on Ubuntu 18.04 x64</option>
-						<option value="3">Minecraft on Ubuntu 18.04 x64</option>
-						<option value="27">Nextcloud on Ubuntu 18.04 x64</option>
-						<option value="45">OpenLiteSpeed on CentOS 7 x64</option>
-						<option value="46">OpenLiteSpeed on Ubuntu 18.04 x64</option>
-						<option value="6">OpenVPN on Ubuntu 18.04 x64</option>
-						<option value="5">ownCloud on Ubuntu 18.04 x64</option>
-						<option value="25">PrestaShop on Ubuntu 18.04 x64</option>
-						<option value="50">Pritunl on Ubuntu 18.04 x64</option>
-						<option value="43">Webmin on CentOS 7 x64</option>
-						<option value="44">Webmin on Ubuntu 18.04 x64</option>
-						<option value="2">WordPress on Ubuntu 18.04 x64</option></select
-					><span
-						class="select2 select2-container select2-container--default"
-						dir="ltr"
-						style="width: 100%;"
-						><span class="selection"
-						><span
-							class="select2-selection select2-selection--single"
-							role="combobox"
-							aria-haspopup="true"
-							aria-expanded="false"
-							tabindex="-1"
-							aria-labelledby="select2-APPID-b8-container"
-							><span
-							class="select2-selection__rendered"
-							id="select2-APPID-b8-container"
-							title="-- Choose New Application --"
-							>-- Choose New Application --</span
-							><span class="select2-selection__arrow" role="presentation"
-							><b role="presentation"></b></span></span></span
-						><span class="dropdown-wrapper" aria-hidden="true"></span></span
-					><span
-						class="select2 select2-container select2-container--default"
-						dir="ltr"
-						style="width: 100%;"
-						><span class="selection"
-						><span
-							class="select2-selection select2-selection--single"
-							role="combobox"
-							aria-haspopup="true"
-							aria-expanded="false"
-							tabindex="0"
-							aria-labelledby="select2-APPID-e2-container"
-							><span
-							class="select2-selection__rendered"
-							id="select2-APPID-e2-container"
-							title="-- Choose New Application --"
-							>-- Choose New Application --</span
-							><span class="select2-selection__arrow" role="presentation"
-							><b role="presentation"></b></span></span></span
-						><span class="dropdown-wrapper" aria-hidden="true"></span
-					></span>
-					</label>
-					<hr class="hr10" />
-					<input
-					class="flexwidth100 has-dropdown"
-					aria-label="Change Application"
-					dropdown-action="change-application"
-					dropdown-disclaimer="Are you sure you want to change to a different application? All data will be lost in the process! "
-					dropdown-info="MjA5LjI1MC4yNDcuMjE2IA=="
-					dropdown-function="$('#frm_changeapp').submit();"
-					onclick="showCheckConfirmationDropdown($(this));"
-					type="button"
-					value="Change Application"
-					data-id="changeapp_button"
-					disabled=""
-					/>
-				</form>
-				</div>
-		
-				<div style="display: none; width:100%;">
-				<h3>Reinstall SSH Keys</h3>
-				<div class="warning_message">
-					<strong>Warning:</strong> Reinstalling SSH keys here will
-					<strong>WIPE ALL DATA</strong> on the server, and reapply the selected
-					ssh keys.
-				</div>
-				<div style="margin-bottom: 15px;">
-					<div class="info_message">
-					You can manually change SSH Keys without reinstalling the server.
-					See our SSH guides:
-					<ul>
-						<li>
-						<a href="http://www.vultr.com/docs/how-do-i-generate-ssh-keys"
-							>How to Generate SSH Keys</a
-						>
-						</li>
-						<li>
-						<a
-							href="http://www.vultr.com/docs/how-to-add-and-delete-ssh-keys"
-							>How to Add and Delete SSH Keys</a
-						>
-						</li>
-						<li>
-						<a
-							href="http://www.vultr.com/docs/deploy-a-new-server-with-an-ssh-key"
-							>Deploy a New Server with an SSH Key</a
-						>
-						</li>
-						<li>
-						<a
-							href="http://www.vultr.com/docs/connect-to-a-server-using-an-ssh-key"
-							>Connect to a Server Using an SSH Key</a
-						>
-						</li>
-						<li>
-						<a
-							href="http://www.vultr.com/docs/using-your-ssh-key-to-login-to-non-root-users"
-							>Use an SSH Key for Non-root Users</a
-						>
-						</li>
-					</ul>
-					</div>
-					<div class="deploy_block">
-					<div class="no_records zero-data">
-						<div class="zero-data-body">
-						<div class="zero-data-title">No SSH Keys</div>
-						<div class="zero-data-desc">
-							Add your public keys here. Pre-load your keys on new server
-							instances for SSH access without passwords.
-						</div>
-						<br />
-						<a
-							href="https://my.vultr.com/sshkeys/manage/?id=new"
-							id=""
-							class="button btn-sm btn-temp"
-							>Add SSH Key</a
-						>
-						</div>
-					</div>
-					</div>
-				</div>
-				</div>
-		
-				<div style="display: none; width:100%;">
-				<h3>Change Startup Script</h3>
-				<div class="warning_message">
-					<span
-					><strong>Warning:</strong> Changing the startup script here will
-					<strong>WIPE ALL DATA</strong> on the server and reinstall it.</span
-					>
-					<span style="display: block;">
-					If you choose a `pxe startup script`, you will only be able to
-					choose `pxe startup scripts` in the future. `boot scripts` and
-					`startup script removal` will be unavailable by choosing a `pxe
-					startup script` option.
-					</span>
-				</div>
-				<div style="margin-bottom: 15px;">
-					<div class="deploy_block">
-					<div class="no_records zero-data">
-						<div class="zero-data-body">
-						<div class="zero-data-title">No Startup Scripts</div>
-						<div class="zero-data-desc">
-							Add a startup script to execute at deployment, or a PXE script
-							to automate operating system installation. You can read more
-							about startup scripts on
-							<a
-							href="https://www.vultr.com/docs/vultr-startup-scripts-quickstart-guide"
-							>Vultr Docs</a
-							>.
-						</div>
-						<br />
-						<a
-							href="https://my.vultr.com/startup/manage/?id=new"
-							id=""
-							class="button btn-sm btn-temp"
-							>Add Startup Script</a
-						>
-						</div>
-					</div>
-					</div>
-				</div>
-				</div>
-			</div>
+			<div class="flex3column submenutabcontent tabs__content tabs__content-active" data-tab="3">
+				
 			</div>
 		
-			<div class="submenutabcontent" id="tabc_subssnapshots" style="display: none;">
+			<div class="submenutabcontent tabs__content tabs__content" data-tab="4">
 			<div class="content-block">
 				<h3>Take Snapshot</h3>
 		
 				<div class="block520left">
-				<form method="POST" id="snapshotform" class="flexlayoutform">
-					<input
-					type="hidden"
-					name="csrf_token"
-					value="GjguL2KtcX/4v6/4wNijrbBejtsVSfOYO5cRpnpOlro="
-					/>
-					<input type="hidden" name="action" value="take_snapshot" />
-					<input
-					type="hidden"
-					name="id"
-					value="6a84cdbf-6130-4164-9c76-51bfa428b595"
-					/>
-					<label class="floatinglabel flexwidthhalf">
-					<span style="display: none;">Label</span>
-					<input
-						type="text"
-						name="description"
-						placeholder="Label"
-						class="flexwidthhalf"
-					/>
-					</label>
-					<br />
-					<div class="staticlabel flexwidthhalf">
-					<input type="submit" value="Take Snapshot" />
-					</div>
-				</form>
 		
 				<ul>
 					<li>
@@ -2319,7 +1213,7 @@
 			</div>
 			</div>
 		
-			<div class="submenutabcontent" id="tabc_subsbackups" style="display: none;">
+			<div class="submenutabcontent tabs__content tabs__content" data-tab="5">
 			<div class="block460center">
 				<h3>Backups</h3>
 				Enabling backups is an additional $1.00/month. Individual files cannot be
@@ -2350,7 +1244,7 @@
 			</div>
 			</div>
 		
-			<div class="submenutabcontent" id="tabc_subsddos" style="display: none;">
+			<div class="submenutabcontent tabs__content tabs__content" data-tab="6">
 			<div class="block460center">
 				<h3>DDOS Protection</h3>
 				Enabling DDOS protection is an additional <strong>$10/month</strong>. This
@@ -2392,8 +1286,35 @@
 			</div>
 
 		</div>
+
+		<script>
+
+			function setupTabs () {
+				document.querySelectorAll(".tab_links").forEach(li => {
+					li.addEventListener("click", () => {
+						const topBar = li.parentElement,
+							/* tabsContainer = , */
+							tabNumber = li.dataset.forTab,
+							tabToActivate = tabsContainer.querySelector(`.tabs__content[data-tab="${tabNumber}"]`);
+						
+						console.log(topBar);
+						console.log(tabsContainer);
+						console.log(tabNumber);
+						console.log(tabToActivate);
+					});
+				});
+			}
+
+			document.addEventListener("DOMContentLoaded", () => {
+				setupTabs();
+			});
+
+		</script>
 	  
 	</main>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>	
 </body>
 
 </html>
